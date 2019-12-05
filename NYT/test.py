@@ -1,6 +1,8 @@
 import requests
 import re
 import json
+import datetime
+import hashlib
 from bs4 import BeautifulSoup
 
 #launch url
@@ -31,6 +33,9 @@ except KeyboardInterrupt:
 print('pulling the html')
 soup = BeautifulSoup(page.text, 'html.parser')
 
+time = soup.find('time').getText()
+time = datetime.datetime.strptime(time, '%B %d, %Y').date()
+
 section = soup.find_all('section')
 
 book_dict = {}
@@ -53,10 +58,6 @@ for category in section:
     if category.find('h2'):
         # get book category
         category_name = category.find('h2').getText()
-        #print('category_name: ', category_name)
-        # get book title & author
-
-        book_dict[category_name] = {}
 
         book_list = category.find_all('li')
 
@@ -64,31 +65,33 @@ for category in section:
         authors = []
         week = []
 
-        for book in book_list:
-            if book.find('p'):
-                weeks = book.find('p').getText()
-                #print(parse_weeks(weeks))
-                week.append(parse_weeks(weeks))
+        for book in book_list:            
 
             if book.find('h3', attrs={'itemprop': 'name'}):
                 title = book.find('h3', attrs={'itemprop': 'name'}).getText()
+                title = title.title()
+
                 author = book.find('p', attrs={'itemprop': 'author'}).getText()
-                #print('title: ', title)
-                #print('author: ', author)
+                author = re.sub('by ', '', author)
 
-                titles.append(title)
-                authors.append(author[3:])
+                hashed_book = hashlib.sha1(title.encode('utf8')).hexdigest()
 
-        #print('all titles: ', titles)
-        #print('all authors: ', authors)
+                book_dict[hashed_book] = {}
+                book_dict[hashed_book]['title'] = title
+                book_dict[hashed_book]['date'] = str(time)
+                book_dict[hashed_book]['author'] = author
+                book_dict[hashed_book]['category'] = category_name
 
-        book_dict[category_name]['titles']  = titles
-        book_dict[category_name]['authors'] = authors
-        book_dict[category_name]['weeks'] = week
+            if book.find('p'):
+                weeks = book.find('p').getText()
 
-                #book_dict[category]['titles'].append(title)
+                num = parse_weeks(weeks)
+                
+                book_dict[hashed_book]['weeks_on_list'] = num
 
 print('book_dict')
-#print(book_dict)
-temp = json.dumps(book_dict)
+temp = json.dumps(book_dict, indent=4)
 print(temp)
+
+with open('data.json', 'w') as f:
+    json.dump(book_dict, f, indent=4)
