@@ -3,10 +3,9 @@ import re
 import json
 import datetime
 import hashlib
-import gzip
 from bs4 import BeautifulSoup
 
-# NYT bestsellers url
+#launch url
 url = 'https://www.nytimes.com/books/best-sellers/'
 
 # get the page
@@ -27,7 +26,6 @@ print('pulling the html')
 soup = BeautifulSoup(page.text, 'html.parser')
 
 # get the last refreshed date
-print('get refresh date')
 if soup.find('time'):
     time = soup.find('time').getText()
     time = datetime.datetime.strptime(time, '%B %d, %Y').date()
@@ -35,7 +33,6 @@ else:
     time = datetime.date.today()
     # the below gets the date of the next sunday
     time = time + datetime.timedelta( (6-today.weekday()) % 7 )
-print('This week is', time)
 
 def parse_weeks(text):
     '''Parses the number of weeks a book has been on the NYT list'''
@@ -47,35 +44,11 @@ def parse_weeks(text):
         return 'New'
 
     elif re.findall(num_weeks, text):
-        num_weeks = re.findall(num_weeks, text)
+        num_weeks = re.findall(num_weeks, weeks)
         return ''.join(num_weeks) + ' weeks'
 
     else:
         return 'N/A'
-
-def get_title(book):
-    if book.find('h3', attrs={'itemprop': 'name'}):
-        title = book.find('h3', attrs={'itemprop': 'name'}).getText()
-        title = title.title()
-    else:
-        title = ''
-    return title
-
-def get_author(book):
-    if book.find('p', attrs={'itemprop': 'author'}):
-        author = book.find('p', attrs={'itemprop': 'author'}).getText()
-        author = re.sub('by ', '', author)
-    else:
-        author = ''
-    return author
-
-def get_weeks_on_list(book):
-    if book.find('p'):
-        weeks = book.find('p').getText()
-        num_weeks = parse_weeks(weeks)
-    else:
-        num_weeks = ''
-    return num_weeks
 
 # each section is a category on the NYT site
 categories = soup.find_all('section')
@@ -86,44 +59,46 @@ for cat in categories:
     if cat.find('h2'):
         # get book category
         category_name = cat.find('h2').getText()
-        print('Getting books in the', category_name, 'category')
 
         books_in_category = cat.find_all('li')
 
-        for book in books_in_category: 
-            # get the book titles in this category
-            title = get_title(book)
-
-            # hash the title+category and store in dictionary
-            title_category = title + category_name
-            hashed_book = hashlib.sha1(title_category.encode('utf8')).hexdigest()
-
+        for book in books_in_category:            
+            # Get book title
+            if book.find('h3', attrs={'itemprop': 'name'}):
+                title = book.find('h3', attrs={'itemprop': 'name'}).getText()
+                title = title.title()
+            else:
+                title = ''
+            # hash the title and store in dictionary
+            hashed_book = hashlib.sha1(title.encode('utf8')).hexdigest()
             book_dict[hashed_book] = {}
             book_dict[hashed_book]['title'] = title
 
-            # get author
-            author = get_author(book)
+            # Get author
+            if book.find('p', attrs={'itemprop': 'author'}):
+                author = book.find('p', attrs={'itemprop': 'author'}).getText()
+                author = re.sub('by ', '', author)
+            else:
+                author = ''
+
             book_dict[hashed_book]['author'] = author
 
-            book_dict[hashed_book]['category_name'] = category_name
-
             # get number of weeks on list
-            num_weeks = get_weeks_on_list(book)
+            if book.find('p'):
+                weeks = book.find('p').getText()
+                num_weeks = parse_weeks(weeks)
+            else:
+                num_weeks = ''
+            
             book_dict[hashed_book]['weeks_on_list'] = num_weeks
 
-            # add pull date
+            # add date & category name
             book_dict[hashed_book]['date'] = str(time)
+            book_dict[hashed_book]['category_name'] = category_name
 
-print(f'Data retrieved. Gzipping to a json file @ {time}.json')
 
-#temp = json.dumps(book_dict, indent=4)
-#print(temp)
+temp = json.dumps(book_dict, indent=4)
+print(temp)
 
-with gzip.open(f'{time}.json', 'wt', encoding='utf-8') as zipfile:
-    json.dump(book_dict, zipfile, indent=4)
-
-num_books = 0
-for key in book_dict:
-    num_books += 1
-
-print('numbooks (non_unique): ', num_books)
+with open('data.json', 'w') as f:
+    json.dump(book_dict, f, indent=4)
