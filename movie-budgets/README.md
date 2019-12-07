@@ -23,7 +23,7 @@ Data (pulled on 12/5/2019)
     * `actors`: Primary Actors/Actresses in movie (pipe ( | ) delimited string of names)
     * `directors`: Director(s) (pipe ( | ) delimited string of names)
 
-* `json/data/` contains gzipped json files (each holding ~100 movies, named by budget rank)
+* `data/` contains gzipped json files (each holding ~100 movies, named by budget rank)
 
 Working files
 * `scrape.py` contains all scraping logic

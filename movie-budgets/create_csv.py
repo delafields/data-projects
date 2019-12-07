@@ -1,9 +1,7 @@
 import pandas as pd
-import urls_n_filenames from urls_to_scrape
+from urls_to_scrape import urls_n_filenames
 import json
-
-# where tha magic happens
-for u_n_f in urls_n_filenames:
+import gzip
 
 df = pd.DataFrame()
 
@@ -12,23 +10,23 @@ num_movies = 0
 # where tha magic happens
 for u_n_f in urls_n_filenames:
     # load json file in
-    print(f'Opening {u_n_1[0]}.json')
+    print(f'Opening ./data/{u_n_f[1]}.json')
 
-    with open(f'./json_data/{u_n_f[1]}') as json_file:
-
+    with gzip.GzipFile(f'./data/{u_n_f[1]}.json', 'r') as fin:
+        
         print(f'Pushing {u_n_f[1]} to csv')
-        json_data = json.load(json_file)
+        data = json.loads(fin.read().decode('utf-8'))
 
         # loop through json and append each movie into a dataframe
-        for movie_hash in json_data:
-            # `[[*json_data[movie_hash]]]` ensures correct column ordering
-            df = df.append(json_data[movie_hash], ignore_index=True)[[*json_data[movie_hash]]]
+        for movie_hash in data:
+            # `[[*data[movie_hash]]]` ensures correct column ordering
+            df = df.append(data[movie_hash], ignore_index=True)[[*data[movie_hash]]]
 
             # for logging progress
             num_movies += 1
     
 
-        print(f'Done pushing {file} to csv. {num_movies} movies appended to csv.')
+        print(f'Done pushing {u_n_f[1]} to csv. {num_movies} movies appended to csv.')
 
 print(df.shape)
 
