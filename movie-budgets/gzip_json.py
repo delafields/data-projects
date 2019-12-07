@@ -6,11 +6,14 @@ for thang in urls_n_filenames:
 
     file = thang[1]
 
-    with open(f'./json_data/{file}.json', 'r') as infile:
+    infile = f'./json_data/{file}.json'
+    outfile = f'./data/{file}.json'
 
-        with gzip.open(f'./data/{file}.json', 'wt', encoding='utf-8') as zipfile:
-            json.dump(infile, zipfile, indent=4)
+    with open(infile) as json_file:
+        data = json.load(json_file)
 
+    with gzip.open(outfile, 'wt', encoding='utf-8') as zipfile:
+        json.dump(data, zipfile, indent=4)
 
 import os
 
