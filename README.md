@@ -6,6 +6,9 @@ This stores some projects using either publically available data or data I've sc
 Data on the top 5,000 (about) biggest budget movies (as found on[the-numbers.com](https://www.the-numbers.com/movie/budgets/all)).
 Link to project [here](movie-budgets/README.md)
 
+# NFL Penalties
+Link to project [here](nfl-penalties/README.md)
+
 # NCAA Men's Basketball: How important is recruiting to success?
 On hold
 Link to project [here](cbb-recruiting/README.md)
