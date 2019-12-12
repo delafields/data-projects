@@ -1,4 +1,4 @@
-# NYT Bestsellers
+# NYT Bestsellers 📚
 
 # WELP - NYT HAS AN API FOR THIS.
 It was a fun exercise in scraping/storing on s3. Ending this pursuit.
