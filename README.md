@@ -10,6 +10,10 @@ Link to project [here](movie-budgets/README.md)
 Data on NFL penalties from 2009-2018 (as found on [nflpenalties.com](https://www.nflpenalties.com/))
 Link to project [here](nfl-penalties/README.md)
 
+# Company Colors 🎨: Do certain industries have a design relationship? [**WIP**]
+Link to project [here](company-colors/README.md)
+
+
 # NCAA Men's Basketball 🏀: How important is recruiting to success? [**WIP**]
 Link to project [here](cbb-recruiting/README.md)
 
