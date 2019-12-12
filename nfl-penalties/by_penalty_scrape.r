@@ -117,7 +117,7 @@ five_yard_penalties <- c('illegal-forward-pass','illegal-touch-pass','defensive-
 ####    EXECUTION    ####
 #########################
 
-file_name = 'penalties_2009-2018.xlsx'
+file_name = 'by_penalty.xlsx'
 
 # create a blank workbook
 wb <- createWorkbook()

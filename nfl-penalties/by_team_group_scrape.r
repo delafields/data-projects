@@ -19,7 +19,7 @@ years = c('2009','2010','2011','2012','2013', '2014','2015','2016','2017','2018'
 ####    EXECUTION    ####
 #########################
 
-file_name = 'penalties_by_group_2009-2018.xlsx'
+file_name = 'by_team_group.xlsx'
 
 # create a blank workbook
 wb <- createWorkbook()
