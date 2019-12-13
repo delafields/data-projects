@@ -28,7 +28,7 @@ insurance,#0076B8,#45BCE5,#b63a25,#001E60,#F0F5F7,#95D600,,,allstate
 financial-services,#3e0046,#650360,#005e8a,#8bc34a,#9c27b0,#3f51b5,#009688,#CB3974,ally-financial
 technology,#F01716,#7BB64A,#F57B3F,#5B86E8,#DFCE7A,#76777A,#E9EAEA,#DA559F,alphabet
 retail,#345C97,#29455F,#761B14,#43A468,#ED1C24,#66C5EF,#0084C3,#FAA61A,altria-group
-retail,#FF9900,#146EB4,#45ACCB,#D89C0A,#CFEF9C,#FF878C,#FEE33C,,amazon-com
+retail,#FF9900,#146EB4,#45ACCB,#D89C0A,#CFEF9C,#FF878C,#FEE33C,,amazon
 energy,#35962B,#E62021,#000000,#ffffff,,,,,ameren
 travel,#0078D2,#36495A,#FFFFFF,#9DA6AB,#131313,#C30019,,,american-airlines-group
 auto,#ed1b2e,#ffffff,#ffbe01,#000000,,,,,american-axle-manufacturing
@@ -54,7 +54,7 @@ insurance,#00263e,#a4cBe1,#062b43,#ffffff,,,,,arthur-j-gallagher
 retail,#d91e18,#000000,#f0f0f0,#ffffff,,,,,asbury-automotive-group
 retail,#53bceb,#7f8084,#000000,#f2f2f2,#b9ac97,#ffffff,,,ascena-retail-group
 insurance,#0066cc,#FF9900,#00cc33,#999999,,,,,assurant
-technology,#067ab4,#3aa5dc,#ff7200,#fcb314,#b6bf00,#6ebb1f,#b30a3c,#0c2577,att-color-palatte
+technology,#067ab4,#3aa5dc,#ff7200,#fcb314,#b6bf00,#6ebb1f,#b30a3c,#0c2577,att
 insurance,#114477,#22ccff,#64b9c1,#2162a6,#e5e5e5,#444444,#ffffff,,auto-owners-insurance
 auto,#005494,#002951,#009ee3,#009ee3,,,,,autoliv
 retail,#E88BB3,#191919,#FF6633,#9B9B9B,#666666,,,,autonation
@@ -113,7 +113,7 @@ food,#231f20,#00309B,#E37424,#568A40,#F1F1F1,#4CA0CC,,,chs
 insurance,#0080C9,#FA9800,#52BB40,#9A8C7D,#352C66,#4B3900,#AFBD21,#EE8A1D,cigna
 supplier,#032169,#c3012c,#002877,#226fba,#309532,#e87837,#a09c34,,cintas
 technology,#2B5592,#64BBE3,#C4D6ED,#000000,#58585B,#005C21,#6CC04A,#8B1001,cisco-systems
-financial-services,#003A72,#DB230B,#00BAF1,#9f44af,#66B58B,#ffad2b,#333333,#DAB3E2,citigroup-color-group
+financial-services,#003A72,#DB230B,#00BAF1,#9f44af,#66B58B,#ffad2b,#333333,#DAB3E2,citigroup
 financial-services,#02945E,#ffffff,#000000,#015944,#E97202,#EBF8F5,#49762A,,citizens-financial-group
 retail,#005CB9,#00833E,#ffffff,#E8ECED,,,,,clorox
 energy,#7ac143,#2660a3,#95d600,#cccccc,#06a7e2,#6C6E71,,,cms-energy
