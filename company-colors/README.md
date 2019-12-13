@@ -11,10 +11,13 @@ Links
     * Calculating color similarity: https://stats.stackexchange.com/questions/109618/computing-image-similarity-based-on-color-distribution
     * Making a color histogram: https://stackoverflow.com/questions/12182891/plot-image-color-histogram-using-matplotlib/12183468
 Work
-    * Create list of companies and their urls
-    * Get logos
-    * Get company colors
-    * Work out color extraction tool - how many to keep?
-    * Work out website screenshot - then extract colors
-    * Create dataset
-    * Clean up code and document
+    * Logo Scraper
+        * ~~Get logos~~
+        * ~~Get company colors~~
+        * Clean up logo code and document it (both scraper and downloader)
+    * Homepage scraper
+        * Get urls of each company
+        * Create scraper
+            * Open homepage, take screenshot, save screenshot
+        * Create color extractor
+        * Clean code and document
