@@ -21,7 +21,7 @@ Work
             * ~~Manually clean :(~~
         * ~~Create scraper~~
             * ~~Open homepage, take screenshot, save screenshot~~
-        * Compress images
+        * ~~Compress images~~
         * Create color extractor
         * Clean code and document
     * Document the directory & data

@@ -2,6 +2,7 @@ archive/
 .google-cookie
 chromedriver.exe
 company_urls_temp.csv
+screenshots/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -34,9 +34,6 @@ with webdriver.Chrome(executable_path=driver_location, chrome_options=options) a
             print(f'{company}\'s screenshot already exists')
             continue
 
-        # for locations
-        company_dict = {}
-
         # create a new Chrome session
         print(f'Opening the homepage for {company}')
         driver.implicitly_wait(5)
@@ -51,9 +48,3 @@ with webdriver.Chrome(executable_path=driver_location, chrome_options=options) a
         # pass location to save screenshot MUST END IN .png
         print(f'Screenshotting {company}\'s homepage')
         driver.save_screenshot(outfile)
-
-        # for location
-        company_dict['company'] = company
-        company_dict['screenshot_location'] = outfile 
-
-        screenshot_df = screenshot_df.append(company_dict, ignore_index=True)  
