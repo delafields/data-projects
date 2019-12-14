@@ -18,3 +18,16 @@ Season-end tables can be found in the `data/epl-results/` folder. Filenames foll
 * `GD`: goal differential
 * `Pts`: num pts from W/L/D
 * `Qualification or relegation`: qualification for European cups, relegated
+
+Transfer data can be found in the `data/transfer-data` folder. 
+* `club_name`: the club who made the transfer 
+* `player_name`: the player being transferred 
+* `age`: player age 
+* `position`: player position 
+* `club_involved`: the club the player is going to/from 
+* `fee`: fee in pounds (£). Could be k, m, or loan info
+* `transfer_movement`: in or out 
+* `fee_cleaned`: the fee cleaned up a bit (Ex: `fee`= £61.02m, `fee_cleaned` = 61.02) 
+* `league_name`: league name (always Premier League here)
+* `year`: year the deal was made
+* `season`: season name (Ex: 2018/2019)
