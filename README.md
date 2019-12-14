@@ -10,9 +10,13 @@ Link to project [here](movie-budgets/README.md)
 Data on NFL penalties from 2009-2018 (as found on [nflpenalties.com](https://www.nflpenalties.com/))
 Link to project [here](nfl-penalties/README.md)
 
-# Company Colors 🎨: Do certain industries have a design relationship? [**WIP**]
+# Company Colors 🎨: Do certain industries have a design relationship?
+Contains the brand palettes and logos of Fortune 500 companies. Furthermore, contains a screenshot of said companies websites and the most common colors used on their homepages.
 Link to project [here](company-colors/README.md)
 
+# EPL Transfers ⚽: Does spending = winning?
+Contains transfer data and year-end results for the English Premier League from the 1992-93 season through 2018-19.
+Link to project [here](epl-transfers/README.md)
 
 # NCAA Men's Basketball 🏀: How important is recruiting to success? [**WIP**]
 Link to project [here](cbb-recruiting/README.md)
