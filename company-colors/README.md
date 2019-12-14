@@ -18,9 +18,9 @@ Work
         * ~~Clean up logo code and document it (both scraper and downloader)~~
     * Homepage scraper
         * ~~Get urls of each company~~
-            * Manually clean :(
-        * Create scraper
-            * Open homepage, take screenshot, save screenshot
+            * ~~Manually clean :(~~
+        * ~~Create scraper~~
+            * ~~Open homepage, take screenshot, save screenshot~~
         * Compress images
         * Create color extractor
         * Clean code and document
