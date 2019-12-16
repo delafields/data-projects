@@ -18,6 +18,10 @@ Link to project [here](company-colors/README.md)
 Contains transfer data and year-end results for the English Premier League from the 1992-93 season through 2018-19.
 Link to project [here](epl-transfers/README.md)
 
+# Big 4 league attendance 🏒🏀🏈⚾: Are people leaving the couch?
+Contains attendance data for the Big 4 US sports leagues from 2001-2019 (NBA, NFL, MLB, NHL).
+Link to project [here](big4league-attendance/README.md)
+
 # NCAA Men's Basketball 🏀: How important is recruiting to success? [**WIP**]
 Link to project [here](cbb-recruiting/README.md)
 
