@@ -17,7 +17,7 @@ multmerge = function(path){
 data <- multmerge("data/transfer-data")
 
 # only keep these columns
-cols <- c('position', 'fee_cleaned', 'year', 'transfer_movement')
+cols <- c("position", "fee_cleaned", "year", "transfer_movement", "season")
 data <- data[cols]
 
 # replace na's with 0's
@@ -25,13 +25,22 @@ data[is.na(data)] <- 0
 
 # multiply "out" transfers by -1
 data <- data %>%
-    mutate(correct_fee = ifelse(transfer_movement == 'out', fee_cleaned * -1, fee_cleaned))
+    mutate(correct_fee = ifelse(transfer_movement == "out", fee_cleaned * -1, fee_cleaned))
 
 grouped_data <- data %>%
     group_by(position, year) %>%
-    summarise(total_spend = sum(correct_fee))
+    summarise(total_spend = sum(correct_fee)) %>%
+    filter(position != "Sweeper") # no data here
 
-# TODO - Taking inflation into account
+# Taking inflation into account
+inflation <- read.csv(file = "data/Inflation_Adjustment.csv", fileEncoding="UTF-8-BOM")
+
+grouped_data <- grouped_data %>% 
+    left_join(inflation, by="year") %>%
+    mutate(inf_adj_spend = total_spend * (1 + .01 * Inflation))
+
+# double checking the spend
+QC <- grouped_data %>% group_by(position, year) %>% summarise(sum(inf_adj_spend))
 
 
 ###
@@ -45,3 +54,4 @@ ggplot(grouped_data, aes(x = total, y = position)) +
 # clean up the styling
 ggplot(grouped_data, aes(x = year, y = total_spend)) +
     geom_line(aes(color = position, linetype = position))
+
