@@ -64,7 +64,7 @@ scrape_results <- function() {
             html_table(fill=TRUE) # some tables had weird formatting
         
         # add current year to the dataframe
-        table <- cbind(year=years[1], table)
+        table <- cbind(year=years[1], table) #! This is wrong - manually fixing the data
         
         # keep first 20 rows, first 12 columns (some yrs had weird formatting)
         table <- table[1:20, 1:12]
