@@ -177,6 +177,7 @@ bscols(select)
 ## temp using ggplot dumbell
 # see link below for moving labels and changing them
 # https://stackoverflow.com/questions/58507077/gganimate-change-axes-between-frames
+# this p is the first ggplot dumbell
 p + transition_time(year) +
     labs(title = "Year: {frame_time}")
 
