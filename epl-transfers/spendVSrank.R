@@ -112,6 +112,8 @@ ptemp
 ## temp using ggplot dumbell
 # see link below for moving labels and changing them
 # https://stackoverflow.com/questions/58507077/gganimate-change-axes-between-frames
+# the answer is probably in the below thread
+# https://stackoverflow.com/questions/53162821/animated-sorted-bar-chart-with-bars-overtaking-each-other/53163549#53163549
 
 
 p <- ggplot(data, aes(x=Pos, xend=spend_rank, y=Team)) + 

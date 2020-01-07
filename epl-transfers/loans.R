@@ -1,6 +1,8 @@
 library(dplyr)
 library(ggplot2)
 library(stringr)
+library(showtext)
+library(cowplot)
 
 # merges multiple csvs together
 multmerge = function(path){
@@ -43,14 +45,29 @@ loans_per_year <- loans %>%
 # PLOTTING
 #####################
 
+## Loading Google fonts (http://www.google.com/fonts)
+font_add_google("Poppins", "poppins")
+
+## Automatically use showtext to render text for future devices
+showtext_auto()
+
+## Plotting functions as usual
+## Open a graphics device if you want, e.g.
+## png("demo.png", 700, 600, res = 96)
+## If you want to show the graph in a window device,
+## remember to manually open one in RStudio
+## See the "Known Issues" section
+windows()
+
+
 # Loans per year
 ggplot(loans_per_year, aes(year, num_loans, group=transfer_movement, color=transfer_movement)) + 
     geom_line(size = 1.5) + 
-    ggtitle("Premier League loans in & loans out (1992 - 2018)") +
+    ggtitle("Out on loan", subtitle="Premier League loans in & loans out (1992 - 2018)") +
     theme(plot.title = element_text(face = "bold", color = "#38003c", margin = margin(10, 0, 10, 0)), 
           axis.title.x = element_text(face = "bold"),
           axis.title.y = element_text(face = "bold"),
-          text = element_text(family = "mono"),
+          text = element_text(family = "poppins"),
           panel.background = element_rect(fill = 'white'),
           panel.grid.major = element_line(colour = "#e0e0e0", linetype = "dashed", size=0.1),
           panel.grid.minor = element_blank(),
@@ -67,11 +84,34 @@ ggplot(loans_per_year, aes(year, num_loans, group=transfer_movement, color=trans
 ggplot(data=loans_per_team, aes(x = reorder(club_name, num_loans), y = num_loans, fill=transfer_movement, label = num_loans)) + 
     geom_bar(stat="identity", color = "#38003c") + 
     coord_flip() + 
-    ggtitle("Premier League loans per team (1992 - 2018)") +
+    ggtitle("Chelsea leads the way", subtitle="Premier League loans per team (1992 - 2018)") +
     theme(plot.title = element_text(face = "bold", color = "#38003c", margin = margin(10, 0, 10, 0)), 
           axis.title.x = element_text(face = "bold"),
           axis.title.y = element_text(face = "bold"),
-          text = element_text(family = "mono"),
+          text = element_text(family = "poppins"),
+          panel.background = element_rect(fill = 'white'),
+          panel.grid.major = element_line(colour = "#e0e0e0", linetype = "dashed", size=0.1),
+          panel.grid.major.y = element_blank(),
+          panel.grid.minor = element_blank(),
+          legend.position = c(0.9, 0.2),
+          legend.background = element_rect(linetype="solid", color = "black"),
+          legend.key=element_rect(fill='white')) + 
+    labs(x = "Club\n", y = "\n# of Loans", fill="Transfer Movement") + 
+    scale_fill_manual(values = c("#00ff85", "#e90052")) +
+    geom_text(size = 3, position = position_stack(vjust = 0.5))
+
+
+loans_in <- loans_per_team %>% filter(transfer_movement == "in")
+loans_out <- loans_per_team %>% filter(transfer_movement == "out")
+
+outp <- ggplot(data=loans_out, aes(x = reorder(club_name, num_loans), y = num_loans, label = num_loans)) + 
+    geom_bar(stat="identity", color = "#38003c", fill="#e90052") + 
+    coord_flip() + 
+    ggtitle("Chelsea (and the Big 6) sends them out", subtitle="Premier League loans out per team (1992 - 2018)") +
+    theme(plot.title = element_text(face = "bold", color = "#38003c", margin = margin(10, 0, 10, 0)), 
+          axis.title.x = element_text(face = "bold"),
+          axis.title.y = element_text(face = "bold"),
+          text = element_text(family = "poppins"),
           panel.background = element_rect(fill = 'white'),
           panel.grid.major = element_line(colour = "#e0e0e0", linetype = "dashed", size=0.1),
           panel.grid.major.y = element_blank(),
@@ -80,5 +120,24 @@ ggplot(data=loans_per_team, aes(x = reorder(club_name, num_loans), y = num_loans
           legend.background = element_rect(linetype="solid", color = "black"),
           legend.key=element_rect(fill='white')) + 
     labs(color = "Transfer Movement", x = "\nClub", y = "# of Loans\n") + 
-    scale_fill_manual(values = c("#00ff85", "#e90052")) +
     geom_text(size = 3, position = position_stack(vjust = 0.5))
+
+inp <- ggplot(data=loans_in, aes(x = reorder(club_name, num_loans), y = num_loans, label = num_loans)) + 
+    geom_bar(stat="identity", color = "#38003c", fill="#00ff85") + 
+    coord_flip() + 
+    ggtitle("West Ham brings them in", subtitle="Premier League loans in per team (1992 - 2018)") +
+    theme(plot.title = element_text(face = "bold", color = "#38003c", margin = margin(10, 0, 10, 0)), 
+          axis.title.x = element_text(face = "bold"),
+          axis.title.y = element_text(face = "bold"),
+          text = element_text(family = "poppins"),
+          panel.background = element_rect(fill = 'white'),
+          panel.grid.major = element_line(colour = "#e0e0e0", linetype = "dashed", size=0.1),
+          panel.grid.major.y = element_blank(),
+          panel.grid.minor = element_blank(),
+          legend.position = c(0.9, 0.2),
+          legend.background = element_rect(linetype="solid", color = "black"),
+          legend.key=element_rect(fill='white')) + 
+    labs(color = "Transfer Movement", x = "\nClub", y = "# of Loans\n") + 
+    geom_text(size = 3, position = position_stack(vjust = 0.5))
+
+plot_grid(outp, inp, ncol=2)
