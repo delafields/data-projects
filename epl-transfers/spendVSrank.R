@@ -3,6 +3,7 @@ library(ggplot2)
 library(stringr)
 library(ggalt)
 library(plotly)
+library(gganimate)
 
 # merges multiple csvs together
 multmerge = function(path){
@@ -56,6 +57,7 @@ results_data <- results_data %>%
 # rename transfer data team names to match results data
 # remove FC and AFC from names then strip strings
 grouped_transfer_data <- grouped_transfer_data %>%
+    ungroup(Team) %>%
     mutate(Team = str_replace_all(Team, " FC", "")) %>%
     mutate(Team = str_replace_all(Team, "AFC", "")) %>%
     mutate(Team = trimws(Team))
@@ -70,10 +72,46 @@ data <- results_data %>% left_join(grouped_transfer_data, by = c("Team", "year")
 
 
 
-###
-# PLOTTING
-###
-temp <- data %>% filter(year == 2001)
+############
+# PLOTTING #
+############
+
+# this works for one year. this is how it should look.
+temp <- data %>% filter(year == 2012)
+
+ptemp <- ggplot(temp, aes(x=Pos, xend=spend_rank, y=Team)) + 
+    geom_segment(aes(x=Pos, 
+                     xend=spend_rank, 
+                     y=Team, 
+                     yend=Team), 
+                 color="black", size=1)+
+    geom_dumbbell(color=NA,
+                  size_x=6, 
+                  size_xend = 6,
+                  #Note: there is no US:'color' for UK:'colour' 
+                  # in geom_dumbbel unlike standard geoms in ggplot()
+                  colour_x="#38003c", 
+                  colour_xend = "#00ff85")+
+    labs(x="Position", y=NULL, 
+         title="Spend vs. End of Season Rank", 
+         subtitle="1992-2018")+
+    geom_text(color="white", size=3, #hjust=-0.5,
+              aes(x=Pos, label=Pos, fontface="bold"))+
+    geom_text(aes(x=spend_rank, label=spend_rank, fontface="bold"), 
+              color="black", size=3) + #, hjust=1.5)
+    theme(plot.title = element_text(face = "bold", color = "#38003c"),
+          plot.subtitle = element_text(color = "#38003c"),
+          axis.title.x = element_text(face = "bold", color = "#38003c"),
+          axis.text.x = element_text(color = "#38003c"),
+          axis.text.y = element_text(color = "#38003c"),
+          panel.background = element_blank(),
+          panel.grid.major = element_line(colour = "#e0e0e0", linetype = "dashed", size=0.1))
+
+ptemp
+
+## temp using ggplot dumbell
+# see link below for moving labels and changing them
+# https://stackoverflow.com/questions/58507077/gganimate-change-axes-between-frames
 
 
 p <- ggplot(data, aes(x=Pos, xend=spend_rank, y=Team)) + 
@@ -81,111 +119,71 @@ p <- ggplot(data, aes(x=Pos, xend=spend_rank, y=Team)) +
                      xend=spend_rank, 
                      y=Team, 
                      yend=Team), 
-                 color="#b2b2b2", size=1.5)+
-    geom_dumbbell(color="red", 
-                  size_x=3.5, 
-                  size_xend = 3.5,
+                 color="black", size=1)+
+    geom_dumbbell(color=NA,
+                  size_x=6, 
+                  size_xend = 6,
                   #Note: there is no US:'color' for UK:'colour' 
                   # in geom_dumbbel unlike standard geoms in ggplot()
-                  colour_x="#edae52", 
-                  colour_xend = "#9fb059")+
-    labs(x=NULL, y=NULL, 
-         title="Dumbbell Chart", 
-         subtitle="Spend vs. End of Season Rank")+
-    geom_text(color="black", size=2, hjust=-0.5,
-              aes(x=Pos, label=Pos))+
-    geom_text(aes(x=spend_rank, label=spend_rank), 
-              color="black", size=2, hjust=1.5)
-p
-
-
-p <- plot_ly(data, color = I("gray80")) %>%
-    add_segments(x = ~Pos, xend = ~spend_rank, y = ~Team, yend = ~Team, showlegend = FALSE) %>%
-    add_markers(x = ~Pos, y = ~Team, name = "Pos", color = I("pink")) %>%
-    add_markers(x = ~spend_rank, y = ~Team, name = "spend_rank", color = I("blue")) %>%
-    layout(
-        title = "Gender earnings disparity",
-        xaxis = list(title = "Annual Salary (in thousands)"),
-        margin = list(l = 65)
-    ) 
-
-p
-
-
-## temp
-gg <- ggplot(data, aes(x=Pos, xend=spend_rank, y=Team, frame=year)) + 
-    geom_segment(aes(x=Pos, 
-                     xend=spend_rank, 
-                     y=Team, 
-                     yend=Team), 
-                 color="#b2b2b2", size=1.5)+
-    geom_dumbbell(color="red", 
-                  size_x=3.5, 
-                  size_xend = 3.5,
-                  #Note: there is no US:'color' for UK:'colour' 
-                  # in geom_dumbbel unlike standard geoms in ggplot()
-                  colour_x="#edae52", 
-                  colour_xend = "#9fb059")+
-    labs(x=NULL, y=NULL, 
-         title="Dumbbell Chart", 
-         subtitle="Spend vs. End of Season Rank")+
-    geom_text(color="black", size=2, hjust=-0.5,
-              aes(x=Pos, label=Pos))+
-    geom_text(aes(x=spend_rank, label=spend_rank), 
-              color="black", size=2, hjust=1.5)
-
-options(warn=1)
-ggplotly(gg)
-
-## temp not wokring
-library("crosstalk")
-
-newdata <- SharedData$new(data)
-
-widgets <- bscols(
-    #filter_select("year", "Year", newdata, ~year)
-    #filter_slider("sales", "Sales", newdata, ~sales),
-    filter_checkbox("year", "Years", newdata, ~year, inline = TRUE)
-)
-widgets
-
-bscols(
-    widths = c(4, 8), widgets, 
-    plot_ly(data, color = I("gray80")) %>%
-        add_segments(x = ~Pos, xend = ~spend_rank, y = ~Team, yend = ~Team, showlegend = FALSE) %>%
-        add_markers(x = ~Pos, y = ~Team, name = "Pos", color = I("pink")) %>%
-        add_markers(x = ~spend_rank, y = ~Team, name = "spend_rank", color = I("blue")) %>%
-        layout(
-            title = "Gender earnings disparity",
-            xaxis = list(title = "Annual Salary (in thousands)"),
-            margin = list(l = 65)
-        ) 
-)
-
-## temp
-
-tx <- highlight_key(data, ~year, "Select a city")
-
-gg <- p
-select <- highlight(
-    ggplotly(gg, tooltip = "year"), 
-    selectize = TRUE, persistent = TRUE
-)
-
-bscols(select)
-
-## temp using ggplot dumbell
-# see link below for moving labels and changing them
-# https://stackoverflow.com/questions/58507077/gganimate-change-axes-between-frames
-# this p is the first ggplot dumbell
-p + transition_time(year) +
-    labs(title = "Year: {frame_time}")
+                  colour_x="#38003c", 
+                  colour_xend = "#00ff85")+
+    labs(x="Position", y=NULL, 
+         title="Spend vs. End of Season Rank", 
+         subtitle="1992-2018")+
+    geom_text(color="white", size=3, #hjust=-0.5,
+              aes(x=Pos, label=Pos, fontface="bold"))+
+    geom_text(aes(x=spend_rank, label=spend_rank, fontface="bold"), 
+              color="black", size=3) + #, hjust=1.5)
+    theme(plot.title = element_text(face = "bold", color = "#38003c"),
+          plot.subtitle = element_text(color = "#38003c"),
+          axis.title.x = element_text(face = "bold", color = "#38003c"),
+          axis.text.x = element_text(color = "#38003c"),
+          axis.text.y = element_text(color = "#38003c"),
+          panel.background = element_blank(),
+          panel.grid.major = element_line(colour = "#e0e0e0", linetype = "dashed", size=0.1))
 
 animation <- p +  
-    labs(title = 'Year: {closest_state}', x = 'Top 5', y = 'Bottom 5') +
+    labs(title = 'Spend vs. End of Season Rank: {closest_state}', y = 'Position') +
     transition_states(year) +
     ease_aes('linear')
 
 animate(animation, renderer = gifski_renderer("gganim.gif"))
 
 anim_save("filenamehere.gif", anim)
+
+
+# This plotly works for one year but I can't sort out the year filter
+# p <- plot_ly(temp, color = I("gray80")) %>%
+#     add_segments(x = ~Pos, xend = ~spend_rank, y = ~Team, yend = ~Team, showlegend = FALSE) %>%
+#     add_markers(x = ~Pos, y = ~Team, name = "Pos", color = I("pink")) %>%
+#     add_markers(x = ~spend_rank, y = ~Team, name = "spend_rank", color = I("blue")) %>%
+#     layout(
+#         title = "Gender earnings disparity",
+#         xaxis = list(title = "Annual Salary (in thousands)"),
+#         margin = list(l = 65)
+#     )
+
+
+## This changes the data each year, but doesn't change axis labels
+# gg <- ggplot(data, aes(x=Pos, xend=spend_rank, y=Team, frame=year)) + 
+#     geom_segment(aes(x=Pos, 
+#                      xend=spend_rank, 
+#                      y=Team, 
+#                      yend=Team), 
+#                  color="#b2b2b2", size=1.5)+
+#     geom_dumbbell(color="red", 
+#                   size_x=3.5, 
+#                   size_xend = 3.5,
+#                   #Note: there is no US:'color' for UK:'colour' 
+#                   # in geom_dumbbel unlike standard geoms in ggplot()
+#                   colour_x="#edae52", 
+#                   colour_xend = "#9fb059")+
+#     labs(x=NULL, y=NULL, 
+#          title="Dumbbell Chart", 
+#          subtitle="Spend vs. End of Season Rank")+
+#     geom_text(color="black", size=2, hjust=-0.5,
+#               aes(x=Pos, label=Pos))+
+#     geom_text(aes(x=spend_rank, label=spend_rank), 
+#               color="black", size=2, hjust=1.5)
+# 
+# ggplotly(gg)
