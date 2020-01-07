@@ -1,7 +1,7 @@
 library(dplyr)
 library(ggplot2)
-library(ggridges)
-#install.packages("ggridges")
+library(cowplot)
+library(plotly)
 
 # merges multiple csvs together
 multmerge = function(path){
@@ -40,18 +40,90 @@ grouped_data <- grouped_data %>%
     mutate(inf_adj_spend = total_spend * (1 + .01 * Inflation))
 
 # double checking the spend
-QC <- grouped_data %>% group_by(position, year) %>% summarise(sum(inf_adj_spend))
+QC <- grouped_data %>% group_by(position) %>% summarise(sum(inf_adj_spend))
 
+# Adding positional grouping
+Midfield <- c("Attacking Midfield", "Defensive Midfield", "Midfielder", 
+              "Central Midfield", "Right Midfield", "Left Midfield")
+Defense <- c("Right-Back", "Centre-Back", "Goalkeeper", "Defender", "Left-Back")
+Forward <- c("Centre-Forward", "Left Winger", "Right Winger", "Forward", "Second Striker")
+
+grouped_data <- grouped_data %>%
+    mutate(pos_group = case_when(position %in% Midfield ~ "Midfield",
+                                 position %in% Defense ~ "Defense",
+                                 position %in% Forward ~ "Forward"))
+
+# filter out positions for which there isn't much data
+`%notin%` <- Negate(`%in%`)
+
+grouped_data <- grouped_data %>%
+    filter(position %notin% c("Midfielder", "Defender", "Forward"))
 
 ###
 # PLOTTING
 ###
+grouped_data <- rename(grouped_data, Position = position) #For renaming dataframe column
 
-# don't think this is gonna work
-ggplot(grouped_data, aes(x = total, y = position)) + 
-    geom_density_ridges(scale=1, rel_min_height=0.001)
 
 # clean up the styling
 ggplot(grouped_data, aes(x = year, y = total_spend)) +
-    geom_line(aes(color = position, linetype = position))
+    geom_line(aes(color = position, linetype = position)) +
+    facet_wrap(~ pos_group, nrow = 3)
 
+lineplotter <- function(df_group) {
+    ggplot(df_group, aes(x = year, y = total_spend)) +
+        geom_line(aes(color = Position), linetype = "solid", size=1) + 
+        scale_x_continuous(breaks = pretty(df_group$year, n = 10)) +
+        labs(x = "\nYear") + 
+        theme(plot.title = element_text(face = "bold", color = "#38003c", margin = margin(10, 0, 10, 0)),
+              axis.title.x = element_text(face = "bold", color = "#38003c"),
+              axis.title.y = element_text(face = "bold", color = "#38003c"),
+              axis.text.x = element_text(color = "#38003c"),
+              axis.text.y = element_text(color = "#38003c"),
+              text = element_text(family = "URWGothic"),
+              panel.grid.major = element_line(colour = "#e0e0e0", linetype = "dashed", size=0.1),
+              panel.grid.minor = element_blank(),
+              panel.border = element_blank(), 
+              #axis.line = element_line(),
+              axis.line.x = element_line(),
+              panel.background = element_blank(),
+              legend.title = element_text(face = "bold", color = "#38003c"),
+              legend.text = element_text(color = "#38003c"),
+              #legend.background = element_rect(linetype="solid", color = "#38003c", size = 1),
+              legend.key=element_rect(fill='white')) + 
+        ylim(-125, 275) +
+        ggtitle("Spend per Position in the Prem (millions £)\n")
+        #+ scale_color_manual(values=c("#04f5ff", "#e90052", "#00ff85", "#38003c", "#ebfe05", "#a6004c"))
+    }
+
+mf_plot <- lineplotter(grouped_data %>% filter(pos_group == 'Midfield'))
+fwd_plot <- lineplotter(grouped_data %>% filter(pos_group == 'Forward'))
+def_plot <- lineplotter(grouped_data %>% filter(pos_group == 'Defense'))
+
+
+plot_grid(fwd_plot + theme(axis.title.x = element_blank(),
+                           axis.title.y = element_blank()), 
+          mf_plot + theme(axis.title.x = element_blank(),
+                          axis.title.y = element_blank(),
+                          plot.title = element_blank()), 
+          def_plot + theme(axis.title.y = element_blank(),
+                           plot.title = element_blank()),  
+          ncol = 1, 
+          align = "v")
+
+
+
+# plotly
+mf_pplot <- plot_ly(grouped_data %>% filter(pos_group == 'Midfield'), color = ~position,
+        x = ~year, y = ~total_spend) %>%
+    add_lines()
+
+fwd_pplot <- plot_ly(grouped_data %>% filter(pos_group == 'Forward'), color = ~position,
+                    x = ~year, y = ~total_spend) %>%
+    add_lines()
+
+def_pplot <- plot_ly(grouped_data %>% filter(pos_group == 'Defense'), color = ~position,
+                    x = ~year, y = ~total_spend) %>%
+    add_lines()
+
+subplot(mf_pplot, fwd_pplot, def_pplot, nrows = 3)
