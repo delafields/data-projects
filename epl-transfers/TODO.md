@@ -6,11 +6,8 @@
 
 ## Additional data points // some anecdotal things
 * Who conducts the most loans?
-    * DONE. Just needs styling.
-
-## Pure visualization
+    * Save figures
 * Net transfer $ ranking vs. end of season ranking
-    * Data is in the right place. Just need to GET THE ANIMATION DOWN
-    * Maybe do an "overall" one and average ranking? (Gonna have to rank 0 for relegated teams)
+    * Save figures
 * How have transfer amounts changed per position year over year?
-    * DONE except for styling
+    * Save figures

@@ -24,14 +24,11 @@ data <- data[cols]
 # replace na's with 0's
 data[is.na(data)] <- 0
 
-# multiply "out" transfers by -1
-data <- data %>%
-    mutate(correct_fee = ifelse(transfer_movement == "out", fee_cleaned * -1, fee_cleaned))
-
+# multiply "out" transfers by -1 and sum by transfer movement
 grouped_data <- data %>%
+    mutate(correct_fee = ifelse(transfer_movement == "out", fee_cleaned * -1, fee_cleaned)) %>%
     group_by(position, year) %>%
-    summarise(total_spend = sum(correct_fee)) %>%
-    filter(position != "Sweeper") # no data here
+    summarise(total_spend = sum(correct_fee))
 
 # Taking inflation into account
 inflation <- read.csv(file = "data/Inflation_Adjustment.csv", fileEncoding="UTF-8-BOM")
@@ -46,7 +43,7 @@ QC <- grouped_data %>% group_by(position) %>% summarise(sum(inf_adj_spend))
 # Adding positional grouping
 Midfield <- c("Attacking Midfield", "Defensive Midfield", "Midfielder", 
               "Central Midfield", "Right Midfield", "Left Midfield")
-Defense <- c("Right-Back", "Centre-Back", "Goalkeeper", "Defender", "Left-Back")
+Defense <- c("Right-Back", "Centre-Back", "Goalkeeper", "Defender", "Left-Back", "Sweeper")
 Forward <- c("Centre-Forward", "Left Winger", "Right Winger", "Forward", "Second Striker")
 
 grouped_data <- grouped_data %>%
@@ -58,11 +55,15 @@ grouped_data <- grouped_data %>%
 `%notin%` <- Negate(`%in%`)
 
 grouped_data <- grouped_data %>%
-    filter(position %notin% c("Midfielder", "Defender", "Forward"))
+    filter(position %notin% c("Midfielder", "Defender", "Forward", "Sweeper"))
 
-###
-# PLOTTING
-###
+# Rename for plotting
+grouped_data <- rename(grouped_data, Position = position)
+
+############
+# PLOTTING #
+############
+
 ## Loading Google fonts (http://www.google.com/fonts)
 font_add_google("Poppins", "poppins")
 
@@ -77,37 +78,28 @@ showtext_auto()
 ## See the "Known Issues" section
 windows()
 
-grouped_data <- rename(grouped_data, Position = position) #For renaming dataframe column
-
-
-# clean up the styling
-ggplot(grouped_data, aes(x = year, y = total_spend)) +
-    geom_line(aes(color = Position, linetype = Position)) +
-    facet_wrap(~ pos_group, nrow = 3)
-
+# function for creating multiple plots
 lineplotter <- function(df_group) {
     ggplot(df_group, aes(x = year, y = total_spend)) +
-        geom_line(aes(color = Position), linetype = "solid", size=1) + 
-        scale_x_continuous(breaks = pretty(df_group$year, n = 10)) +
+        geom_line(aes(color = Position), linetype = "solid", size=1) +
+        ggtitle("People in the Center are getting PAID",
+                subtitle = "Spend per position in the Prem (millions £)\n") +
         labs(x = "\nYear") + 
-        theme(plot.title = element_text(face = "bold", color = "#38003c", margin = margin(10, 0, 10, 0)),
+        scale_color_manual(values=c("#04f5ff", "#e90052", "#00ff85", "#ebfe05", "#38003c", "#500057")) + 
+        scale_x_continuous(breaks = pretty(df_group$year, n = 10)) +
+        ylim(-125, 275) +
+        theme(text = element_text(family = "poppins"),
+              plot.title = element_text(face = "bold", color = "#38003c", margin = margin(10, 0, 10, 0)),
               axis.title.x = element_text(face = "bold"),
               axis.title.y = element_text(face = "bold"),
-              text = element_text(family = "poppins"),
+              axis.line.x = element_line(),
               panel.grid.major = element_line(colour = "#e0e0e0", linetype = "dashed", size=0.1),
               panel.grid.major.x = element_blank(),
               panel.grid.minor = element_blank(),
               panel.border = element_blank(), 
-              #axis.line = element_line(),
-              axis.line.x = element_line(),
               panel.background = element_blank(),
               legend.title = element_text(face = "bold"),
-              legend.key=element_rect(fill='white')) + 
-        ylim(-125, 275) +
-        ggtitle("People in the Center are getting PAID",
-            subtitle = "Spend per position in the Prem (millions £)\n") +
-        scale_color_manual(values=c("#04f5ff", "#e90052", "#00ff85", "#ebfe05", "#38003c", "#500057")) + 
-        annotate(geom="text", x=1993, y=150, label=df_group$pos_group)
+              legend.key=element_rect(fill='white')) 
 }
 
 mf_plot <- lineplotter(grouped_data %>% filter(pos_group == 'Midfield'))
@@ -115,33 +107,17 @@ fwd_plot <- lineplotter(grouped_data %>% filter(pos_group == 'Forward'))
 def_plot <- lineplotter(grouped_data %>% filter(pos_group == 'Defense'))
 
 
-plot_grid(fwd_plot + 
+plot_grid(fwd_plot + labs(color="Attack") +
               theme(axis.title.x = element_blank(),
                     axis.title.y = element_blank()), 
-          mf_plot + 
+          mf_plot + labs(color="Midfield") +
               theme(axis.title.x = element_blank(),
                     axis.title.y = element_blank(),
                     plot.title = element_blank(),
                     plot.subtitle = element_blank()), 
-          def_plot + 
+          def_plot + labs(color="Defense") +
               theme(axis.title.y = element_blank(),
                     plot.title = element_blank(),
                     plot.subtitle = element_blank()),  
           ncol = 1, 
           align = "v")
-
-
-# plotly
-mf_pplot <- plot_ly(grouped_data %>% filter(pos_group == 'Midfield'), color = ~position,
-                    x = ~year, y = ~total_spend) %>%
-    add_lines()
-
-fwd_pplot <- plot_ly(grouped_data %>% filter(pos_group == 'Forward'), color = ~position,
-                     x = ~year, y = ~total_spend) %>%
-    add_lines()
-
-def_pplot <- plot_ly(grouped_data %>% filter(pos_group == 'Defense'), color = ~position,
-                     x = ~year, y = ~total_spend) %>%
-    add_lines()
-
-subplot(mf_pplot, fwd_pplot, def_pplot, nrows = 3)
