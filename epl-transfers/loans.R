@@ -125,7 +125,7 @@ loans_out <- loans_per_team %>% filter(transfer_movement == "out")
 outp <- ggplot(data=loans_out, aes(x = reorder(club_name, num_loans), y = num_loans, label = num_loans)) + 
     geom_bar(stat="identity", color = "#38003c", fill="#e90052") + 
     coord_flip() + 
-    ggtitle("Chelsea (and the Big 6) sends them out", subtitle="Premier League loans out per team (1992 - 2018)") +
+    ggtitle("Loans In", subtitle="Premier League Top 20 Loaners (1992 - 2018)") +
     labs(color = "Transfer Movement", x = "\nClub", y = "\n# of Loans Out") +
     geom_text(size = 3, position = position_stack(vjust = 0.5)) + 
     theme(plot.title = element_text(face = "bold", color = "#38003c", margin = margin(10, 0, 10, 0)), 
@@ -143,7 +143,7 @@ outp <- ggplot(data=loans_out, aes(x = reorder(club_name, num_loans), y = num_lo
 inp <- ggplot(data=loans_in, aes(x = reorder(club_name, num_loans), y = num_loans, label = num_loans)) + 
     geom_bar(stat="identity", color = "#38003c", fill="#00ff85") + 
     coord_flip() + 
-    ggtitle("West Ham brings them in", subtitle=" ") +
+    ggtitle("Loans Out", subtitle=" ") +
     labs(color = "Transfer Movement", x = "\nClub", y = "\n# of Loans In") + 
     geom_text(size = 3, position = position_stack(vjust = 0.5)) + 
     theme(plot.title = element_text(face = "bold", color = "#38003c", margin = margin(10, 0, 10, 0)), 

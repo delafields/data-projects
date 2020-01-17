@@ -1,0 +1,57 @@
+---
+title: "The EPL's modern transfer market"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## The EPL's modern transfer market
+
+There's a lot to say about the soccer/football's current transfer market. An indisputable point is that transfer prices have blown through the roof.
+
+### The Data
+I forked the **transfer data** from [ewenme's](https://github.com/ewenme) awesome pre-scraped [repo](https://github.com/ewenme/transfers)(<- that data is from [Transfermarkt](https://www.transfermarkt.co.uk/)). I then scraped the **season-end results data** from Wikipedia. 
+
+Note that these both range from the 1992-93 season to the 2018-19 season. 1992-93 because that's the year the league was formally branded as the EPL and 2018-19 because that's the last complete year at the time of writing.
+
+All data can be found in my [epl-transfers repo](https://github.com/delafields/data-projects/tree/master/epl-transfers).
+
+Here's the kind of stuff you can quickly zip together with it:
+
+### Spend
+![](C:/Users/jfields/Desktop/Code/data-projects/epl-transfers/plots/total_spend_YoY.jpeg)
+
+👆 those figures are all inflation adjusted too. Shortly after the 2008-2009 crash the transfer market has spiked up.
+
+![](C:/Users/jfields/Desktop/Code/data-projects/epl-transfers/plots/position_spend_YoY.jpeg)
+
+These are definitely spikey due to big transfer splashes but in technical terms - the spikes are getting bigger. It's interesting to see the steady growth of the Centre-Back market which was probably proliferated through Liverpool's signing of Virgil van Djik.
+
+**Okay but did you improve by spending?**
+![](C:/Users/jfields/Desktop/Code/data-projects/epl-transfers/plots/spend_vs_rank.jpeg)
+
+This was more of an exercise in plotting but this can be read as follows:
+* The green circles represent ranks of amount spent, summed over 1992-2018.
+* The deep purple circles represent average position in the table.
+
+City's Avg Pos is a bit skewed due to both their historical "ok" performance and their more recent spending under owner Sheikh Mansour. United, Liverpool, and Arsenal show real consistency in both spend and performance. Chelsea gets a bit less bang for their buck. Sunderland really hasn't performed to the size of their pockets.
+
+
+### Loans
+
+By no means would I expect the monetary value of loans to have spiked tremendously (might be something worth exploring). What I was curious to see was the frequency of loans over time.
+
+![](C:/Users/jfields/Desktop/Code/data-projects/epl-transfers/plots/loans_YoY.jpeg)
+
+Interestingly enough, there is a fairly linear trend in loans out minus the drop from 2014 - 2016. I think the credit is due to one of two things 
+1. The constantly improving youth academies in the league; with loans being a great way to develop young talent. 
+2. With the explosion of transfer spend, loans become a way to offload players that haven't worked out.
+
+**Who's doing the loaning?**
+
+
+![](C:/Users/jfields/Desktop/Code/data-projects/epl-transfers/plots/loans_by_movementNteam.jpeg)
+
+No surprise that Chelsea and the Big 6 are at the top of the loan out chart, for the reasons I mentioned above. For loans in, there are a fair number of middle/lower end of the table clubs (no offense) (but offense meant for Stoke). This is probably due to their inability to make huge transfer splashes. 
