@@ -1,0 +1,186 @@
+---
+title: "EPL Transfer Analysis"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Who is getting their money's worth in the English Premier League?
+
+There's a lot to be said of the current world transfer market in football/soccer. An indisputable point is that transfer prices have soared through the roof. 
+
+I was curious to see what the trend looked like in the English Premier League (EPL) and furthermore - **who's investments have paid off**.
+
+### The Data
+I forked the **transfer data** from [@ewenme](https://github.com/ewenme)'s awesome pre-scraped [repo](https://github.com/ewenme/transfers)(<- that data is from [Transfermarkt](https://www.transfermarkt.co.uk/)). I then scraped the **season-end results data** from Wikipedia. Note that these both range from the 1992-93 season to the 2018-19 season. 92-93 because that's the year the league was formally branded as the EPL, and 18-19 because that's the last complete year at the time of writing.
+
+All data can be found in my [epl-transfers repo](https://github.com/delafields/data-projects/tree/master/epl-transfers).
+
+## Transfer Trends
+I first did some exploration around what the overall trend in terms of £'s spent looked like, just to get a feel for the data and formulate some ideas for analysis. Because my I was working with csv's for each year and I was feeling hacky, I looked for a quick way to row bind all of the files in a directory, to which I found this [0 upvoted SO](https://stackoverflow.com/questions/30242065/trying-to-merge-multiple-csv-files-in-r/30242347) workaround. 
+
+```{r}
+library(dplyr)
+
+multmerge = function(path){
+    filenames = list.files(path=path, full.names=TRUE)
+    
+    datalist = lapply(filenames, function(x){
+        read.csv(file = x, header = T)})
+    
+    Reduce(function(x, y) {merge(x, y, all = TRUE)}, datalist)
+}
+
+transfer_data <- multmerge("data/transfer-data")
+
+head(transfer_data)
+```
+
+We're clearly interested in `fee_cleaned` here. To see the overall trend, we'll have to group by year. First, we do some quick data cleaning: other than replacing na's, we should **negate** rows with `transfer_movement == "out"`, as we'll want to see spend in the positive axis:
+
+```{r}
+transfer_data <- transfer_data %>%
+    mutate(fee_cleaned = ifelse(is.na(fee_cleaned), 0, fee_cleaned), 
+           corrected_fee = ifelse(transfer_movement == "out", fee_cleaned * -1, fee_cleaned))
+
+spend_per_year  <- transfer_data %>% 
+    group_by(year) %>%
+    summarise(total_spend = sum(corrected_fee))
+```
+
+Let's give that a look with a quick lineplot:
+
+```{r message=FALSE}
+library(ggplot2)
+
+ggplot(spend_per_year, aes(year, y=total_spend)) +
+    geom_line()
+```
+
+Hm...That looks pretty absurd. How about we take inflation into account? I found a csv with pound inflation rates going back to '92 - we can use that to adjust `total_spend`.
+
+```{r}
+inflation <- read.csv(file = "data/Inflation_Adjustment.csv", fileEncoding="UTF-8-BOM")
+
+spend_per_year <- spend_per_year %>%
+    left_join(inflation, by = "year") %>%
+    mutate(inf_adj_spend = total_spend * (1 + .01 * inflation$Inflation))
+
+```
+
+After adding some flavor to the plot, that leaves us with:
+```{r}
+# calculate average spend
+avg_spend <- spend_per_year %>% 
+    summarize(Mean = mean(inf_adj_spend, na.rm=TRUE)) %>% 
+    pull()
+
+ggplot(spend_per_year, aes(x = year, y = inf_adj_spend)) +
+    geom_line(linetype = "solid", size=1, color = "#00ff85") +
+    geom_hline(yintercept = mean(spend_per_year$inf_adj_spend), color="#e90052", linetype="dashed") +
+    geom_text(aes(color="red"), x=1993, y=375, label="Avg Spend", show.legend = FALSE) +
+    ggtitle("The market is going UP",
+            subtitle = "Spend per year in the Prem (millions £)\n") +
+    labs(x = "\nYear", y = "Spend\n") + 
+    #scale_color_manual(values=c("#e90052", "#00ff85", "#ebfe05", "#38003c", "#500057")) + 
+    scale_x_continuous(breaks = pretty(spend_per_year$year, n = 10)) +
+    theme(text = element_text(family = "mono"),
+          plot.title = element_text(face = "bold", color = "#38003c", margin = margin(10, 0, 10, 0)),
+          axis.title.x = element_text(face = "bold"),
+          axis.title.y = element_text(face = "bold"),
+          axis.line.x = element_line(),
+          panel.grid.major = element_line(colour = "#e0e0e0", linetype = "dashed", size=0.1),
+          panel.grid.major.x = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.border = element_blank(), 
+          panel.background = element_blank(),
+          legend.title = element_text(face = "bold"),
+          legend.key=element_rect(fill='white'))
+
+```
+
+Inflation didn't make any negligible difference! As we expected, the market has really just shot up.
+
+In order to analyze the current market, it would be wise to set a cutoff date for it. From the chart above we can clearly see an upward trend starting in 2011, right after a steady crash in 2008 ([wonder why](https://en.wikipedia.org/wiki/Stock_market_crash#Crash_of_2008%E2%80%932009)). 
+
+Note that this also gives us the added benefit of not having to do a lot of work around promotion/relegation. 3 teams get sent up to the EPL from the Championship and vise versa every year, so we won't get as clean of reads for the clubs that tow the line.
+
+## So they spent. What did they get?
+
+First thing's first, we bring season end results tables scraped from Wikipedia. We'll also create a dataframe of transfers per year per team.
+```{r}
+results_data <- multmerge("data/epl-results")
+
+results_data
+
+grouped_transfer_data <- transfer_data %>%
+    left_join(inflation, by = "year") %>%
+    mutate(inf_adj_spend = corrected_fee * (1 + .01 * Inflation)) %>%
+    group_by(club_name, year) %>%
+    summarise(total_spend = sum(inf_adj_spend))
+```
+
+In order to join the results to the transfer data, we'll have to do some more data cleaning.
+
+```{r}
+library(stringr)
+
+# rename `club_name` to `Team` to match results
+grouped_transfer_data <- rename(grouped_transfer_data, Team = club_name)
+
+grouped_transfer_data <- grouped_transfer_data %>% 
+    ungroup(Team) %>%
+    mutate(Team = str_replace_all(Team, " FC", "")) %>%  # to match results names
+    mutate(Team = str_replace_all(Team, "AFC", "")) %>%  # to match results names
+    mutate(Team = trimws(Team))
+
+
+results_data <- results_data %>% 
+    mutate(year = substr(year, start = 1, stop = 4),        # trim year to just the first yyyy
+           year = as.numeric(year),
+           Team = str_replace_all(Team, " \\(\\S\\)", ""))  # remove the (C)'s and (R)'s from Team names
+
+    
+# join transfers to results
+data <- results_data %>% 
+    right_join(grouped_transfer_data, by = c("Team", "year")) %>%
+    arrange(year) %>%
+    filter(year >= 2011) # our cutoff
+
+head(data)
+```
+
+To be able to see how teams results changed as an effect of their spend, we'll create a few new features: WinChange, LossChange, GFChange, GAChange, and PtsChange.
+
+```{r message=FALSE}
+# convert year back to date for YoY and Pts to numeric
+data <- data %>% 
+    mutate(year = as.Date(ISOdate(year, 1, 1)), Pts = as.numeric(Pts))
+
+# calc YoY points change
+data <- data %>% group_by(Team) %>%
+    arrange(year) %>%
+    mutate(WinChange  = W   - lag(W, 1),
+           LossChange = L   - lag(L, 1),
+           PtsChange  = Pts - lag(Pts, 1),
+           GFChange   = GF  - lag(GF, 1),
+           GAChange   = GA  - lag(GA, 1))
+```
+
+
+And ultimately, because we're concered about the effects of spend, a few more features. We'll divide all of our `{}Change` features by total spend to get how many Pts per million, Wins per million, etc. were gained.
+
+```{r}
+data <- data %>%
+    mutate(WinChangePerMill  = WinChange  / total_spend,
+           LossChangePerMill = LossChange / total_spend,
+           PtsChangePerMill  = PtsChange  / total_spend,
+           GFChangePerMill   = GFChange   / total_spend,
+           GAChangePerMill   = GAChange   / total_spend)
+```
+
+
+
+
