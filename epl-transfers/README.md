@@ -1,6 +1,8 @@
 # EPL TRANSFERS ⚽
 
-Data on English Premier League transfers and season-end position from the 1992-93 season through 2018-19. Season-end tables scraped from wikipedia. Transfer data from [@ewenme](https://github.com/ewenme)'s awesome pre-scraped [repo](https://github.com/ewenme/transfers) (<- that data is from [Transfermarkt](https://www.transfermarkt.co.uk/)).
+Data on English Premier League transfers and season-end position from the 1992-93 season through 2018-19. Season-end tables scraped from wikipedia. Transfer data from [@ewenme](https://github.com/ewenme)'s awesome [repo](https://github.com/ewenme/transfers) (<- that data is from [Transfermarkt](https://www.transfermarkt.co.uk/)).
+
+A brief visual analysis can be found in the [Overall Analysis](OverallAnalysis.md) file.
 
 See [epl_table_scraper.r]('epl_scraper.r') for the results-table scraper code.
 
