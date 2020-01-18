@@ -1,7 +1,5 @@
 library(dplyr)
-library(showtext)
 library(ggplot2)
-library(cowplot)
 library(plotly)
 
 # merges multiple csvs together
@@ -38,7 +36,7 @@ grouped_data <- grouped_data %>%
     mutate(inf_adj_spend = total_spend * (1 + .01 * Inflation))
 
 # double checking the spend
-QC <- grouped_data %>% group_by(position) %>% summarise(sum(inf_adj_spend))
+# QC <- grouped_data %>% group_by(position) %>% summarise(sum(inf_adj_spend))
 
 # calc average spend
 avg_spend <- grouped_data %>% 
@@ -50,39 +48,28 @@ avg_spend <- pull(avg_spend)
 # PLOTTING #
 ############
 
-## Loading Google fonts (http://www.google.com/fonts)
-font_add_google("Poppins", "poppins")
+windowsFonts(poppins = windowsFont("Poppins"))
 
-## Automatically use showtext to render text for future devices
-showtext_auto()
 
-## Plotting functions as usual
-## Open a graphics device if you want, e.g.
-## png("demo.png", 700, 600, res = 96)
-## If you want to show the graph in a window device,
-## remember to manually open one in RStudio
-## See the "Known Issues" section
-windows()
-
-# function for creating multiple plots
-ggplot(grouped_data, aes(x = year, y = inf_adj_spend)) +
+p <- ggplot(grouped_data, aes(x = year, y = inf_adj_spend)) +
     geom_line(linetype = "solid", size=1, color = "#00ff85") +
     geom_hline(yintercept = mean(grouped_data$inf_adj_spend), color="#e90052", linetype="dashed") +
-    geom_text(aes(color="red"), x=1993, y=375, label="Avg Spend", show.legend = FALSE) +
     ggtitle("The market is going UP",
             subtitle = "Spend per year in the Prem (millions £)\n") +
     labs(x = "\nYear", y = "Spend\n") + 
-    #scale_color_manual(values=c("#e90052", "#00ff85", "#ebfe05", "#38003c", "#500057")) + 
     scale_x_continuous(breaks = pretty(grouped_data$year, n = 10)) +
     theme(text = element_text(family = "poppins"),
-          plot.title = element_text(face = "bold", color = "#38003c", margin = margin(10, 0, 10, 0)),
-          axis.title.x = element_text(face = "bold"),
-          axis.title.y = element_text(face = "bold"),
+          plot.title = element_text(face = "bold", color = "#38003c", size = 8),
+          plot.subtitle = element_text(size = 5),
+          axis.title = element_text(face = "bold", size = 8),
           axis.line.x = element_line(),
+          axis.text = element_text(size = 5),
+          axis.ticks = element_blank(),
           panel.grid.major = element_line(colour = "#e0e0e0", linetype = "dashed", size=0.1),
           panel.grid.major.x = element_blank(),
           panel.grid.minor = element_blank(),
           panel.border = element_blank(), 
-          panel.background = element_blank(),
-          legend.title = element_text(face = "bold"),
-          legend.key=element_rect(fill='white')) 
+          panel.background = element_blank()) 
+
+
+ggsave("total_spend_YoY.png", p, width = 4, height = 3)

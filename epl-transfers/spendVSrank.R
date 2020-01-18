@@ -2,7 +2,6 @@ library(dplyr)
 library(ggplot2)
 library(stringr)
 library(ggalt)
-library(showtext)
 
 # merges multiple csvs together
 multmerge = function(path){
@@ -83,19 +82,7 @@ data <- grouped_results_data %>%
 # PLOTTING #
 ############
 
-## Loading Google fonts (http://www.google.com/fonts)
-font_add_google("Poppins", "poppins")
-
-## Automatically use showtext to render text for future devices
-showtext_auto()
-
-## Plotting functions as usual
-## Open a graphics device if you want, e.g.
-## png("demo.png", 700, 600, res = 96)
-## If you want to show the graph in a window device,
-## remember to manually open one in RStudio
-## See the "Known Issues" section
-windows()
+windowsFonts(poppins = windowsFont("Poppins"))
 
 
 # Sort by spend rank and create a Team factor for ordering
@@ -103,35 +90,43 @@ data <- data %>% arrange(desc(spend_rank))
 
 data$Team <- factor(data$Team, levels=as.character(data$Team))
 
+
 # Spend Rank vs. Average Position plot
-ggplot(data, aes(x=avg_Pos, xend=spend_rank, y=Team)) + 
+p <- ggplot(data, aes(x=avg_Pos, xend=spend_rank, y=Team)) + 
     #create a line between x and xend
-    geom_segment(aes(x=avg_Pos, xend=spend_rank, y=Team, yend=Team), color="black", size=1) +
+    geom_segment(aes(x=avg_Pos, xend=spend_rank, y=Team, yend=Team), color="black", size=0.5) +
     # create dumbbells
-    geom_dumbbell(color=NA, size_x=6, size_xend = 6, colour_x="#38003c",  colour_xend = "#00ff85") +
+    geom_dumbbell(color=NA, size_x=3, size_xend = 3, colour_x="#38003c",  colour_xend = "#00ff85") +
     # label rankings
-    geom_text(aes(x=avg_Pos, label=avg_Pos, fontface="bold"), color="white", size=3) +
-    geom_text(aes(x=spend_rank, label=spend_rank, fontface="bold"), color="black", size=3) + 
+    geom_text(aes(x=avg_Pos, label=avg_Pos, fontface="bold"), color="white", size=1.5) +
+    geom_text(aes(x=spend_rank, label=spend_rank, fontface="bold"), color="black", size=1.5) + 
     # create a dummy legend
     # Spend Rank
-    geom_rect(aes(xmin = 12.25, xmax = 13.75, ymin = 8.5, ymax = 9),
+    geom_rect(aes(xmin = 12.25, xmax = 14, ymin = 8.5, ymax = 9),
               fill = "#00ff85", color = "#00ff85", size = 1.5) + 
-    annotate(geom="text", x=13, y=8.8, label="Spend Rank") + 
+    annotate(geom="text", x=13.15, y=8.8, label="Spend Rank", size = 1.5) + 
     # Average Position
-    geom_rect(aes(xmin = 12.25, xmax = 13.75, ymin = 8, ymax = 8.5),
+    geom_rect(aes(xmin = 12.25, xmax = 14, ymin = 8, ymax = 8.4),
               fill = "#38003c", color = "#38003c", size = 1.5) + 
-    annotate(geom="text", x=13, y=8.25, label="Avg Pos", color="white") +
+    annotate(geom="text", x=13.15, y=8.25, label="Avg Pos", color="white", size = 1.5) +
     labs(x="\nPosition", y=NULL,  
          title="Buying wins?", 
          subtitle="Transfer Budget vs. Average Table Position (1992-2018)") +
     scale_x_continuous(breaks=seq(1,15, by=2)) + 
     theme(text = element_text(family = "poppins"),
-          plot.title = element_text(face = "bold", color = "#38003c"),
+          plot.title = element_text(face = "bold", color = "#38003c", size = 8),
+          plot.subtitle = element_text(size = 5),
           plot.margin = margin(10, 10, 10, 30),
-          axis.title.x = element_text(face = "bold"),
+          axis.title.x = element_text(face = "bold", size = 5),
+          axis.text = element_text(size = 5),
+          axis.ticks = element_blank(),
           panel.background = element_blank(),
           panel.grid.major = element_line(colour = "#e0e0e0", linetype = "dashed", size=0.1),
-          axis.title.y = element_text(face = "bold"))
+          panel.grid.major.y = element_blank())
+
+
+
+ggsave("plots/spend_vs_rank.png", p, width = 4, height = 3)
 
 
 ## failed animation

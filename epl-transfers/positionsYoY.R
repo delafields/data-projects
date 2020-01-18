@@ -1,8 +1,6 @@
 library(dplyr)
-library(showtext)
 library(ggplot2)
 library(cowplot)
-library(plotly)
 
 # merges multiple csvs together
 multmerge = function(path){
@@ -38,7 +36,7 @@ grouped_data <- grouped_data %>%
     mutate(inf_adj_spend = total_spend * (1 + .01 * Inflation))
 
 # double checking the spend
-QC <- grouped_data %>% group_by(position) %>% summarise(sum(inf_adj_spend))
+# QC <- grouped_data %>% group_by(position) %>% summarise(sum(inf_adj_spend))
 
 # Adding positional grouping
 Midfield <- c("Attacking Midfield", "Defensive Midfield", "Midfielder", 
@@ -64,41 +62,34 @@ grouped_data <- rename(grouped_data, Position = position)
 # PLOTTING #
 ############
 
-## Loading Google fonts (http://www.google.com/fonts)
-font_add_google("Poppins", "poppins")
+windowsFonts(poppins = windowsFont("Poppins"))
 
-## Automatically use showtext to render text for future devices
-showtext_auto()
-
-## Plotting functions as usual
-## Open a graphics device if you want, e.g.
-## png("demo.png", 700, 600, res = 96)
-## If you want to show the graph in a window device,
-## remember to manually open one in RStudio
-## See the "Known Issues" section
-windows()
 
 # function for creating multiple plots
 lineplotter <- function(df_group) {
     ggplot(df_group, aes(x = year, y = total_spend)) +
-        geom_line(aes(color = Position), linetype = "solid", size=1) +
+        geom_line(aes(color = Position), linetype = "solid", size=0.5) +
         ggtitle("People in the Center are getting PAID",
                 subtitle = "Spend per position in the Prem (millions £)\n") +
         labs(x = "\nYear") + 
         scale_color_manual(values=c("#04f5ff", "#e90052", "#00ff85", "#ebfe05", "#38003c", "#500057")) + 
-        scale_x_continuous(breaks = pretty(df_group$year, n = 10)) +
+        scale_x_continuous(breaks = pretty(df_group$year, n = 8)) +
         ylim(-125, 275) +
         theme(text = element_text(family = "poppins"),
-              plot.title = element_text(face = "bold", color = "#38003c", margin = margin(10, 0, 10, 0)),
-              axis.title.x = element_text(face = "bold"),
-              axis.title.y = element_text(face = "bold"),
+              plot.title = element_text(face = "bold", color = "#38003c", size = 8),
+              plot.subtitle = element_text(size = 5),
+              axis.title = element_text(face = "bold", size = 8),
+              axis.text = element_text(size = 5),
               axis.line.x = element_line(),
+              axis.ticks = element_blank(),
               panel.grid.major = element_line(colour = "#e0e0e0", linetype = "dashed", size=0.1),
               panel.grid.major.x = element_blank(),
               panel.grid.minor = element_blank(),
               panel.border = element_blank(), 
               panel.background = element_blank(),
-              legend.title = element_text(face = "bold"),
+              legend.title = element_text(face = "bold", size = 5),
+              legend.text  = element_text(size = 4),
+              legend.key.size  = unit(0.25, 'cm'),
               legend.key=element_rect(fill='white')) 
 }
 
@@ -107,17 +98,18 @@ fwd_plot <- lineplotter(grouped_data %>% filter(pos_group == 'Forward'))
 def_plot <- lineplotter(grouped_data %>% filter(pos_group == 'Defense'))
 
 
-plot_grid(fwd_plot + labs(color="Attack") +
-              theme(axis.title.x = element_blank(),
-                    axis.title.y = element_blank()), 
-          mf_plot + labs(color="Midfield") +
-              theme(axis.title.x = element_blank(),
-                    axis.title.y = element_blank(),
-                    plot.title = element_blank(),
-                    plot.subtitle = element_blank()), 
-          def_plot + labs(color="Defense") +
-              theme(axis.title.y = element_blank(),
-                    plot.title = element_blank(),
-                    plot.subtitle = element_blank()),  
-          ncol = 1, 
-          align = "v")
+p <- plot_grid(fwd_plot + labs(color="Attack") +
+                   theme(axis.title.x = element_blank(),
+                         axis.title.y = element_blank()), 
+              mf_plot + labs(color="Midfield") +
+                  theme(axis.title.x = element_blank(),
+                        axis.title.y = element_blank(),
+                        plot.title = element_blank(),
+                        plot.subtitle = element_blank()), 
+              def_plot + labs(color="Defense") +
+                  theme(axis.title.y = element_blank(),
+                        plot.title = element_blank(),
+                        plot.subtitle = element_blank()),  
+              ncol = 1, align = "v", rel_heights = c(1, 0.75, 1))
+
+ggsave("position_spend_YoY.png", p, width = 4, height = 3.5)

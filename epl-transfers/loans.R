@@ -1,7 +1,6 @@
 library(dplyr)
 library(ggplot2)
 library(stringr)
-library(showtext)
 library(cowplot)
 
 # merges multiple csvs together
@@ -62,60 +61,66 @@ loans_per_team <- loans_per_team %>%
 # PLOTTING #
 ############
 
-## Loading Google fonts (http://www.google.com/fonts)
-font_add_google("Poppins", "poppins")
-
-## Automatically use showtext to render text for future devices
-showtext_auto()
-
-## Plotting functions as usual
-## Open a graphics device if you want, e.g.
-## png("demo.png", 700, 600, res = 96)
-## If you want to show the graph in a window device,
-## remember to manually open one in RStudio
-## See the "Known Issues" section
-windows()
-
+windowsFonts(poppins = windowsFont("Poppins"))
 
 # Loans per year plot
-ggplot(loans_per_year, aes(year, num_loans, group=transfer_movement, color=transfer_movement)) + 
-    geom_line(size = 1.5) + 
+lpy <- ggplot(loans_per_year, aes(year, num_loans, group=transfer_movement, color=transfer_movement)) + 
+    geom_line(size = 1) + 
     ggtitle("Out on loan", subtitle="Premier League loans in & loans out (1992 - 2018)") +
-    labs(color = "Transfer Movement", x = "\nYear", y = "# of Loans\n") +
+    labs(color = "Transfer Movement   ", x = "\nYear", y = "# of Loans\n") +
     scale_y_continuous(breaks = pretty(loans_per_year$num_loans, n = 10)) + 
     scale_x_continuous(breaks = pretty(loans_per_year$year, n = 10)) + 
     scale_color_manual(values = c("#00ff85", "#e90052")) + 
     theme(text = element_text(family = "poppins"), 
-          plot.title = element_text(face = "bold", color = "#38003c", margin = margin(10, 0, 10, 0)), 
-          axis.title.x = element_text(face = "bold"),
-          axis.title.y = element_text(face = "bold"),,
+          plot.title = element_text(face = "bold", color = "#38003c", size = 8),
+          plot.subtitle = element_text(size = 5),
+          axis.title = element_text(face = "bold", size = 8),
+          axis.text = element_text(size = 5),
+          axis.ticks = element_blank(),
           panel.background = element_rect(fill = 'white'),
           panel.grid.major = element_line(colour = "#e0e0e0", linetype = "dashed", size=0.1),
+          panel.grid.major.x = element_blank(),
           panel.grid.minor = element_blank(),
           legend.position = c(0.2, 0.75),
           legend.background = element_rect(linetype="solid", color = "black"),
-          legend.key=element_rect(fill='white'))
+          legend.key=element_rect(fill='white'),
+          legend.title = element_text(face = "bold", size = 5),
+          legend.key.size  = unit(0.25, 'cm'),
+          legend.text  = element_text(size = 5))
 
+lpy
+
+ggsave("loans_YoY.png", lpy, width = 4, height = 3)
 
 # Loans per team plot
-ggplot(data=loans_per_team, aes(x = reorder(club_name, num_loans), y = num_loans, fill=transfer_movement, label = num_loans)) + 
-    geom_bar(stat="identity", color = "#38003c") + 
+lpt <- ggplot(data=loans_per_team, aes(x = reorder(club_name, num_loans), y = num_loans, fill=transfer_movement, label = num_loans)) + 
+    geom_bar(stat="identity", color = "#38003c", size = 0.5) + 
     coord_flip() + 
-    geom_text(size = 3, position = position_stack(vjust = 0.5)) +
+    geom_text(size = 2, position = position_stack(vjust = 0.5)) +
     ggtitle("Chelsea leads the way", subtitle="Premier League loans per team (1992 - 2018)") +
-    labs(x = "Club\n", y = "\n# of Loans", fill="Transfer Movement") +
+    labs(x = "Club", y = "# of Loans", fill="Transfer Movement") +
     scale_fill_manual(values = c("#00ff85", "#e90052")) + 
-    theme(plot.title = element_text(face = "bold", color = "#38003c", margin = margin(10, 0, 10, 0)), 
-          axis.title.x = element_text(face = "bold"),
-          axis.title.y = element_text(face = "bold"),
-          text = element_text(family = "poppins"),
+    theme(text = element_text(family = "poppins"),
+          plot.title = element_text(face = "bold", color = "#38003c", size = 8),
+          plot.subtitle = element_text(size = 6),
+          axis.title = element_text(face = "bold", size = 8),
+          axis.text = element_text(size = 5),
+          axis.ticks = element_blank(),
+          axis.title.y = element_blank(),
           panel.background = element_rect(fill = 'white'),
           panel.grid.major = element_line(colour = "#e0e0e0", linetype = "dashed", size=0.1),
           panel.grid.major.y = element_blank(),
           panel.grid.minor = element_blank(),
-          legend.position = c(0.9, 0.2),
+          legend.position = c(0.7, 0.2),
           legend.background = element_rect(linetype="solid", color = "black"),
-          legend.key=element_rect(fill='white'))
+          legend.key=element_rect(fill='white'),
+          legend.title = element_text(face = "bold", size = 5),
+          legend.key.size  = unit(0.25, 'cm'),
+          legend.text  = element_text(size = 5))
+
+lpt
+
+ggsave("loans_per_team.png", lpt, width = 4, height = 3)
 
 
 # Loans per team by transfer movement
@@ -123,40 +128,49 @@ loans_in <- loans_per_team %>% filter(transfer_movement == "in")
 loans_out <- loans_per_team %>% filter(transfer_movement == "out")
 
 outp <- ggplot(data=loans_out, aes(x = reorder(club_name, num_loans), y = num_loans, label = num_loans)) + 
-    geom_bar(stat="identity", color = "#38003c", fill="#e90052") + 
+    geom_bar(stat="identity", color = "#38003c", fill="#e90052", size = 0.5) + 
     coord_flip() + 
-    ggtitle("Loans In", subtitle="Premier League Top 20 Loaners (1992 - 2018)") +
+    ggtitle("Loans In", subtitle="EPL Top 20 Loaners") +
     labs(color = "Transfer Movement", x = "\nClub", y = "\n# of Loans Out") +
-    geom_text(size = 3, position = position_stack(vjust = 0.5)) + 
-    theme(plot.title = element_text(face = "bold", color = "#38003c", margin = margin(10, 0, 10, 0)), 
-          axis.title.x = element_text(face = "bold"),
-          axis.title.y = element_text(face = "bold"),
-          text = element_text(family = "poppins"),
+    geom_text(size = 2, position = position_stack(vjust = 0.5)) + 
+    theme(text = element_text(family = "poppins"),
+          plot.title = element_text(face = "bold", color = "#38003c", size = 8),
+          plot.subtitle = element_text(size = 5),
+          axis.title = element_blank(),
+          axis.text = element_text(size = 5),
+          axis.ticks = element_blank(),
           panel.background = element_rect(fill = 'white'),
           panel.grid.major = element_line(colour = "#e0e0e0", linetype = "dashed", size=0.1),
           panel.grid.major.y = element_blank(),
           panel.grid.minor = element_blank(),
           legend.position = c(0.9, 0.2),
-          legend.background = element_rect(linetype="solid", color = "black"),
+          legend.title = element_text(face = "bold", size = 5),
+          legend.text  = element_text(size = 4),
+          legend.key.size  = unit(0.25, 'cm'),
           legend.key=element_rect(fill='white'))
 
 inp <- ggplot(data=loans_in, aes(x = reorder(club_name, num_loans), y = num_loans, label = num_loans)) + 
-    geom_bar(stat="identity", color = "#38003c", fill="#00ff85") + 
+    geom_bar(stat="identity", color = "#38003c", fill="#00ff85", size = 0.5) + 
     coord_flip() + 
     ggtitle("Loans Out", subtitle=" ") +
     labs(color = "Transfer Movement", x = "\nClub", y = "\n# of Loans In") + 
-    geom_text(size = 3, position = position_stack(vjust = 0.5)) + 
-    theme(plot.title = element_text(face = "bold", color = "#38003c", margin = margin(10, 0, 10, 0)), 
-          axis.title.x = element_text(face = "bold"),
-          axis.title.y = element_text(face = "bold"),
-          text = element_text(family = "poppins"),
+    geom_text(size = 2, position = position_stack(vjust = 0.5)) + 
+    theme(text = element_text(family = "poppins"),
+          plot.title = element_text(face = "bold", color = "#38003c", size = 8),
+          plot.subtitle = element_text(size = 5),
+          axis.title = element_blank(),
+          axis.text = element_text(size = 5),
+          axis.ticks = element_blank(),
           panel.background = element_rect(fill = 'white'),
           panel.grid.major = element_line(colour = "#e0e0e0", linetype = "dashed", size=0.1),
           panel.grid.major.y = element_blank(),
           panel.grid.minor = element_blank(),
           legend.position = c(0.9, 0.2),
-          legend.background = element_rect(linetype="solid", color = "black"),
+          legend.title = element_text(face = "bold", size = 5),
+          legend.text  = element_text(size = 4),
+          legend.key.size  = unit(0.25, 'cm'),
           legend.key=element_rect(fill='white'))
 
-plot_grid(outp, inp + theme(axis.title.y = element_blank()),
-          ncol=2)
+split <- plot_grid(outp, inp, ncol=2)
+
+ggsave("loans_by_movementNteam.png", split, width = 4, height = 3.5)
