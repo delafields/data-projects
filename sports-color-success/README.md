@@ -17,4 +17,5 @@ Working files
 * scrape colors
 * scrape results
 * clean names
+* add to overall README and portfolio
 * do analysis
