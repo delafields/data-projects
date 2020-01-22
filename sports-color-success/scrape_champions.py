@@ -1,60 +1,81 @@
-import requests
 import pandas as pd
-from bs4 import BeautifulSoup
 import re
+from helpers import get_soup, championship_urls
 
-championship_urls {
-    "NFL": ["https://en.wikipedia.org/wiki/List_of_Super_Bowl_champions",
-            "#mw-content-text > div > table:nth-child(35)"]
-    "NBA": ["https://en.wikipedia.org/wiki/List_of_NBA_champions",
-            "#mw-content-text > div > table:nth-child(13)"]
-    "MLB": ["https://en.wikipedia.org/wiki/List_of_World_Series_champions",
-            "#mw-content-text > div > table:nth-child(21)"]
-    "NHL": ["https://en.wikipedia.org/wiki/List_of_Stanley_Cup_champions",
-            "#mw-content-text > div > table:nth-child(44)"]
-    "EPL": ["https://en.wikipedia.org/wiki/List_of_English_football_champions",
-            "#mw-content-text > div > table:nth-child(17)"]
-    "La Liga": ["https://en.wikipedia.org/wiki/List_of_Spanish_football_champions",
-            "#mw-content-text > div > table.sortable.plainrowheaders.wikitable.jquery-tablesorter"]
-    "Serie A": ["https://en.wikipedia.org/wiki/List_of_Italian_football_champions",
-            "#mw-content-text > div > table.wikitable.plainrowheaders"]
-    "NCAAF": ["https://www.ncaa.com/history/football/fbs",
-            "#ncaa-root > div > article > div > div > div > table"]
-    "NCAAB":  ["https://www.ncaa.com/history/basketball-men/d1",
-            "#ncaa-root > div > article > div > div > div > table"]
-}
+def get_champs_table(league):
+        print(f"Workin on {league}")
 
+        url = championship_urls[league][0]
+        selector = championship_urls[league][1]
 
+        soup = get_soup(url)
 
-#table = soup.find_all('table')[0] 
-#df = pd.read_html(str(table))
+        if league == "La Liga":
+                champ_table = soup.find_all("table", {"class": selector})[-1]
+        else:
+                champ_table = soup.select_one(selector)
+                
+                
+        champ_df = pd.read_html(str(champ_table))[0]
+        champ_df["League"] = league
 
-def get_soup(url = ''):
-    '''Open a webpage and return a BeautifulSoup object'''
-    try:
-        headers = {'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36'}
-        page = requests.get(url, headers = headers, timeout = 5)
-    except requests.ConnectionError as e:
-        print("Connection Error. Make sure you are connected to Internet. Technical Details given below.\n")
-        print(str(e))
-    except requests.Timeout as e:
-        print("Timeout Error")
-        print(str(e))
+        league = league.replace(" ", "")
 
-    # parse the html using beautiful soup and store in variable `soup`
-    print('pulling the html')
-    soup = BeautifulSoup(page.text, 'html.parser')
+        return champ_df
 
-    return soup
+# SERIE A DONE
+# champ_df = get_champs_table(league = "Serie A")[["Club", "Champions", "League"]]
+# champ_df = champ_df.rename(columns = {"Club": "Team", "Champions": "Wins"})
+# champ_df = champ_df.replace({"Milan": "A.C. Milan", "Internazionale": "Inter Milan", "Roma": "A.S. Roma"}) # don't have many colors
 
-team_colors = pd.DataFrame(columns = ['Team', 'Championships'])
+# LA LIGA DONE
+# champ_df = get_champs_table(league = "La Liga")[["Club", "Winners", "League"]]
+# champ_df = champ_df.rename(columns = {"Club": "Team", "Winners": "Wins"})
+# champ_df = champ_df.replace({"Real Madrid": "Real Madrid CF", "Barcelona": "Barcelona FC", "Atlético Madrid": "Atletico Madrid",
+#                              "Valencia": "Valencia CF", "Deportivo La Coruña": "Deportivo"})
 
-temp = get_soup(nfl_champs_url)
+# EPL DONE
+# champ_df = get_champs_table(league = "EPL")[["Club", "Winners", "League"]]
+# champ_df = champ_df.rename(columns = {"Club": "Team", "Winners": "Wins"})
+# champ_df = champ_df.replace({"Everton FC": "Everton", "Newcastle United": "Newcastle United FC", 
+#                              "Wolverhampton Wanderers": "Wolverhampton", "Watford": "Watford FC",
+#                              "Southampton": "Southampton FC"})
 
-#temp = temp.find_all("table")
+# NHL DONE
+# champ_df = get_champs_table(league = "NHL")[["Team", "Wins", "League"]]
+# champ_df["Team"] = champ_df["Team"].str.replace(r"\[.\]", "")
 
-#print(temp[3].prettify())
+# MLB DONE
+# champ_df = get_champs_table(league = "MLB")[["Team", "Wins", "League"]]
+# champ_df = champ_df.replace({"New York/San Francisco GiantsNY until 1957, SF 1958-present": "San Francisco Giants",
+#                              "Brooklyn/Los Angeles DodgersBKN until 1957, LA 1958-present": "Los Angeles Dodgers",
+#                              "Philadelphia/Kansas City/Oakland AthleticsPHI until 1954, KC 1955-1967, OAK 1968-present": "Oakland Athletics",
+#                              "Boston/Milwaukee/Atlanta BravesBOS until 1952, MIL 1953-1965, ATL 1966-present": "Atlanta Braves",
+#                              "St. Louis Browns/Baltimore OriolesSTL until 1953, BAL 1954-present": "Baltimore Orioles",
+#                              "Washington Senators/Minnesota TwinsWSH until 1960, MIN 1961-present": "Minnesota Twins",
+#                              "Washington Senators/Texas Rangers WSH until 1971, TEX 1972-present": "Texas Rangers",
+#                              "Montreal Expos/Washington Nationals MTL until 2004, WSH 2005-present": "Washington Nationals",
+#                              "Seattle Pilots/Milwaukee Brewers SEA 1969, MIL 1970-present": "Milwaukee Brewers"})
 
-ok = temp.select_one('#mw-content-text > div > table:nth-child(35)')
+# NBA DONE
+# champ_df = get_champs_table(league = "NBA")[["Teams", "Win", "League"]]
+# champ_df = champ_df.rename(columns = {"Teams": "Team", "Win": "Wins"})
+# champ_df["Team"] = champ_df["Team"].str.replace(r"\[.*\]", "")
+# champ_df["Wins"] = champ_df["Wins"].replace("—", 0)
 
-print(ok.prettify())
+# NFL DONE
+# champ_df = get_champs_table(league = "NFL")[["Team", "Wins", "League"]]
+# champ_df = champ_df[: -1] # remove last header row
+# champ_df["Team"] = champ_df["Team"].str.replace(r"\[.*\]", "") # get rid of bracketed numbers
+# champ_df["Team"] = champ_df["Team"].str.rstrip(r"(N|n|A|a)")   # get rid of text artifacts
+# champ_df = champ_df.replace({"Boston/New England Patriots": "New England Patriots",
+#                              "Oakland/Los Angeles Raiders": "Oakland Raiders",
+#                              "Baltimore/Indianapolis Colts": "Indianapolis Colts",
+#                              "St. Louis/Los Angeles Rams": "Los Angeles Rams",
+#                              "San Diego/Los Angeles Chargers": "Los Angeles Chargers",
+#                              "Houston/Tennessee Oilers/Titans": "Tennessee Titans",
+#                              "St. Louis/Phoenix/Arizona Cardinals": "Arizona Cardinals"})
+
+print(champ_df)
+
+#champ_df.to_csv(f"data/{league}_Champions.csv", index = False)
