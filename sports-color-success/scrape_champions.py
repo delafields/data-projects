@@ -31,7 +31,7 @@ for league in championship_urls:
                 champ_df = champ_df.replace({"Milan": "A.C. Milan", 
                                              "Internazionale": "Inter Milan", 
                                              "Roma": "A.S. Roma"})
-                                             
+
                 league = league.replace(" ", "")
                 champ_df.to_csv(f"data/{league}_Champions.csv", index = False)
 
@@ -100,6 +100,3 @@ for league in championship_urls:
                                              "St. Louis/Phoenix/Arizona Cardinals": "Arizona Cardinals"})
 
                 champ_df.to_csv(f"data/{league}_Champions.csv", index = False)
-
-
-#champ_df.to_csv(f"data/{league}_Champions.csv", index = False)

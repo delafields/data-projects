@@ -1,6 +1,7 @@
 import pandas as pd
 import re
 from helpers import get_soup, color_urls
+import webcolors
 
 def extract_colors(url, league):
 
@@ -26,6 +27,17 @@ def extract_colors(url, league):
         else:
             secondary = secondary_temp[0][-7:]
 
+        # edge cases
+        if primary == "#024":  primary = "#002244"
+        elif primary == "#000": primary = "#000000"
+        elif primary == "#111": primary = "#111111"
+        
+        if secondary == "#fff": secondary = "#ffffff"
+        elif secondary == "#000; c": secondary = "#000000"
+        elif secondary == " #FC4C0": secondary = "#FC4C00"
+        elif secondary == "#fff; c": secondary = "#ffffff"
+        elif secondary == "black; ": secondary = "#000000"
+
         team_colors.loc[len(team_colors)] = [Team, primary, secondary, league]
 
 team_colors = pd.DataFrame(columns = ["Team", "Primary Color", "Secondary Color", "League"])
@@ -40,6 +52,26 @@ for league in color_urls:
 
     extract_colors(url, league_name)
 
+# https://stackoverflow.com/questions/9694165/convert-rgb-color-to-english-color-name-like-green-with-python
+def get_color_name(hex_code):
+
+    # convert hex to an rgb triplet
+    hex_code = hex_code[1: ]
+    red, green, blue = bytes.fromhex(hex_code)
+    rgb_triplet = (red, green, blue)
+
+    min_colors = {}
+    for key, name in webcolors.css3_hex_to_names.items():
+        r_c, g_c, b_c = webcolors.hex_to_rgb(key)
+        rd = (r_c - rgb_triplet[0]) ** 2
+        gd = (g_c - rgb_triplet[1]) ** 2
+        bd = (b_c - rgb_triplet[2]) ** 2
+        min_colors[(rd + gd + bd)] = name
+    return min_colors[min(min_colors.keys())]
+
+# get the color name for each hex code
+team_colors["Primary Name"] = team_colors["Primary Color"].apply(lambda c: get_color_name(c))
+team_colors["Secondary Name"] = team_colors["Secondary Color"].apply(lambda c: get_color_name(c))    
 
 team_colors.to_csv("data/team_colors.csv", index = False)
 
