@@ -4,6 +4,8 @@ Data on English Premier League transfers and season-end position from the 1992-9
 
 A brief visual analysis can be found in the [Overall Analysis](OverallAnalysis.md) file.
 
+An in depth analysis of the modern transfer market can be found in the [Analysis](Analysis.md) file.
+
 See [epl_table_scraper.r]('epl_scraper.r') for the results-table scraper code.
 
 ## Data
