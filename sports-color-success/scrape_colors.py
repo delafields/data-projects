@@ -2,6 +2,8 @@ import pandas as pd
 import re
 from helpers import get_soup, color_urls
 import webcolors
+import wolframalpha
+from secret import app_id
 
 def extract_colors(url, league):
 
@@ -40,7 +42,7 @@ def extract_colors(url, league):
 
         team_colors.loc[len(team_colors)] = [Team, primary, secondary, league]
 
-team_colors = pd.DataFrame(columns = ["Team", "Primary Color", "Secondary Color", "League"])
+team_colors = pd.DataFrame(columns = ["Team", "hex_Primary_Color", "hex_Secondary_Color", "League"])
 
 # loop through each league, grab the html and extract the colors
 for league in color_urls:
@@ -69,9 +71,65 @@ def get_color_name(hex_code):
         min_colors[(rd + gd + bd)] = name
     return min_colors[min(min_colors.keys())]
 
-# get the color name for each hex code
-team_colors["Primary Name"] = team_colors["Primary Color"].apply(lambda c: get_color_name(c))
-team_colors["Secondary Name"] = team_colors["Secondary Color"].apply(lambda c: get_color_name(c))    
+# get the color name for each hex code from the `webcolors` package
+team_colors["wc_Primary_Name"] = team_colors["hex_Primary_Color"].apply(lambda c: get_color_name(c))
+team_colors["wc_Secondary_Name"] = team_colors["hex_Secondary_Color"].apply(lambda c: get_color_name(c))
+
+# finds the nth occurence of a character
+# https://stackoverflow.com/questions/1883980/find-the-nth-occurrence-of-substring-in-a-string
+def find_nth(haystack, needle, n):
+    start = haystack.find(needle)
+    while start >= 0 and n > 1:
+        start = haystack.find(needle, start+len(needle))
+        n -= 1
+    return start
+
+
+client = wolframalpha.Client(app_id)
+# use the wolfram alpha api to get color names from hex codes
+def get_wolfram_colors(color):
+    print(f'Hitting wolfram for {color}')
+    res = client.query(color)
+
+    for pod in res.pods:
+        if pod['@title'] == 'Nearest named HTML colors':
+
+            colors = pod['subpod']['plaintext']
+            
+            # get the first english color name provided
+            start_color_one = find_nth(colors, '|', 6)
+            end_color_one = find_nth(colors, '|', 7)
+            color_one = colors[start_color_one+1 : end_color_one].strip()
+
+            # get the second english color name provided
+            start_color_two = find_nth(colors, '|', 11)
+            end_color_two = find_nth(colors, '|', 12)
+            color_two = colors[start_color_two+1 : end_color_two].strip()
+
+            # join the two color names together - split later
+            wa_colors = f"{color_one},{color_two}"
+
+            print(f"color 1: {color_one}, color 2: {color_two}")
+            return wa_colors
+
+# get color names from wolfram alpha
+print("Starting wolfram primary colors")
+team_colors["wa_Primary_Names"] = team_colors["hex_Primary_Color"].apply(lambda c: get_wolfram_colors(c))
+print("Starting wolfram secondary colors")
+team_colors["wa_Secondary_Names"] = team_colors["hex_Secondary_Color"].apply(lambda c: get_wolfram_colors(c))
+
+
+# create a temporary df of primary and secondary color names
+new_wa_primary   = team_colors["wa_Primary_Names"].str.split(",", n = 1, expand = True)
+new_wa_secondary = team_colors["wa_Secondary_Names"].str.split(",", n = 1, expand = True)
+
+# add a col for each primary color name supplied by wolfram alpha
+team_colors["wa_Primary_Name_1"] = new_wa_primary[0]
+team_colors["wa_Primary_Name_2"] = new_wa_primary[1]
+
+# add a col for each secondary color name supplied by wolfram alpha
+team_colors["wa_Secondary_Name_1"] = new_wa_secondary[0] 
+team_colors["wa_Secondary_Name_2"] = new_wa_secondary[1] 
 
 team_colors.to_csv("data/team_colors.csv", index = False)
 

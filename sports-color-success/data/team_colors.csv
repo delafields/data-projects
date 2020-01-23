@@ -1,441 +1,441 @@
-Team,Primary Color,Secondary Color,League,Primary Name,Secondary Name
-Arizona Cardinals,#97233F,#FFB612,NFL,brown,orange
-Atlanta Falcons,#A71930,#000000,NFL,brown,black
-Baltimore Ravens,#241773,#000000,NFL,midnightblue,black
-Buffalo Bills,#C60C30,#00338D,NFL,crimson,midnightblue
-Carolina Panthers,#0085ca,#000000,NFL,dodgerblue,black
-Chicago Bears,#0B162A,#C83803,NFL,black,firebrick
-Cincinnati Bengals,#FB4F14,#101820,NFL,orangered,black
-Cleveland Browns,#FF3C00,#311D00,NFL,orangered,black
-Dallas Cowboys,#041E42,#869397,NFL,midnightblue,lightslategray
-Denver Broncos,#002244,#FB4F14,NFL,midnightblue,orangered
-Detroit Lions,#0076B6,#B0B7BC,NFL,darkcyan,silver
-Green Bay Packers,#203731,#FFB612,NFL,darkslategray,orange
-Houston Texans,#03202F,#A71930,NFL,black,brown
-Indianapolis Colts,#002C5F,#002C5F,NFL,midnightblue,midnightblue
-Jacksonville Jaguars,#006778,#D7A22A,NFL,teal,goldenrod
-Kansas City Chiefs,#E31837,#FFB81C,NFL,crimson,orange
-Los Angeles Chargers,#002A5E,#FFC20E,NFL,midnightblue,gold
-Los Angeles Rams,#002244,#002244,NFL,midnightblue,midnightblue
-Miami Dolphins,#008E97,#F26A24,NFL,darkcyan,chocolate
-Minnesota Vikings,#512D6D,#FFB81C,NFL,darkslateblue,orange
-New England Patriots,#002244,#C60C30,NFL,midnightblue,crimson
-New Orleans Saints,#D3BC8D,#000000,NFL,tan,black
-New York Giants,#0B2265,#A71930,NFL,midnightblue,brown
-New York Jets,#003F2D,#003F2D,NFL,darkgreen,darkgreen
-Oakland Raiders,#000000,#A5ACAF,NFL,black,darkgray
-Philadelphia Eagles,#004C54,#A5ACAF,NFL,darkslategray,darkgray
-Pittsburgh Steelers,#000000,#FFB612,NFL,black,orange
-San Francisco 49ers,#AA0000,#B3995D,NFL,darkred,darkkhaki
-Seattle Seahawks,#002244,#69BE28,NFL,midnightblue,olivedrab
-Tampa Bay Buccaneers,#D50A0A,#0A0A08,NFL,red,black
-Tennessee Titans,#002A5C,#4495D1,NFL,midnightblue,steelblue
-Washington Redskins,#773141,#FFB612,NFL,brown,orange
-Houston Oilers,#4691df,#cc122c,NFL,cornflowerblue,crimson
-Atlanta Hawks,#E03A3E,#C1D32F,NBA,crimson,yellowgreen
-Boston Celtics,#007a33,#BA9653,NBA,forestgreen,peru
-Brooklyn Nets,#000000,#000000,NBA,black,black
-Charlotte Hornets,#1D1160,#00788c,NBA,midnightblue,teal
-Chicago Bulls,#CE1141,#000000,NBA,crimson,black
-Cleveland Cavaliers,#6f263d,#ffb81c,NBA,brown,orange
-Dallas Mavericks,#00538C,#B8C4CA,NBA,teal,silver
-Denver Nuggets,#00285E,#ffc72c,NBA,midnightblue,gold
-Detroit Pistons,#ED174C,#006BB6,NBA,crimson,darkcyan
-Golden State Warriors,#006BB6,#fdb927,NBA,darkcyan,goldenrod
-Houston Rockets,#ce1141,#000000,NBA,crimson,black
-Indiana Pacers,#002D62,#fdbb30,NBA,midnightblue,goldenrod
-Los Angeles Clippers,#ED174C,#006bb6,NBA,crimson,darkcyan
-Los Angeles Lakers,#552583,#ffc72c,NBA,darkslateblue,gold
-Memphis Grizzlies,#6189B9,#00285E,NBA,steelblue,midnightblue
-Miami Heat,#98002e,#F9A01B,NBA,brown,orange
-Milwaukee Bucks,#00471b,#eee1c6,NBA,darkgreen,bisque
-Minnesota Timberwolves,#0c2340,#236192,NBA,midnightblue,teal
-New Orleans Pelicans,#002b5c,#E31837,NBA,midnightblue,crimson
-New York Knicks,#006BB6,#f58426,NBA,darkcyan,darkorange
-Oklahoma City Thunder,#007AC1,#ef3b24,NBA,darkcyan,orangered
-Orlando Magic,#0057b8,#c2ccd2,NBA,darkcyan,lightgray
-Philadelphia 76ers,#006BB6,#ED174C,NBA,darkcyan,crimson
-Phoenix Suns,#1D1160,#e56020,NBA,midnightblue,chocolate
-Portland Trail Blazers,#E03A3E,#000000,NBA,crimson,black
-Sacramento Kings,#5A2D81,#63727a,NBA,darkslateblue,dimgray
-San Antonio Spurs,#000000,#C4CED4,NBA,black,lightgray
-Toronto Raptors,#CE1141,#000000,NBA,crimson,black
-Utah Jazz,#002B5C,#F9A01B,NBA,midnightblue,orange
-Washington Wizards,#002B5C,#e31837,NBA,midnightblue,crimson
-Seattle Supersonics,#00653a,#ffc200,NBA,darkslategray,gold
-Arizona Diamondbacks,#A71930,#000000,MLB,brown,black
-Atlanta Braves,#002855,#BA0C2F,MLB,midnightblue,firebrick
-Baltimore Orioles,#DF4601,#000000,MLB,orangered,black
-Boston Red Sox,#C8102E,#0C2340,MLB,crimson,midnightblue
-Chicago Cubs,#002F6C,#C8102E,MLB,midnightblue,crimson
-Chicago White Sox,#27251F,#8A8D8F,MLB,black,lightslategray
-Cincinnati Reds,#D50032,#000000,MLB,crimson,black
-Cleveland Indians,#0F223E,#E31937,MLB,midnightblue,crimson
-Colorado Rockies,#333366,#C4CED4,MLB,darkslategray,lightgray
-Detroit Tigers,#0C2C56,#FF6600,MLB,midnightblue,orangered
-Houston Astros,#002D62,#EB6E1F,MLB,midnightblue,chocolate
-Kansas City Royals,#004687,#C09A5B,MLB,midnightblue,darkkhaki
-Los Angeles Angels,#BA0021,#003263,MLB,firebrick,midnightblue
-Los Angeles Dodgers,#002F6C,#E4002B,MLB,midnightblue,crimson
-Miami Marlins,#000000,#ef3340,MLB,black,crimson
-Milwaukee Brewers,#13294B,#85714D,MLB,midnightblue,dimgray
-Minnesota Twins,#0C2341,#BA0C2E,MLB,midnightblue,firebrick
-New York Mets,#002D72,#FC4C00,MLB,midnightblue,orangered
-New York Yankees,#162546,#97999B,MLB,midnightblue,darkgray
-Oakland Athletics,#003831,#EFB21E,MLB,darkslategray,goldenrod
-Philadelphia Phillies,#BA0C2F,#003087,MLB,firebrick,midnightblue
-Pittsburgh Pirates,#111111,#ffc72c,MLB,black,gold
-St. Louis Cardinals,#BA0C2F,#0C2340,MLB,firebrick,midnightblue
-San Diego Padres,#002D62,#A0AAB2,MLB,midnightblue,darkgray
-San Francisco Giants,#FA4616,#27251F,MLB,orangered,black
-Seattle Mariners,#0C2340,#00685E,MLB,midnightblue,teal
-Tampa Bay Rays,#092C5C,#8FBCE6,MLB,midnightblue,skyblue
-Texas Rangers,#003278,#C0111F,MLB,midnightblue,firebrick
-Toronto Blue Jays,#134A8E,#E8291C,MLB,darkslateblue,crimson
-Washington Nationals,#BA122B,#14225A,MLB,firebrick,midnightblue
-Montreal Expos,#002E88,#E4002B,MLB,midnightblue,crimson
-MLB,#002D72,#D50032,MLB,midnightblue,crimson
-Anaheim Ducks,#f95602,#000000,NHL,orangered,black
-Arizona Coyotes,#8C2633,#E2D6B5,NHL,brown,wheat
-Boston Bruins,#111111,#FCB514,NHL,black,orange
-Buffalo Sabres,#002654,#FCB514,NHL,midnightblue,orange
-Calgary Flames,#B72B35,#F1BE48,NHL,brown,sandybrown
-Carolina Hurricanes,#B72B35,#000000,NHL,brown,black
-Chicago Blackhawks,#CF0A2C,#000000,NHL,crimson,black
-Colorado Avalanche,#6F263D,#236192,NHL,brown,teal
-Columbus Blue Jackets,#002654,#CE1126,NHL,midnightblue,crimson
-Dallas Stars,#006847,#8F8F8C,NHL,darkslategray,gray
-Detroit Red Wings,#CE1126,#CE1126,NHL,crimson,crimson
-Edmonton Oilers,#041E41,#FF4C00,NHL,midnightblue,orangered
-Florida Panthers,#041E42,#C8102E,NHL,midnightblue,crimson
-Los Angeles Kings,#111111,#a2aaad,NHL,black,darkgray
-Minnesota Wild,#004F30,#C51230,NHL,darkgreen,crimson
-Montreal Canadiens,#C51230,#192168,NHL,crimson,midnightblue
-Nashville Predators,#041E42,#FFB81C,NHL,midnightblue,orange
-New Jersey Devils,#CE1126,#000000,NHL,crimson,black
-New York Islanders,#00529B,#F47920,NHL,teal,chocolate
-New York Rangers,#0038A8,#CE1126,NHL,darkblue,crimson
-Ottawa Senators,#E31837,#000000,NHL,crimson,black
-Philadelphia Flyers,#F74902,#000000,NHL,orangered,black
-Pittsburgh Penguins,#000000,#FCB514,NHL,black,orange
-St. Louis Blues,#002F87,#FCB514,NHL,midnightblue,orange
-San Jose Sharks,#006D75,#EA7200,NHL,teal,darkorange
-Tampa Bay Lightning,#002868,#000000,NHL,midnightblue,black
-Toronto Maple Leafs,#003E7E,#003E7E,NHL,midnightblue,midnightblue
-Vancouver Canucks,#001F5C,#021B2C,NHL,midnightblue,black
-Vegas Golden Knights,#B4975A,#333F42,NHL,darkkhaki,darkslategray
-Washington Capitals,#041E41,#CF0A2C,NHL,midnightblue,crimson
-Winnipeg Jets,#041E41,#AC162C,NHL,midnightblue,firebrick
-Atlanta Thrashers,#041E42,#FFA300,NHL,midnightblue,orange
-Hartford Whalers,#0e7b3e,#2a3489,NHL,forestgreen,darkslateblue
-Minnesota North Stars,#009639,#ffd100,NHL,forestgreen,gold
-Quebec Nordiques,#c8102e,#0072ce,NHL,crimson,dodgerblue
-AFC Bournemouth,#d41e2a,#000000,EPL,crimson,black
-Arsenal,#D80919,#063672,EPL,crimson,midnightblue
-Brighton & Hove Albion,#0A56A3,#F8BC1B,EPL,teal,orange
-Burnley,#80234C,#91D2F2,EPL,brown,skyblue
-Cardiff City,#0070B5,#D11524,EPL,darkcyan,crimson
-Chelsea,#034694,#ED1C24,EPL,teal,crimson
-Crystal Palace FC,#1B458F,#C4122E,EPL,darkslateblue,firebrick
-Everton FC,#063A99,#000000,EPL,midnightblue,black
-Fulham,#cc0000,#000000,EPL,red,black
-Huddersfield Town,#0E63AD,#000000,EPL,darkcyan,black
-Leicester City,#1358A1,#FAB92C,EPL,teal,goldenrod
-Liverpool,#E0202C,#19A78E,EPL,crimson,lightseagreen
-Manchester City,#99C5E7,#022A5D,EPL,skyblue,midnightblue
-Manchester United,#DC1F29,#000000,EPL,crimson,black
-Newcastle United FC,#000000,#C2A475,EPL,black,darkkhaki
-Southampton FC,#D41E29,#FFC20E,EPL,crimson,gold
-Tottenham Hotspur,#11214B,#11214b,EPL,midnightblue,midnightblue
-Watford FC,#FEEB00,#000000,EPL,yellow,black
-West Ham United,#7A263A,#2AB2E5,EPL,brown,dodgerblue
-Wolverhampton,#231F20,#FDB913,EPL,black,orange
-Aston Villa,#95bfe5,#670e36,EPL,skyblue,maroon
-Leeds United,#005B9E,#ffcd00,EPL,teal,gold
-Stoke City FC,#D41E29,#02225f,EPL,crimson,midnightblue
-Swansea City FC,#121212,#000000,EPL,black,black
-West Bromwich Albion,#122F67,#122f67,EPL,midnightblue,midnightblue
-Alavés,#009Ad7,#0761AF,La Liga,dodgerblue,darkcyan
-Atletico Madrid,#272e61,#CB3524,La Liga,midnightblue,firebrick
-Barcelona FC,#a40344,#004A99,La Liga,brown,teal
-Celta Vigo,#E5254E,#8AC3EE,La Liga,crimson,skyblue
-Deportivo,#57175E,#A38D44,La Liga,indigo,peru
-Levante U.D.,#A40344,#004A99,La Liga,brown,teal
-Real Betis,#0BB363,#E7A614,La Liga,mediumseagreen,goldenrod
-Real Madrid CF,#FEBE10,#EE324E,La Liga,orange,crimson
-Valencia CF,#0097D7,#000000,La Liga,dodgerblue,black
-A.C. Milan,#000000,#fb090b,Serie A,black,red
-A.S. Roma,#8E1F2F,#F0BC42,Serie A,brown,sandybrown
-Atalanta,#1e71b8,#000000,Serie A,steelblue,black
-Bologna,#1a2f48,#a21c26,Serie A,darkslategray,brown
-Cagliari,#ad002a,#002350,Serie A,firebrick,midnightblue
-ChievoVerona,#FFE72C,#0068B0,Serie A,gold,darkcyan
-Empoli FC,#00579C,#00579C,Serie A,teal,teal
-Fiorentina,#482e92,#a29160,Serie A,darkslateblue,darkkhaki
-Inter Milan,#a29161,#0068A8,Serie A,darkkhaki,darkcyan
-Juventus,#000000,#000000,Serie A,black,black
-Napoli,#003C82,#12A0D7,Serie A,midnightblue,dodgerblue
-Cincinnati,#E00122,#000000,NCAA,crimson,black
-East Carolina,#592A8A,#FDC82F,NCAA,darkslateblue,gold
-Houston,#C8102E,#C8102E,NCAA,crimson,crimson
-Memphis,#003087,#898D8D,NCAA,midnightblue,gray
-Navy,#00205B,#C5B783,NCAA,midnightblue,tan
-South Florida,#006747,#CFC493,NCAA,darkslategray,tan
-Temple,#9D2235,#9D2235,NCAA,brown,brown
-Tulane,#006747,#006747,NCAA,darkslategray,darkslategray
-Tulsa,#002D72,#c8102e,NCAA,midnightblue,crimson
-Wichita State,#000000,#ffcd00,NCAA,black,gold
-Boston College,#98002E,#BC9B6A,NCAA,brown,darkkhaki
-Clemson,#f66733,#522d80,NCAA,tomato,darkslateblue
-Duke,#001a57,#003366,NCAA,midnightblue,midnightblue
-Florida State,#782f40,#ceb888,NCAA,brown,tan
-Georgia Tech,#eeb211,#262626,NCAA,orange,darkslategray
-Louisville,#Ad0000,#000000,NCAA,darkred,black
-Miami,#f47321,#005030,NCAA,chocolate,darkgreen
-North Carolina,#4b9cd3,#13294b,NCAA,cornflowerblue,midnightblue
-North Carolina State,#cc0000,#000000,NCAA,red,black
-Notre Dame,#0c2340,#c99700,NCAA,midnightblue,darkgoldenrod
-Pittsburgh,#003594,#FFB81C,NCAA,midnightblue,orange
-Syracuse,#d44500,#3e3d3c,NCAA,orangered,darkslategray
-Virginia,#232D4b,#e57200,NCAA,darkslategray,chocolate
-Virginia Tech,#8a1e41,#ee7623,NCAA,brown,chocolate
-Wake Forest,#a67f31,#000000,NCAA,peru,black
-Davidson,#AC1A2F,#000000,NCAA,firebrick,black
-Dayton,#CE1141,#004B8D,NCAA,crimson,teal
-Duquesne,#041E42,#BA0C2F,NCAA,midnightblue,firebrick
-Fordham,#860038,#860038,NCAA,brown,brown
-George Mason,#006633,#FFCC33,NCAA,darkgreen,gold
-George Washington,#002654,#E2CB92,NCAA,midnightblue,burlywood
-La Salle,#003366,#FFCC00,NCAA,midnightblue,gold
-UMass,#971B2F,#572932,NCAA,brown,darkslategray
-Rhode Island,#002147,#68ABE8,NCAA,midnightblue,cornflowerblue
-Richmond,#000066,#990000,NCAA,navy,darkred
-St. Bonaventure,#54261A,#FDB726,NCAA,saddlebrown,goldenrod
-St. Joseph’s,#9E1B32,#6C6F70,NCAA,brown,dimgray
-St. Louis,#003DA5,#C8C9C7,NCAA,darkblue,silver
-VCU,#FFB300,#000000,NCAA,orange,black
-Eastern Washington,#a10022,#000000,NCAA,firebrick,black
-Idaho,#B3A369,#000000,NCAA,darkkhaki,black
-Idaho State,#660033,#999999,NCAA,maroon,darkgray
-Montana,#660033,#999999,NCAA,maroon,darkgray
-Montana State,#00205B,#B9975B,NCAA,midnightblue,darkkhaki
-Northern Arizona,#003466,#ffd200,NCAA,midnightblue,gold
-Northern Colorado,#013C65,#F6B000,NCAA,midnightblue,orange
-Portland State,#154734,#154734,NCAA,darkslategray,darkslategray
-Sacramento State,#043927,#C4B581,NCAA,darkgreen,tan
-Southern Utah,#C41425,#000000,NCAA,firebrick,black
-Weber State,#4B2682,#a1a1a4,NCAA,darkslateblue,darkgray
-Illinois,#13294B,#e84a27,NCAA,midnightblue,chocolate
-Indiana,#990000,#eeedeb,NCAA,darkred,linen
-Iowa,#ffcd00,#000000,NCAA,gold,black
-Maryland,#e03a3e,#ffd520,NCAA,crimson,gold
-Michigan,#00274c,#ffcb05,NCAA,midnightblue,gold
-Michigan State,#18453b,#d1d1d1,NCAA,darkslategray,lightgray
-Minnesota,#7a0019,#ffcc33,NCAA,maroon,gold
-Nebraska,#c8102e,#000000,NCAA,crimson,black
-Northwestern,#4e2a84,#4e2a84,NCAA,darkslateblue,darkslateblue
-Ohio State,#bb0000,#666666,NCAA,darkred,dimgray
-Penn State,#093162,#000000,NCAA,midnightblue,black
-Purdue,#000000,#c28e0e,NCAA,black,darkgoldenrod
-Rutgers,#cc0033,#5f6a72,NCAA,crimson,dimgray
-Wisconsin,#c50505,#000000,NCAA,firebrick,black
-Charlotte,#046A38,#B9975B,NCAA,forestgreen,darkkhaki
-Florida Atlantic (FAU),#003366,#cc0000,NCAA,midnightblue,red
-Florida International (FIU),#081E3F,#B6862C,NCAA,midnightblue,peru
-Louisiana Tech,#E31B23,#002F8B,NCAA,crimson,midnightblue
-Marshall,#00B140,#27251F,NCAA,limegreen,black
-Middle Tennessee,#0066CC,#000000,NCAA,royalblue,black
-North Texas,#00853E,#000000,NCAA,forestgreen,black
-Old Dominion,#003057,#7C878E,NCAA,midnightblue,lightslategray
-Rice,#00205B,#C1C6C8,NCAA,midnightblue,silver
-Southern Miss,#000000,#FFAB00,NCAA,black,orange
-UAB,#006341,#CC8A00,NCAA,darkslategray,darkgoldenrod
-UTEP,#FF8200,#041E42,NCAA,darkorange,midnightblue
-UTSA,#F15A22,#0C2340,NCAA,chocolate,midnightblue
-WKU,#c60c30,#1e1e1e,NCAA,crimson,black
-Brown,#4E3629,#e4002b,NCAA,darkolivegreen,crimson
-Columbia,#003865,#9BCBEB,NCAA,midnightblue,skyblue
-Cornell,#B31B1B,#000000,NCAA,firebrick,black
-Dartmouth,#046A38,#000000,NCAA,forestgreen,black
-Harvard,#A41034,#000000,NCAA,brown,black
-Penn,#011F5B,#990000,NCAA,midnightblue,darkred
-Princeton,#FF671F,#000000,NCAA,tomato,black
-Yale,#00356B,#00356B,NCAA,midnightblue,midnightblue
-Akron,#041E42,#A89969,NCAA,midnightblue,darkkhaki
-Bowling Green,#4F2C1D,#FE5000,NCAA,saddlebrown,orangered
-Buffalo,#005BBB,#FE5000,NCAA,darkcyan,orangered
-Kent State,#002664,#EAAB00,NCAA,midnightblue,orange
-Miami,#B61E2E,#000000,NCAA,firebrick,black
-Ohio,#00694E,#CDA077,NCAA,darkslategray,tan
-Ball State,#BA0C2F,#000000,NCAA,firebrick,black
-Central Michigan,#6A0032,#6A0032,NCAA,maroon,maroon
-Eastern Michigan,#006633,#000000,NCAA,darkgreen,black
-Northern Illinois,#BA0C2F,#8A8D8F,NCAA,firebrick,lightslategray
-Toledo,#15397F,#FFDA00,NCAA,midnightblue,gold
-Western Michigan,#15397F,#B5A167,NCAA,midnightblue,darkkhaki
-Air Force,#003087,#B1B3B3,NCAA,midnightblue,darkgray
-Boise State,#0033A0,#d64309,NCAA,darkblue,orangered
-Colorado State,#1E4D2B,#C8C372,NCAA,darkslategray,darkkhaki
-Fresno State,#db0032,#002E6d,NCAA,crimson,midnightblue
-Hawaii,#024731,#c8c8c8,NCAA,darkslategray,silver
-Nevada,#003366,#807F84,NCAA,midnightblue,gray
-New Mexico,#Ba0c2f,#63666A,NCAA,firebrick,dimgray
-San Diego State,#A6192E,#000000,NCAA,brown,black
-San Jose State,#0055A2,#e5A823,NCAA,teal,goldenrod
-UNLV,#b10202,#666666,NCAA,darkred,dimgray
-Utah State,#0F2439,#9d968d,NCAA,midnightblue,rosybrown
-Wyoming,#492f24,#ffc425,NCAA,darkslategray,gold
-Bucknell,#E87722,#003865,NCAA,chocolate,midnightblue
-Colgate,#821019,#5A646E,NCAA,maroon,dimgray
-Holy Cross,#602d89,#602d89,NCAA,darkslateblue,darkslateblue
-Chattanooga,#00386B,#E0AA0F,NCAA,midnightblue,goldenrod
-ETSU,#041E42,#FFC72C,NCAA,midnightblue,gold
-Mercer,#F76800,#000000,NCAA,orangered,black
-Furman,#201547,#582C83,NCAA,midnightblue,darkslateblue
-Samford,#002649,#c4161d,NCAA,midnightblue,firebrick
-The Citadel,#3975B7,#1F3A60,NCAA,steelblue,darkslategray
-UNC Greensboro,#0f2044,#ffb71b,NCAA,midnightblue,orange
-VMI,#A71F23,#ffd520,NCAA,firebrick,gold
-Western Carolina,#592C88,#C1A875,NCAA,darkslateblue,darkkhaki
-Wofford,#886E4C,#000000,NCAA,dimgray,black
-Appalachian State,#222222,#FFCC00,NCAA,black,gold
-Arkansas Little-Rock,#6E2639,#A7A9AC,NCAA,saddlebrown,darkgray
-Arkansas State,#CC092F,#000000,NCAA,crimson,black
-Coastal Carolina,#006F71,#A27752,NCAA,teal,peru
-Georgia Southern,#011E41,#A3AAAE,NCAA,midnightblue,darkgray
-Georgia State,#0039A6,#C60C30,NCAA,darkblue,crimson
-Louisiana,#CE181E,#0A0203,NCAA,firebrick,black
-Louisiana-Monroe,#800029,#BD955A,NCAA,maroon,peru
-South Alabama,#00205B,#BF0D3E,NCAA,midnightblue,crimson
-Texas Arlington,#0064B1,#F58025,NCAA,darkcyan,darkorange
-Texas State,#501214,#8d734a,NCAA,maroon,sienna
-BYU,#002255,#C5AF7D,NCAA,midnightblue,tan
-Gonzaga,#041E42,#C8102E,NCAA,midnightblue,crimson
-Loyola Marymount,#B62B3A,#00447C,NCAA,brown,midnightblue
-Pacific,#E35205,#231F20,NCAA,orangered,black
-Pepperdine,#00205C,#EE7624,NCAA,midnightblue,chocolate
-Portland,#1E1656,#5E6A71,NCAA,midnightblue,dimgray
-Saint Mary’s,#06315B,#D80024,NCAA,midnightblue,crimson
-San Diego,#002868,#84BCE8,NCAA,midnightblue,skyblue
-San Francisco,#00543C,#FDBB30,NCAA,darkslategray,goldenrod
-Santa Clara,#862633,#862633,NCAA,brown,brown
-Albany,#461660,#EEB211,NCAA,indigo,orange
-Binghamton,#005A43,#B1B3B3,NCAA,darkslategray,darkgray
-Hartford,#C02427,#000000,NCAA,firebrick,black
-Maine,#003263,#B0D7FF,NCAA,midnightblue,lightblue
-New Hampshire,#041E42,#BBBCBC,NCAA,midnightblue,silver
-Stony Brook,#990000,#16243E,NCAA,darkred,midnightblue
-Umass Lowell,#003DA5,#C8102E,NCAA,darkblue,crimson
-UMBC,#B18906,#FFC20E,NCAA,darkgoldenrod,gold
-Vermont,#154734,#FFC72C,NCAA,darkslategray,gold
-Florida Gulf Coast,#002d72,#007749,NCAA,midnightblue,seagreen
-Jacksonville,#004E44,#898A8D,NCAA,darkslategray,gray
-Kennesaw State,#FDBB30,#0B1315,NCAA,goldenrod,black
-Lipscomb University,#331E54,#F4AA00,NCAA,midnightblue,orange
-North Alabama,#46166B,#DB9F11,NCAA,indigo,goldenrod
-NJIT,#D22630,#071D49,NCAA,crimson,midnightblue
-North Florida,#00246B,#D9D9D9,NCAA,midnightblue,gainsboro
-South Carolina Upstate,#00703C,#000000,NCAA,forestgreen,black
-Stetson,#00703C,#B58150,NCAA,forestgreen,peru
-Butler,#13294B,#747678,NCAA,midnightblue,gray
-Creighton,#005CA9,#00235D,NCAA,teal,midnightblue
-DePaul,#005EB8,#E4002B,NCAA,darkcyan,crimson
-Georgetown,#041e42,#8D817B,NCAA,midnightblue,gray
-Marquette,#003366,#ffcc00,NCAA,midnightblue,gold
-Providence,#000000,#8a8d8f,NCAA,black,lightslategray
-Seton Hall,#004488,#A2AAAD,NCAA,midnightblue,darkgray
-St. John’s,#BA0C2F,#041c2c,NCAA,firebrick,black
-Villanova,#00205B,#13B5EA,NCAA,midnightblue,deepskyblue
-Xavier,#0c2340,#9ea2a2,NCAA,midnightblue,darkgray
-Cal Poly,#003831,#ffe395,NCAA,darkslategray,khaki
-Cal State Fullerton,#00274C,#dc8218,NCAA,midnightblue,chocolate
-CSUN,#CE1126,#d1cec6,NCAA,crimson,lightgray
-Hawaii,#154734,#CCCCCC,NCAA,darkslategray,lightgray
-Long Beach State,#000000,#FFC72A,NCAA,black,gold
-UC Davis,#002855,#b3a369,NCAA,midnightblue,darkkhaki
-UC Irvine,#0C2340,#ffc72c,NCAA,midnightblue,gold
-UC Riverside,#2D6CC0,#f1ab00,NCAA,steelblue,orange
-UC Santa Barbara,#003660,#FEBC11,NCAA,midnightblue,orange
-Baylor,#1d3c34,#ffb81c,NCAA,darkslategray,orange
-Iowa State,#c8102e,#f1be48,NCAA,crimson,sandybrown
-Kansas,#0051ba,#e8000d,NCAA,teal,red
-Kansas State,#512888,#a7a7a7,NCAA,darkslateblue,darkgray
-Oklahoma,#841617,#fdf9d8,NCAA,maroon,cornsilk
-Oklahoma State,#ff7300,#000000,NCAA,darkorange,black
-Texas,#bf5700,#333f48,NCAA,chocolate,darkslategray
-Texas Christian,#4d1979,#a3a9ac,NCAA,indigo,darkgray
-Texas Tech,#cc0000,#000000,NCAA,red,black
-West Virginia,#002855,#eaaa00,NCAA,midnightblue,orange
-Cleveland State,#006747,#000000,NCAA,darkslategray,black
-Detroit Mercy,#A6093D,#002d72,NCAA,brown,midnightblue
-Green Bay,#006747,#9d2235,NCAA,darkslategray,brown
-IUPUI,#9d2235,#dfd1a7,NCAA,brown,palegoldenrod
-Milwaukee,#ffbd00,#000000,NCAA,orange,black
-Northern Kentucky,#FFC72C,#000000,NCAA,gold,black
-Oakland,#B59A57,#000000,NCAA,darkkhaki,black
-UIC,#041E42,#AC1E2D,NCAA,midnightblue,firebrick
-Wright State,#026937,#cea052,NCAA,forestgreen,peru
-Youngstown State,#c8102e,#000000,NCAA,crimson,black
-Canisius,#0c2340,#FFBA00,NCAA,midnightblue,orange
-Fairfield,#C8102E,#A2AAAD,NCAA,crimson,darkgray
-Iona,#6F2C3F,#F2A900,NCAA,saddlebrown,orange
-Manhattan,#00703C,#00703C,NCAA,forestgreen,forestgreen
-Marist,#C8102E,#B2B2B2,NCAA,crimson,darkgray
-Monmouth,#041E42,#53565A,NCAA,midnightblue,dimgray
-Niagara,#582C83,#582C83,NCAA,darkslateblue,darkslateblue
-Rider,#981E32,#6C6F70,NCAA,brown,dimgray
-St. Peter’s,#003C71,#0072CE,NCAA,midnightblue,dodgerblue
-Siena,#006747,#FFC72C,NCAA,darkslategray,gold
-Bradley,#A50000,#000000,NCAA,darkred,black
-Drake,#004477,#000000,NCAA,midnightblue,black
-Evansville,#52237F,#F36F21,NCAA,darkslateblue,chocolate
-Illinois State,#CE1126,#F9DD16,NCAA,crimson,gold
-Indiana State,#0142BC,#0142BC,NCAA,mediumblue,mediumblue
-Loyola,#922247,#febd18,NCAA,brown,orange
-Missouri State,#5E0009,#000000,NCAA,maroon,black
-Northern Iowa,#4B116F,#FFCC00,NCAA,indigo,gold
-Southern Illinois,#720000,#000000,NCAA,maroon,black
-Valparaiso,#381E0E,#FFCC00,NCAA,black,gold
-Arizona,#cc0033,#003366,NCAA,crimson,midnightblue
-Arizona State,#8c1d40,#ffc627,NCAA,brown,gold
-California,#003262,#fdb515,NCAA,midnightblue,orange
-Colorado,#cfb87c,#000000,NCAA,tan,black
-Oregon,#154733,#fee123,NCAA,darkslategray,gold
-Oregon State,#dc4405,#000000,NCAA,orangered,black
-Stanford,#8C1515,#4D4F53,NCAA,darkred,darkslategray
-UCLA,#2d68c4,#f2a900,NCAA,royalblue,orange
-USC,#9d2235,#ffc72c,NCAA,brown,gold
-Utah,#cc0000,#808080,NCAA,red,gray
-Washington,#4b2e83,#b7a57a,NCAA,darkslateblue,darkkhaki
-Washington State,#981e32,#5e6a71,NCAA,brown,dimgray
-Alabama,#9e1b32,#828A8f,NCAA,brown,lightslategray
-Arkansas,#9D2235,#000000,NCAA,brown,black
-Auburn,#0C2350,#e87722,NCAA,midnightblue,chocolate
-Florida,#fa4616,#0021a5,NCAA,orangered,darkblue
-Georgia,#ba0c2f,#000000,NCAA,firebrick,black
-Kentucky,#0033a0,#000000,NCAA,darkblue,black
-Louisiana State,#461d7c,#fdd023,NCAA,indigo,gold
-Mississippi,#13294b,#c8102e,NCAA,midnightblue,crimson
-Mississippi State,#660000,#ffffff,NCAA,maroon,white
-Missouri,#f1b82d,#000000,NCAA,goldenrod,black
-South Carolina,#73000a,#000000,NCAA,maroon,black
-Tennessee,#FF8200,#58595b,NCAA,darkorange,dimgray
-Texas A&M,#500000,#000000,NCAA,maroon,black
-Vanderbilt,#866d4b,#000000,NCAA,dimgray,black
-Denver,#8b2332,#8b6f4b,NCAA,brown,dimgray
-Fort Wayne,#002F6C,#97999B,NCAA,midnightblue,darkgray
-NDSU,#0A5640,#FFC72A,NCAA,darkslategray,gold
-North Dakota,#009A44,#aaaead,NCAA,forestgreen,darkgray
-Omaha,#000000,#D71920,NCAA,black,crimson
-Oral Roberts,#002f60,#a28e2a,NCAA,midnightblue,darkgoldenrod
-South Dakota,#AD0000,#000000,NCAA,darkred,black
-South Dakota State,#0033A0,#FFD100,NCAA,darkblue,gold
-Western Illinois,#663399,#ffcc00,NCAA,darkslateblue,gold
-CSUB Bakersfield,#005DAA,#ffd200,NCAA,teal,gold
-Chicago State,#006666,#000000,NCAA,teal,black
-Grand Canyon,#522398,#000000,NCAA,darkslateblue,black
-UMKC,#005293,#fecb00,NCAA,teal,gold
-New Mexico State,#861F41,#000000,NCAA,brown,black
-Seattle University,#aa0000,#333333,NCAA,darkred,darkslategray
-UTRGV,#ffa300,#0c2340,NCAA,orange,midnightblue
-Utah Valley,#275038,#000000,NCAA,darkslategray,black
+Team,hex_Primary_Color,hex_Secondary_Color,League,wc_Primary_Name,wc_Secondary_Name,wa_Primary_Names,wa_Secondary_Names,wa_Primary_Name_1,wa_Primary_Name_2,wa_Secondary_Name_1,wa_Secondary_Name_2
+Arizona Cardinals,#97233F,#FFB612,NFL,brown,orange,"crimson,medium violet red","orange,dark orange",crimson,medium violet red,orange,dark orange
+Atlanta Falcons,#A71930,#000000,NFL,brown,black,"crimson,medium violet red","black,dim gray",crimson,medium violet red,black,dim gray
+Baltimore Ravens,#241773,#000000,NFL,midnightblue,black,"midnight blue,navy","black,dim gray",midnight blue,navy,black,dim gray
+Buffalo Bills,#C60C30,#00338D,NFL,crimson,midnightblue,"crimson,deep pink","dark blue,navy",crimson,deep pink,dark blue,navy
+Carolina Panthers,#0085ca,#000000,NFL,dodgerblue,black,"deep sky blue,dark turquoise","black,dim gray",deep sky blue,dark turquoise,black,dim gray
+Chicago Bears,#0B162A,#C83803,NFL,black,firebrick,"midnight blue,steel blue","orange red,chocolate",midnight blue,steel blue,orange red,chocolate
+Cincinnati Bengals,#FB4F14,#101820,NFL,orangered,black,"orange red,chocolate","dark slate gray,steel blue",orange red,chocolate,dark slate gray,steel blue
+Cleveland Browns,#FF3C00,#311D00,NFL,orangered,black,"orange red,red","saddle brown,olive",orange red,red,saddle brown,olive
+Dallas Cowboys,#041E42,#869397,NFL,midnightblue,lightslategray,"navy,dark blue","light slate gray,slate gray",navy,dark blue,light slate gray,slate gray
+Denver Broncos,#002244,#FB4F14,NFL,midnightblue,orangered,"navy,teal","orange red,chocolate",navy,teal,orange red,chocolate
+Detroit Lions,#0076B6,#B0B7BC,NFL,darkcyan,silver,"deep sky blue,dark turquoise","alice blue,light steel blue",deep sky blue,dark turquoise,alice blue,light steel blue
+Green Bay Packers,#203731,#FFB612,NFL,darkslategray,orange,"dark slate gray,cadet blue","orange,dark orange",dark slate gray,cadet blue,orange,dark orange
+Houston Texans,#03202F,#A71930,NFL,black,brown,"teal,dark cyan","crimson,medium violet red",teal,dark cyan,crimson,medium violet red
+Indianapolis Colts,#002C5F,#002C5F,NFL,midnightblue,midnightblue,"navy,dark blue","navy,dark blue",navy,dark blue,navy,dark blue
+Jacksonville Jaguars,#006778,#D7A22A,NFL,teal,goldenrod,"teal,dark cyan","goldenrod,chocolate",teal,dark cyan,goldenrod,chocolate
+Kansas City Chiefs,#E31837,#FFB81C,NFL,crimson,orange,"crimson,deep pink","goldenrod,orange",crimson,deep pink,goldenrod,orange
+Los Angeles Chargers,#002A5E,#FFC20E,NFL,midnightblue,gold,"navy,dark blue","gold,orange",navy,dark blue,gold,orange
+Los Angeles Rams,#002244,#002244,NFL,midnightblue,midnightblue,"navy,teal","navy,teal",navy,teal,navy,teal
+Miami Dolphins,#008E97,#F26A24,NFL,darkcyan,chocolate,"dark cyan,teal","chocolate,orange red",dark cyan,teal,chocolate,orange red
+Minnesota Vikings,#512D6D,#FFB81C,NFL,darkslateblue,orange,"dark slate blue,medium orchid","goldenrod,orange",dark slate blue,medium orchid,goldenrod,orange
+New England Patriots,#002244,#C60C30,NFL,midnightblue,crimson,"navy,teal","crimson,deep pink",navy,teal,crimson,deep pink
+New Orleans Saints,#D3BC8D,#000000,NFL,tan,black,"tan,navajo white","black,dim gray",tan,navajo white,black,dim gray
+New York Giants,#0B2265,#A71930,NFL,midnightblue,brown,"midnight blue,navy","crimson,medium violet red",midnight blue,navy,crimson,medium violet red
+New York Jets,#003F2D,#003F2D,NFL,darkgreen,darkgreen,"teal,dark cyan","teal,dark cyan",teal,dark cyan,teal,dark cyan
+Oakland Raiders,#000000,#A5ACAF,NFL,black,darkgray,"black,dim gray","alice blue,azure",black,dim gray,alice blue,azure
+Philadelphia Eagles,#004C54,#A5ACAF,NFL,darkslategray,darkgray,"teal,dark cyan","alice blue,azure",teal,dark cyan,alice blue,azure
+Pittsburgh Steelers,#000000,#FFB612,NFL,black,orange,"black,dim gray","orange,dark orange",black,dim gray,orange,dark orange
+San Francisco 49ers,#AA0000,#B3995D,NFL,darkred,darkkhaki,"dark red,maroon","dark khaki,burly wood",dark red,maroon,dark khaki,burly wood
+Seattle Seahawks,#002244,#69BE28,NFL,midnightblue,olivedrab,"navy,teal","yellow green,green yellow",navy,teal,yellow green,green yellow
+Tampa Bay Buccaneers,#D50A0A,#0A0A08,NFL,red,black,"red,dark red","dark khaki,pale goldenrod",red,dark red,dark khaki,pale goldenrod
+Tennessee Titans,#002A5C,#4495D1,NFL,midnightblue,steelblue,"navy,dark blue","steel blue,cornflower blue",navy,dark blue,steel blue,cornflower blue
+Washington Redskins,#773141,#FFB612,NFL,brown,orange,"pale violet red,hot pink","orange,dark orange",pale violet red,hot pink,orange,dark orange
+Houston Oilers,#4691df,#cc122c,NFL,cornflowerblue,crimson,"steel blue,royal blue","crimson,deep pink",steel blue,royal blue,crimson,deep pink
+Atlanta Hawks,#E03A3E,#C1D32F,NBA,crimson,yellowgreen,"crimson,hot pink","yellow green,olive drab",crimson,hot pink,yellow green,olive drab
+Boston Celtics,#007a33,#BA9653,NBA,forestgreen,peru,"green,dark green","sandy brown,peru",green,dark green,sandy brown,peru
+Brooklyn Nets,#000000,#000000,NBA,black,black,"black,dim gray","black,dim gray",black,dim gray,black,dim gray
+Charlotte Hornets,#1D1160,#00788c,NBA,midnightblue,teal,"midnight blue,navy","dark cyan,teal",midnight blue,navy,dark cyan,teal
+Chicago Bulls,#CE1141,#000000,NBA,crimson,black,"crimson,deep pink","black,dim gray",crimson,deep pink,black,dim gray
+Cleveland Cavaliers,#6f263d,#ffb81c,NBA,brown,orange,"pale violet red,hot pink","goldenrod,orange",pale violet red,hot pink,goldenrod,orange
+Dallas Mavericks,#00538C,#B8C4CA,NBA,teal,silver,"dark cyan,teal","alice blue,light steel blue",dark cyan,teal,alice blue,light steel blue
+Denver Nuggets,#00285E,#ffc72c,NBA,midnightblue,gold,"navy,dark blue","goldenrod,chocolate",navy,dark blue,goldenrod,chocolate
+Detroit Pistons,#ED174C,#006BB6,NBA,crimson,darkcyan,"crimson,deep pink","deep sky blue,dodger blue",crimson,deep pink,deep sky blue,dodger blue
+Golden State Warriors,#006BB6,#fdb927,NBA,darkcyan,goldenrod,"deep sky blue,dodger blue","goldenrod,chocolate",deep sky blue,dodger blue,goldenrod,chocolate
+Houston Rockets,#ce1141,#000000,NBA,crimson,black,"crimson,deep pink","black,dim gray",crimson,deep pink,black,dim gray
+Indiana Pacers,#002D62,#fdbb30,NBA,midnightblue,goldenrod,"navy,dark blue","goldenrod,chocolate",navy,dark blue,goldenrod,chocolate
+Los Angeles Clippers,#ED174C,#006bb6,NBA,crimson,darkcyan,"crimson,deep pink","deep sky blue,dodger blue",crimson,deep pink,deep sky blue,dodger blue
+Los Angeles Lakers,#552583,#ffc72c,NBA,darkslateblue,gold,"dark orchid,blue violet","goldenrod,chocolate",dark orchid,blue violet,goldenrod,chocolate
+Memphis Grizzlies,#6189B9,#00285E,NBA,steelblue,midnightblue,"light sky blue,cornflower blue","navy,dark blue",light sky blue,cornflower blue,navy,dark blue
+Miami Heat,#98002e,#F9A01B,NBA,brown,orange,"crimson,medium violet red","goldenrod,chocolate",crimson,medium violet red,goldenrod,chocolate
+Milwaukee Bucks,#00471b,#eee1c6,NBA,darkgreen,bisque,"dark green,green","papaya whip,blanched almond",dark green,green,papaya whip,blanched almond
+Minnesota Timberwolves,#0c2340,#236192,NBA,midnightblue,teal,"midnight blue,steel blue","steel blue,royal blue",midnight blue,steel blue,steel blue,royal blue
+New Orleans Pelicans,#002b5c,#E31837,NBA,midnightblue,crimson,"navy,dark blue","crimson,deep pink",navy,dark blue,crimson,deep pink
+New York Knicks,#006BB6,#f58426,NBA,darkcyan,darkorange,"deep sky blue,dodger blue","chocolate,goldenrod",deep sky blue,dodger blue,chocolate,goldenrod
+Oklahoma City Thunder,#007AC1,#ef3b24,NBA,darkcyan,orangered,"deep sky blue,dark turquoise","fire brick,tomato",deep sky blue,dark turquoise,fire brick,tomato
+Orlando Magic,#0057b8,#c2ccd2,NBA,darkcyan,lightgray,"dodger blue,deep sky blue","alice blue,light steel blue",dodger blue,deep sky blue,alice blue,light steel blue
+Philadelphia 76ers,#006BB6,#ED174C,NBA,darkcyan,crimson,"deep sky blue,dodger blue","crimson,deep pink",deep sky blue,dodger blue,crimson,deep pink
+Phoenix Suns,#1D1160,#e56020,NBA,midnightblue,chocolate,"midnight blue,navy","chocolate,saddle brown",midnight blue,navy,chocolate,saddle brown
+Portland Trail Blazers,#E03A3E,#000000,NBA,crimson,black,"crimson,hot pink","black,dim gray",crimson,hot pink,black,dim gray
+Sacramento Kings,#5A2D81,#63727a,NBA,darkslateblue,dimgray,"dark orchid,medium orchid","slate gray,light slate gray",dark orchid,medium orchid,slate gray,light slate gray
+San Antonio Spurs,#000000,#C4CED4,NBA,black,lightgray,"black,dim gray","alice blue,light steel blue",black,dim gray,alice blue,light steel blue
+Toronto Raptors,#CE1141,#000000,NBA,crimson,black,"crimson,deep pink","black,dim gray",crimson,deep pink,black,dim gray
+Utah Jazz,#002B5C,#F9A01B,NBA,midnightblue,orange,"navy,dark blue","goldenrod,chocolate",navy,dark blue,goldenrod,chocolate
+Washington Wizards,#002B5C,#e31837,NBA,midnightblue,crimson,"navy,dark blue","crimson,deep pink",navy,dark blue,crimson,deep pink
+Seattle Supersonics,#00653a,#ffc200,NBA,darkslategray,gold,"teal,dark cyan","gold,orange",teal,dark cyan,gold,orange
+Arizona Diamondbacks,#A71930,#000000,MLB,brown,black,"crimson,medium violet red","black,dim gray",crimson,medium violet red,black,dim gray
+Atlanta Braves,#002855,#BA0C2F,MLB,midnightblue,firebrick,"navy,dark blue","crimson,deep pink",navy,dark blue,crimson,deep pink
+Baltimore Orioles,#DF4601,#000000,MLB,orangered,black,"orange red,dark orange","black,dim gray",orange red,dark orange,black,dim gray
+Boston Red Sox,#C8102E,#0C2340,MLB,crimson,midnightblue,"crimson,deep pink","midnight blue,steel blue",crimson,deep pink,midnight blue,steel blue
+Chicago Cubs,#002F6C,#C8102E,MLB,midnightblue,crimson,"navy,dark blue","crimson,deep pink",navy,dark blue,crimson,deep pink
+Chicago White Sox,#27251F,#8A8D8F,MLB,black,lightslategray,"tan,pale goldenrod","alice blue,slate gray",tan,pale goldenrod,alice blue,slate gray
+Cincinnati Reds,#D50032,#000000,MLB,crimson,black,"crimson,deep pink","black,dim gray",crimson,deep pink,black,dim gray
+Cleveland Indians,#0F223E,#E31937,MLB,midnightblue,crimson,"midnight blue,steel blue","crimson,deep pink",midnight blue,steel blue,crimson,deep pink
+Colorado Rockies,#333366,#C4CED4,MLB,darkslategray,lightgray,"dark slate blue,slate blue","alice blue,light steel blue",dark slate blue,slate blue,alice blue,light steel blue
+Detroit Tigers,#0C2C56,#FF6600,MLB,midnightblue,orangered,"midnight blue,navy","orange red,dark orange",midnight blue,navy,orange red,dark orange
+Houston Astros,#002D62,#EB6E1F,MLB,midnightblue,chocolate,"navy,dark blue","chocolate,orange red",navy,dark blue,chocolate,orange red
+Kansas City Royals,#004687,#C09A5B,MLB,midnightblue,darkkhaki,"dark cyan,teal","sandy brown,burly wood",dark cyan,teal,sandy brown,burly wood
+Los Angeles Angels,#BA0021,#003263,MLB,firebrick,midnightblue,"crimson,deep pink","teal,dark cyan",crimson,deep pink,teal,dark cyan
+Los Angeles Dodgers,#002F6C,#E4002B,MLB,midnightblue,crimson,"navy,dark blue","crimson,deep pink",navy,dark blue,crimson,deep pink
+Miami Marlins,#000000,#ef3340,MLB,black,crimson,"black,dim gray","crimson,deep pink",black,dim gray,crimson,deep pink
+Milwaukee Brewers,#13294B,#85714D,MLB,midnightblue,dimgray,"midnight blue,steel blue","burly wood,dark khaki",midnight blue,steel blue,burly wood,dark khaki
+Minnesota Twins,#0C2341,#BA0C2E,MLB,midnightblue,firebrick,"midnight blue,steel blue","crimson,deep pink",midnight blue,steel blue,crimson,deep pink
+New York Mets,#002D72,#FC4C00,MLB,midnightblue,orangered,"navy,dark blue","orange red,dark orange",navy,dark blue,orange red,dark orange
+New York Yankees,#162546,#97999B,MLB,midnightblue,darkgray,"midnight blue,steel blue","alice blue,light slate gray",midnight blue,steel blue,alice blue,light slate gray
+Oakland Athletics,#003831,#EFB21E,MLB,darkslategray,goldenrod,"teal,dark cyan","goldenrod,dark goldenrod",teal,dark cyan,goldenrod,dark goldenrod
+Philadelphia Phillies,#BA0C2F,#003087,MLB,firebrick,midnightblue,"crimson,deep pink","dark blue,navy",crimson,deep pink,dark blue,navy
+Pittsburgh Pirates,#111111,#ffc72c,MLB,black,gold,"black,dim gray","goldenrod,chocolate",black,dim gray,goldenrod,chocolate
+St. Louis Cardinals,#BA0C2F,#0C2340,MLB,firebrick,midnightblue,"crimson,deep pink","midnight blue,steel blue",crimson,deep pink,midnight blue,steel blue
+San Diego Padres,#002D62,#A0AAB2,MLB,midnightblue,darkgray,"navy,dark blue","alice blue,light slate gray",navy,dark blue,alice blue,light slate gray
+San Francisco Giants,#FA4616,#27251F,MLB,orangered,black,"orange red,chocolate","tan,pale goldenrod",orange red,chocolate,tan,pale goldenrod
+Seattle Mariners,#0C2340,#00685E,MLB,midnightblue,teal,"midnight blue,steel blue","teal,dark cyan",midnight blue,steel blue,teal,dark cyan
+Tampa Bay Rays,#092C5C,#8FBCE6,MLB,midnightblue,skyblue,"navy,dark blue","sky blue,light sky blue",navy,dark blue,sky blue,light sky blue
+Texas Rangers,#003278,#C0111F,MLB,midnightblue,firebrick,"navy,dark blue","crimson,deep pink",navy,dark blue,crimson,deep pink
+Toronto Blue Jays,#134A8E,#E8291C,MLB,darkslateblue,crimson,"dodger blue,midnight blue","fire brick,red",dodger blue,midnight blue,fire brick,red
+Washington Nationals,#BA122B,#14225A,MLB,firebrick,midnightblue,"crimson,deep pink","midnight blue,royal blue",crimson,deep pink,midnight blue,royal blue
+Montreal Expos,#002E88,#E4002B,MLB,midnightblue,crimson,"dark blue,navy","crimson,deep pink",dark blue,navy,crimson,deep pink
+MLB,#002D72,#D50032,MLB,midnightblue,crimson,"navy,dark blue","crimson,deep pink",navy,dark blue,crimson,deep pink
+Anaheim Ducks,#f95602,#000000,NHL,orangered,black,"orange red,dark orange","black,dim gray",orange red,dark orange,black,dim gray
+Arizona Coyotes,#8C2633,#E2D6B5,NHL,brown,wheat,"crimson,hot pink","blanched almond,papaya whip",crimson,hot pink,blanched almond,papaya whip
+Boston Bruins,#111111,#FCB514,NHL,black,orange,"black,dim gray","orange,goldenrod",black,dim gray,orange,goldenrod
+Buffalo Sabres,#002654,#FCB514,NHL,midnightblue,orange,"navy,dark blue","orange,goldenrod",navy,dark blue,orange,goldenrod
+Calgary Flames,#B72B35,#F1BE48,NHL,brown,sandybrown,"crimson,medium violet red","peru,sandy brown",crimson,medium violet red,peru,sandy brown
+Carolina Hurricanes,#B72B35,#000000,NHL,brown,black,"crimson,medium violet red","black,dim gray",crimson,medium violet red,black,dim gray
+Chicago Blackhawks,#CF0A2C,#000000,NHL,crimson,black,"crimson,deep pink","black,dim gray",crimson,deep pink,black,dim gray
+Colorado Avalanche,#6F263D,#236192,NHL,brown,teal,"pale violet red,hot pink","steel blue,royal blue",pale violet red,hot pink,steel blue,royal blue
+Columbus Blue Jackets,#002654,#CE1126,NHL,midnightblue,crimson,"navy,dark blue","crimson,deep pink",navy,dark blue,crimson,deep pink
+Dallas Stars,#006847,#8F8F8C,NHL,darkslategray,gray,"teal,dark cyan","beige,ivory",teal,dark cyan,beige,ivory
+Detroit Red Wings,#CE1126,#CE1126,NHL,crimson,crimson,"crimson,deep pink","crimson,deep pink",crimson,deep pink,crimson,deep pink
+Edmonton Oilers,#041E41,#FF4C00,NHL,midnightblue,orangered,"navy,dark blue","orange red,dark orange",navy,dark blue,orange red,dark orange
+Florida Panthers,#041E42,#C8102E,NHL,midnightblue,crimson,"navy,dark blue","crimson,deep pink",navy,dark blue,crimson,deep pink
+Los Angeles Kings,#111111,#a2aaad,NHL,black,darkgray,"black,dim gray","alice blue,azure",black,dim gray,alice blue,azure
+Minnesota Wild,#004F30,#C51230,NHL,darkgreen,crimson,"teal,dark cyan","crimson,deep pink",teal,dark cyan,crimson,deep pink
+Montreal Canadiens,#C51230,#192168,NHL,crimson,midnightblue,"crimson,deep pink","midnight blue,royal blue",crimson,deep pink,midnight blue,royal blue
+Nashville Predators,#041E42,#FFB81C,NHL,midnightblue,orange,"navy,dark blue","goldenrod,orange",navy,dark blue,goldenrod,orange
+New Jersey Devils,#CE1126,#000000,NHL,crimson,black,"crimson,deep pink","black,dim gray",crimson,deep pink,black,dim gray
+New York Islanders,#00529B,#F47920,NHL,teal,chocolate,"deep sky blue,dodger blue","chocolate,goldenrod",deep sky blue,dodger blue,chocolate,goldenrod
+New York Rangers,#0038A8,#CE1126,NHL,darkblue,crimson,"dark blue,medium blue","crimson,deep pink",dark blue,medium blue,crimson,deep pink
+Ottawa Senators,#E31837,#000000,NHL,crimson,black,"crimson,deep pink","black,dim gray",crimson,deep pink,black,dim gray
+Philadelphia Flyers,#F74902,#000000,NHL,orangered,black,"orange red,dark orange","black,dim gray",orange red,dark orange,black,dim gray
+Pittsburgh Penguins,#000000,#FCB514,NHL,black,orange,"black,dim gray","orange,goldenrod",black,dim gray,orange,goldenrod
+St. Louis Blues,#002F87,#FCB514,NHL,midnightblue,orange,"dark blue,navy","orange,goldenrod",dark blue,navy,orange,goldenrod
+San Jose Sharks,#006D75,#EA7200,NHL,teal,darkorange,"teal,dark cyan","dark orange,orange",teal,dark cyan,dark orange,orange
+Tampa Bay Lightning,#002868,#000000,NHL,midnightblue,black,"navy,dark blue","black,dim gray",navy,dark blue,black,dim gray
+Toronto Maple Leafs,#003E7E,#003E7E,NHL,midnightblue,midnightblue,"navy,dark blue","navy,dark blue",navy,dark blue,navy,dark blue
+Vancouver Canucks,#001F5C,#021B2C,NHL,midnightblue,black,"navy,dark blue","teal,dark cyan",navy,dark blue,teal,dark cyan
+Vegas Golden Knights,#B4975A,#333F42,NHL,darkkhaki,darkslategray,"dark khaki,burly wood","slate gray,light slate gray",dark khaki,burly wood,slate gray,light slate gray
+Washington Capitals,#041E41,#CF0A2C,NHL,midnightblue,crimson,"navy,dark blue","crimson,deep pink",navy,dark blue,crimson,deep pink
+Winnipeg Jets,#041E41,#AC162C,NHL,midnightblue,firebrick,"navy,dark blue","crimson,medium violet red",navy,dark blue,crimson,medium violet red
+Atlanta Thrashers,#041E42,#FFA300,NHL,midnightblue,orange,"navy,dark blue","orange,dark orange",navy,dark blue,orange,dark orange
+Hartford Whalers,#0e7b3e,#2a3489,NHL,forestgreen,darkslateblue,"sea green,green","midnight blue,royal blue",sea green,green,midnight blue,royal blue
+Minnesota North Stars,#009639,#ffd100,NHL,forestgreen,gold,"green,spring green","gold,orange",green,spring green,gold,orange
+Quebec Nordiques,#c8102e,#0072ce,NHL,crimson,dodgerblue,"crimson,deep pink","deep sky blue,dodger blue",crimson,deep pink,deep sky blue,dodger blue
+AFC Bournemouth,#d41e2a,#000000,EPL,crimson,black,"crimson,deep pink","black,dim gray",crimson,deep pink,black,dim gray
+Arsenal,#D80919,#063672,EPL,crimson,midnightblue,"crimson,deep pink","navy,dark blue",crimson,deep pink,navy,dark blue
+Brighton & Hove Albion,#0A56A3,#F8BC1B,EPL,teal,orange,"dodger blue,deep sky blue","goldenrod,dark goldenrod",dodger blue,deep sky blue,goldenrod,dark goldenrod
+Burnley,#80234C,#91D2F2,EPL,brown,skyblue,"medium violet red,hot pink","sky blue,light sky blue",medium violet red,hot pink,sky blue,light sky blue
+Cardiff City,#0070B5,#D11524,EPL,darkcyan,crimson,"deep sky blue,dark turquoise","crimson,deep pink",deep sky blue,dark turquoise,crimson,deep pink
+Chelsea,#034694,#ED1C24,EPL,teal,crimson,"dodger blue,dark blue","crimson,deep pink",dodger blue,dark blue,crimson,deep pink
+Crystal Palace FC,#1B458F,#C4122E,EPL,darkslateblue,firebrick,"midnight blue,royal blue","crimson,deep pink",midnight blue,royal blue,crimson,deep pink
+Everton FC,#063A99,#000000,EPL,midnightblue,black,"dark blue,navy","black,dim gray",dark blue,navy,black,dim gray
+Fulham,#cc0000,#000000,EPL,red,black,"red,dark red","black,dim gray",red,dark red,black,dim gray
+Huddersfield Town,#0E63AD,#000000,EPL,darkcyan,black,"dodger blue,deep sky blue","black,dim gray",dodger blue,deep sky blue,black,dim gray
+Leicester City,#1358A1,#FAB92C,EPL,teal,goldenrod,"dodger blue,deep sky blue","goldenrod,chocolate",dodger blue,deep sky blue,goldenrod,chocolate
+Liverpool,#E0202C,#19A78E,EPL,crimson,lightseagreen,"crimson,deep pink","light sea green,turquoise",crimson,deep pink,light sea green,turquoise
+Manchester City,#99C5E7,#022A5D,EPL,skyblue,midnightblue,"sky blue,light blue","navy,dark blue",sky blue,light blue,navy,dark blue
+Manchester United,#DC1F29,#000000,EPL,crimson,black,"crimson,deep pink","black,dim gray",crimson,deep pink,black,dim gray
+Newcastle United FC,#000000,#C2A475,EPL,black,darkkhaki,"black,dim gray","burly wood,tan",black,dim gray,burly wood,tan
+Southampton FC,#D41E29,#FFC20E,EPL,crimson,gold,"crimson,deep pink","gold,orange",crimson,deep pink,gold,orange
+Tottenham Hotspur,#11214B,#11214b,EPL,midnightblue,midnightblue,"midnight blue,royal blue","midnight blue,royal blue",midnight blue,royal blue,midnight blue,royal blue
+Watford FC,#FEEB00,#000000,EPL,yellow,black,"yellow,gold","black,dim gray",yellow,gold,black,dim gray
+West Ham United,#7A263A,#2AB2E5,EPL,brown,dodgerblue,"pale violet red,hot pink","dodger blue,light sea green",pale violet red,hot pink,dodger blue,light sea green
+Wolverhampton,#231F20,#FDB913,EPL,black,orange,"lavender blush,pink","orange,goldenrod",lavender blush,pink,orange,goldenrod
+Aston Villa,#95bfe5,#670e36,EPL,skyblue,maroon,"sky blue,light sky blue","medium violet red,crimson",sky blue,light sky blue,medium violet red,crimson
+Leeds United,#005B9E,#ffcd00,EPL,teal,gold,"deep sky blue,dark cyan","gold,orange",deep sky blue,dark cyan,gold,orange
+Stoke City FC,#D41E29,#02225f,EPL,crimson,midnightblue,"crimson,deep pink","navy,dark blue",crimson,deep pink,navy,dark blue
+Swansea City FC,#121212,#000000,EPL,black,black,"black,dim gray","black,dim gray",black,dim gray,black,dim gray
+West Bromwich Albion,#122F67,#122f67,EPL,midnightblue,midnightblue,"midnight blue,royal blue","midnight blue,royal blue",midnight blue,royal blue,midnight blue,royal blue
+Alavés,#009Ad7,#0761AF,La Liga,dodgerblue,darkcyan,"deep sky blue,dark turquoise","dodger blue,deep sky blue",deep sky blue,dark turquoise,dodger blue,deep sky blue
+Atletico Madrid,#272e61,#CB3524,La Liga,midnightblue,firebrick,"dark slate blue,midnight blue","fire brick,brown",dark slate blue,midnight blue,fire brick,brown
+Barcelona FC,#a40344,#004A99,La Liga,brown,teal,"medium violet red,crimson","deep sky blue,dodger blue",medium violet red,crimson,deep sky blue,dodger blue
+Celta Vigo,#E5254E,#8AC3EE,La Liga,crimson,skyblue,"crimson,deep pink",,crimson,deep pink,,
+Deportivo,#57175E,#A38D44,La Liga,indigo,peru,"dark orchid,medium orchid","dark khaki,peru",dark orchid,medium orchid,dark khaki,peru
+Levante U.D.,#A40344,#004A99,La Liga,brown,teal,"medium violet red,crimson","deep sky blue,dodger blue",medium violet red,crimson,deep sky blue,dodger blue
+Real Betis,#0BB363,#E7A614,La Liga,mediumseagreen,goldenrod,"medium spring green,spring green","goldenrod,dark goldenrod",medium spring green,spring green,goldenrod,dark goldenrod
+Real Madrid CF,#FEBE10,#EE324E,La Liga,orange,crimson,"orange,gold","crimson,deep pink",orange,gold,crimson,deep pink
+Valencia CF,#0097D7,#000000,La Liga,dodgerblue,black,"deep sky blue,dark turquoise","black,dim gray",deep sky blue,dark turquoise,black,dim gray
+A.C. Milan,#000000,#fb090b,Serie A,black,red,"black,dim gray","crimson,deep pink",black,dim gray,crimson,deep pink
+A.S. Roma,#8E1F2F,#F0BC42,Serie A,brown,sandybrown,"crimson,medium violet red","peru,goldenrod",crimson,medium violet red,peru,goldenrod
+Atalanta,#1e71b8,#000000,Serie A,steelblue,black,"dodger blue,royal blue","black,dim gray",dodger blue,royal blue,black,dim gray
+Bologna,#1a2f48,#a21c26,Serie A,darkslategray,brown,"steel blue,midnight blue","crimson,medium violet red",steel blue,midnight blue,crimson,medium violet red
+Cagliari,#ad002a,#002350,Serie A,firebrick,midnightblue,"crimson,deep pink","navy,dark blue",crimson,deep pink,navy,dark blue
+ChievoVerona,#FFE72C,#0068B0,Serie A,gold,darkcyan,"goldenrod,gold","deep sky blue,dodger blue",goldenrod,gold,deep sky blue,dodger blue
+Empoli FC,#00579C,#00579C,Serie A,teal,teal,"deep sky blue,dark cyan","deep sky blue,dark cyan",deep sky blue,dark cyan,deep sky blue,dark cyan
+Fiorentina,#482e92,#a29160,Serie A,darkslateblue,darkkhaki,"dark slate blue,midnight blue","dark khaki,burly wood",dark slate blue,midnight blue,dark khaki,burly wood
+Inter Milan,#a29161,#0068A8,Serie A,darkkhaki,darkcyan,"dark khaki,burly wood","deep sky blue,dark cyan",dark khaki,burly wood,deep sky blue,dark cyan
+Juventus,#000000,#000000,Serie A,black,black,"black,dim gray","black,dim gray",black,dim gray,black,dim gray
+Napoli,#003C82,#12A0D7,Serie A,midnightblue,dodgerblue,"navy,dark blue","deep sky blue,dodger blue",navy,dark blue,deep sky blue,dodger blue
+Cincinnati,#E00122,#000000,NCAA,crimson,black,"crimson,deep pink","black,dim gray",crimson,deep pink,black,dim gray
+East Carolina,#592A8A,#FDC82F,NCAA,darkslateblue,gold,"dark orchid,blue violet","goldenrod,chocolate",dark orchid,blue violet,goldenrod,chocolate
+Houston,#C8102E,#C8102E,NCAA,crimson,crimson,"crimson,deep pink","crimson,deep pink",crimson,deep pink,crimson,deep pink
+Memphis,#003087,#898D8D,NCAA,midnightblue,gray,"dark blue,navy","azure,light cyan",dark blue,navy,azure,light cyan
+Navy,#00205B,#C5B783,NCAA,midnightblue,tan,"navy,dark blue","tan,pale goldenrod",navy,dark blue,tan,pale goldenrod
+South Florida,#006747,#CFC493,NCAA,darkslategray,tan,"teal,dark cyan","pale goldenrod,wheat",teal,dark cyan,pale goldenrod,wheat
+Temple,#9D2235,#9D2235,NCAA,brown,brown,"crimson,medium violet red","crimson,medium violet red",crimson,medium violet red,crimson,medium violet red
+Tulane,#006747,#006747,NCAA,darkslategray,darkslategray,"teal,dark cyan","teal,dark cyan",teal,dark cyan,teal,dark cyan
+Tulsa,#002D72,#c8102e,NCAA,midnightblue,crimson,"navy,dark blue","crimson,deep pink",navy,dark blue,crimson,deep pink
+Wichita State,#000000,#ffcd00,NCAA,black,gold,"black,dim gray","gold,orange",black,dim gray,gold,orange
+Boston College,#98002E,#BC9B6A,NCAA,brown,darkkhaki,"crimson,medium violet red","burly wood,tan",crimson,medium violet red,burly wood,tan
+Clemson,#f66733,#522d80,NCAA,tomato,darkslateblue,"tomato,coral","dark slate blue,dark orchid",tomato,coral,dark slate blue,dark orchid
+Duke,#001a57,#003366,NCAA,midnightblue,midnightblue,"navy,dark blue","navy,teal",navy,dark blue,navy,teal
+Florida State,#782f40,#ceb888,NCAA,brown,tan,"pale violet red,hot pink","tan,burly wood",pale violet red,hot pink,tan,burly wood
+Georgia Tech,#eeb211,#262626,NCAA,orange,darkslategray,"goldenrod,orange","black,dim gray",goldenrod,orange,black,dim gray
+Louisville,#Ad0000,#000000,NCAA,darkred,black,"dark red,maroon","black,dim gray",dark red,maroon,black,dim gray
+Miami,#f47321,#005030,NCAA,chocolate,darkgreen,"chocolate,orange red","teal,dark cyan",chocolate,orange red,teal,dark cyan
+North Carolina,#4b9cd3,#13294b,NCAA,cornflowerblue,midnightblue,"steel blue,cornflower blue","midnight blue,steel blue",steel blue,cornflower blue,midnight blue,steel blue
+North Carolina State,#cc0000,#000000,NCAA,red,black,"red,dark red","black,dim gray",red,dark red,black,dim gray
+Notre Dame,#0c2340,#c99700,NCAA,midnightblue,darkgoldenrod,"midnight blue,steel blue","dark goldenrod,gold",midnight blue,steel blue,dark goldenrod,gold
+Pittsburgh,#003594,#FFB81C,NCAA,midnightblue,orange,"dark blue,navy","goldenrod,orange",dark blue,navy,goldenrod,orange
+Syracuse,#d44500,#3e3d3c,NCAA,orangered,darkslategray,"orange red,dark orange","dim gray,black",orange red,dark orange,dim gray,black
+Virginia,#232D4b,#e57200,NCAA,darkslategray,chocolate,"dark slate blue,steel blue","dark orange,orange",dark slate blue,steel blue,dark orange,orange
+Virginia Tech,#8a1e41,#ee7623,NCAA,brown,chocolate,"crimson,medium violet red","chocolate,goldenrod",crimson,medium violet red,chocolate,goldenrod
+Wake Forest,#a67f31,#000000,NCAA,peru,black,"peru,sienna","black,dim gray",peru,sienna,black,dim gray
+Davidson,#AC1A2F,#000000,NCAA,firebrick,black,"crimson,medium violet red","black,dim gray",crimson,medium violet red,black,dim gray
+Dayton,#CE1141,#004B8D,NCAA,crimson,teal,"crimson,deep pink","deep sky blue,dark cyan",crimson,deep pink,deep sky blue,dark cyan
+Duquesne,#041E42,#BA0C2F,NCAA,midnightblue,firebrick,"navy,dark blue","crimson,deep pink",navy,dark blue,crimson,deep pink
+Fordham,#860038,#860038,NCAA,brown,brown,"medium violet red,crimson","medium violet red,crimson",medium violet red,crimson,medium violet red,crimson
+George Mason,#006633,#FFCC33,NCAA,darkgreen,gold,"dark green,teal","goldenrod,chocolate",dark green,teal,goldenrod,chocolate
+George Washington,#002654,#E2CB92,NCAA,midnightblue,burlywood,"navy,dark blue","tan,navajo white",navy,dark blue,tan,navajo white
+La Salle,#003366,#FFCC00,NCAA,midnightblue,gold,"navy,teal","gold,orange",navy,teal,gold,orange
+UMass,#971B2F,#572932,NCAA,brown,darkslategray,"crimson,medium violet red","pale violet red,hot pink",crimson,medium violet red,pale violet red,hot pink
+Rhode Island,#002147,#68ABE8,NCAA,midnightblue,cornflowerblue,"navy,dark blue","cornflower blue,steel blue",navy,dark blue,cornflower blue,steel blue
+Richmond,#000066,#990000,NCAA,navy,darkred,"navy,dark blue","dark red,maroon",navy,dark blue,dark red,maroon
+St. Bonaventure,#54261A,#FDB726,NCAA,saddlebrown,goldenrod,"sienna,brown","goldenrod,chocolate",sienna,brown,goldenrod,chocolate
+St. Joseph’s,#9E1B32,#6C6F70,NCAA,brown,dimgray,"crimson,medium violet red","slate gray,light slate gray",crimson,medium violet red,slate gray,light slate gray
+St. Louis,#003DA5,#C8C9C7,NCAA,darkblue,silver,"dark blue,navy","honeydew,ivory",dark blue,navy,honeydew,ivory
+VCU,#FFB300,#000000,NCAA,orange,black,"orange,gold","black,dim gray",orange,gold,black,dim gray
+Eastern Washington,#a10022,#000000,NCAA,firebrick,black,"crimson,medium violet red","black,dim gray",crimson,medium violet red,black,dim gray
+Idaho,#B3A369,#000000,NCAA,darkkhaki,black,"dark khaki,khaki","black,dim gray",dark khaki,khaki,black,dim gray
+Idaho State,#660033,#999999,NCAA,maroon,darkgray,"medium violet red,purple","dark gray,gray",medium violet red,purple,dark gray,gray
+Montana,#660033,#999999,NCAA,maroon,darkgray,"medium violet red,purple","dark gray,gray",medium violet red,purple,dark gray,gray
+Montana State,#00205B,#B9975B,NCAA,midnightblue,darkkhaki,"navy,dark blue","burly wood,dark khaki",navy,dark blue,burly wood,dark khaki
+Northern Arizona,#003466,#ffd200,NCAA,midnightblue,gold,"teal,dark cyan","gold,orange",teal,dark cyan,gold,orange
+Northern Colorado,#013C65,#F6B000,NCAA,midnightblue,orange,"teal,dark cyan","orange,gold",teal,dark cyan,orange,gold
+Portland State,#154734,#154734,NCAA,darkslategray,darkslategray,"sea green,medium sea green","sea green,medium sea green",sea green,medium sea green,sea green,medium sea green
+Sacramento State,#043927,#C4B581,NCAA,darkgreen,tan,"teal,dark cyan","tan,pale goldenrod",teal,dark cyan,tan,pale goldenrod
+Southern Utah,#C41425,#000000,NCAA,firebrick,black,"crimson,deep pink","black,dim gray",crimson,deep pink,black,dim gray
+Weber State,#4B2682,#a1a1a4,NCAA,darkslateblue,darkgray,"dark orchid,dark slate blue","ghost white,lavender",dark orchid,dark slate blue,ghost white,lavender
+Illinois,#13294B,#e84a27,NCAA,midnightblue,chocolate,"midnight blue,steel blue","chocolate,tomato",midnight blue,steel blue,chocolate,tomato
+Indiana,#990000,#eeedeb,NCAA,darkred,linen,"dark red,maroon","floral white,old lace",dark red,maroon,floral white,old lace
+Iowa,#ffcd00,#000000,NCAA,gold,black,"gold,orange","black,dim gray",gold,orange,black,dim gray
+Maryland,#e03a3e,#ffd520,NCAA,crimson,gold,"crimson,hot pink","goldenrod,gold",crimson,hot pink,goldenrod,gold
+Michigan,#00274c,#ffcb05,NCAA,midnightblue,gold,"teal,dark cyan","gold,orange",teal,dark cyan,gold,orange
+Michigan State,#18453b,#d1d1d1,NCAA,darkslategray,lightgray,"sea green,medium sea green","light gray,gainsboro",sea green,medium sea green,light gray,gainsboro
+Minnesota,#7a0019,#ffcc33,NCAA,maroon,gold,"crimson,medium violet red","goldenrod,chocolate",crimson,medium violet red,goldenrod,chocolate
+Nebraska,#c8102e,#000000,NCAA,crimson,black,"crimson,deep pink","black,dim gray",crimson,deep pink,black,dim gray
+Northwestern,#4e2a84,#4e2a84,NCAA,darkslateblue,darkslateblue,"dark slate blue,dark orchid","dark slate blue,dark orchid",dark slate blue,dark orchid,dark slate blue,dark orchid
+Ohio State,#bb0000,#666666,NCAA,darkred,dimgray,"dark red,maroon","dim gray,gray",dark red,maroon,dim gray,gray
+Penn State,#093162,#000000,NCAA,midnightblue,black,"navy,dark blue","black,dim gray",navy,dark blue,black,dim gray
+Purdue,#000000,#c28e0e,NCAA,black,darkgoldenrod,"black,dim gray","dark goldenrod,goldenrod",black,dim gray,dark goldenrod,goldenrod
+Rutgers,#cc0033,#5f6a72,NCAA,crimson,dimgray,"crimson,deep pink","slate gray,light slate gray",crimson,deep pink,slate gray,light slate gray
+Wisconsin,#c50505,#000000,NCAA,firebrick,black,"red,dark red","black,dim gray",red,dark red,black,dim gray
+Charlotte,#046A38,#B9975B,NCAA,forestgreen,darkkhaki,"teal,dark cyan","burly wood,dark khaki",teal,dark cyan,burly wood,dark khaki
+Florida Atlantic (FAU),#003366,#cc0000,NCAA,midnightblue,red,"navy,teal","red,dark red",navy,teal,red,dark red
+Florida International (FIU),#081E3F,#B6862C,NCAA,midnightblue,peru,"midnight blue,navy","peru,goldenrod",midnight blue,navy,peru,goldenrod
+Louisiana Tech,#E31B23,#002F8B,NCAA,crimson,midnightblue,"crimson,deep pink","dark blue,navy",crimson,deep pink,dark blue,navy
+Marshall,#00B140,#27251F,NCAA,limegreen,black,"spring green,medium spring green","tan,pale goldenrod",spring green,medium spring green,tan,pale goldenrod
+Middle Tennessee,#0066CC,#000000,NCAA,royalblue,black,"deep sky blue,dodger blue","black,dim gray",deep sky blue,dodger blue,black,dim gray
+North Texas,#00853E,#000000,NCAA,forestgreen,black,"spring green,medium spring green","black,dim gray",spring green,medium spring green,black,dim gray
+Old Dominion,#003057,#7C878E,NCAA,midnightblue,lightslategray,"teal,dark cyan","slate gray,light slate gray",teal,dark cyan,slate gray,light slate gray
+Rice,#00205B,#C1C6C8,NCAA,midnightblue,silver,"navy,dark blue","alice blue,azure",navy,dark blue,alice blue,azure
+Southern Miss,#000000,#FFAB00,NCAA,black,orange,"black,dim gray","orange,dark orange",black,dim gray,orange,dark orange
+UAB,#006341,#CC8A00,NCAA,darkslategray,darkgoldenrod,"teal,dark cyan","dark goldenrod,orange",teal,dark cyan,dark goldenrod,orange
+UTEP,#FF8200,#041E42,NCAA,darkorange,midnightblue,"dark orange,orange","navy,dark blue",dark orange,orange,navy,dark blue
+UTSA,#F15A22,#0C2340,NCAA,chocolate,midnightblue,"chocolate,orange red","midnight blue,steel blue",chocolate,orange red,midnight blue,steel blue
+WKU,#c60c30,#1e1e1e,NCAA,crimson,black,"crimson,deep pink","black,dim gray",crimson,deep pink,black,dim gray
+Brown,#4E3629,#e4002b,NCAA,darkolivegreen,crimson,"dark salmon,burly wood","crimson,deep pink",dark salmon,burly wood,crimson,deep pink
+Columbia,#003865,#9BCBEB,NCAA,midnightblue,skyblue,"teal,dark cyan","sky blue,light blue",teal,dark cyan,sky blue,light blue
+Cornell,#B31B1B,#000000,NCAA,firebrick,black,"fire brick,brown","black,dim gray",fire brick,brown,black,dim gray
+Dartmouth,#046A38,#000000,NCAA,forestgreen,black,"teal,dark cyan","black,dim gray",teal,dark cyan,black,dim gray
+Harvard,#A41034,#000000,NCAA,brown,black,"crimson,medium violet red","black,dim gray",crimson,medium violet red,black,dim gray
+Penn,#011F5B,#990000,NCAA,midnightblue,darkred,"navy,dark blue","dark red,maroon",navy,dark blue,dark red,maroon
+Princeton,#FF671F,#000000,NCAA,tomato,black,"chocolate,orange red","black,dim gray",chocolate,orange red,black,dim gray
+Yale,#00356B,#00356B,NCAA,midnightblue,midnightblue,"navy,dark blue","navy,dark blue",navy,dark blue,navy,dark blue
+Akron,#041E42,#A89969,NCAA,midnightblue,darkkhaki,"navy,dark blue","dark khaki,tan",navy,dark blue,dark khaki,tan
+Bowling Green,#4F2C1D,#FE5000,NCAA,saddlebrown,orangered,"sienna,brown","orange red,dark orange",sienna,brown,orange red,dark orange
+Buffalo,#005BBB,#FE5000,NCAA,darkcyan,orangered,"deep sky blue,dodger blue","orange red,dark orange",deep sky blue,dodger blue,orange red,dark orange
+Kent State,#002664,#EAAB00,NCAA,midnightblue,orange,"navy,dark blue","orange,gold",navy,dark blue,orange,gold
+Miami,#B61E2E,#000000,NCAA,firebrick,black,"crimson,medium violet red","black,dim gray",crimson,medium violet red,black,dim gray
+Ohio,#00694E,#CDA077,NCAA,darkslategray,tan,"teal,dark cyan","burly wood,tan",teal,dark cyan,burly wood,tan
+Ball State,#BA0C2F,#000000,NCAA,firebrick,black,"crimson,deep pink","black,dim gray",crimson,deep pink,black,dim gray
+Central Michigan,#6A0032,#6A0032,NCAA,maroon,maroon,"medium violet red,purple","medium violet red,purple",medium violet red,purple,medium violet red,purple
+Eastern Michigan,#006633,#000000,NCAA,darkgreen,black,"dark green,teal","black,dim gray",dark green,teal,black,dim gray
+Northern Illinois,#BA0C2F,#8A8D8F,NCAA,firebrick,lightslategray,"crimson,deep pink","alice blue,slate gray",crimson,deep pink,alice blue,slate gray
+Toledo,#15397F,#FFDA00,NCAA,midnightblue,gold,"midnight blue,royal blue","gold,yellow",midnight blue,royal blue,gold,yellow
+Western Michigan,#15397F,#B5A167,NCAA,midnightblue,darkkhaki,"midnight blue,royal blue","dark khaki,burly wood",midnight blue,royal blue,dark khaki,burly wood
+Air Force,#003087,#B1B3B3,NCAA,midnightblue,darkgray,"dark blue,navy","azure,light cyan",dark blue,navy,azure,light cyan
+Boise State,#0033A0,#d64309,NCAA,darkblue,orangered,"dark blue,navy","orange red,chocolate",dark blue,navy,orange red,chocolate
+Colorado State,#1E4D2B,#C8C372,NCAA,darkslategray,darkkhaki,"sea green,medium sea green","dark khaki,khaki",sea green,medium sea green,dark khaki,khaki
+Fresno State,#db0032,#002E6d,NCAA,crimson,midnightblue,"crimson,deep pink","navy,dark blue",crimson,deep pink,navy,dark blue
+Hawaii,#024731,#c8c8c8,NCAA,darkslategray,silver,"teal,dark cyan","silver,light gray",teal,dark cyan,silver,light gray
+Nevada,#003366,#807F84,NCAA,midnightblue,gray,"navy,teal","lavender,ghost white",navy,teal,lavender,ghost white
+New Mexico,#Ba0c2f,#63666A,NCAA,firebrick,dimgray,"crimson,deep pink","slate gray,light slate gray",crimson,deep pink,slate gray,light slate gray
+San Diego State,#A6192E,#000000,NCAA,brown,black,"crimson,medium violet red","black,dim gray",crimson,medium violet red,black,dim gray
+San Jose State,#0055A2,#e5A823,NCAA,teal,goldenrod,"deep sky blue,dodger blue","goldenrod,dark goldenrod",deep sky blue,dodger blue,goldenrod,dark goldenrod
+UNLV,#b10202,#666666,NCAA,darkred,dimgray,"dark red,maroon","dim gray,gray",dark red,maroon,dim gray,gray
+Utah State,#0F2439,#9d968d,NCAA,midnightblue,rosybrown,"steel blue,midnight blue","linen,antique white",steel blue,midnight blue,linen,antique white
+Wyoming,#492f24,#ffc425,NCAA,darkslategray,gold,"indian red,sienna","goldenrod,dark goldenrod",indian red,sienna,goldenrod,dark goldenrod
+Bucknell,#E87722,#003865,NCAA,chocolate,midnightblue,"chocolate,goldenrod","teal,dark cyan",chocolate,goldenrod,teal,dark cyan
+Colgate,#821019,#5A646E,NCAA,maroon,dimgray,"crimson,medium violet red","slate gray,light slate gray",crimson,medium violet red,slate gray,light slate gray
+Holy Cross,#602d89,#602d89,NCAA,darkslateblue,darkslateblue,"dark orchid,medium orchid","dark orchid,medium orchid",dark orchid,medium orchid,dark orchid,medium orchid
+Chattanooga,#00386B,#E0AA0F,NCAA,midnightblue,goldenrod,"teal,dark cyan","dark goldenrod,goldenrod",teal,dark cyan,dark goldenrod,goldenrod
+ETSU,#041E42,#FFC72C,NCAA,midnightblue,gold,"navy,dark blue","goldenrod,chocolate",navy,dark blue,goldenrod,chocolate
+Mercer,#F76800,#000000,NCAA,orangered,black,"dark orange,orange red","black,dim gray",dark orange,orange red,black,dim gray
+Furman,#201547,#582C83,NCAA,midnightblue,darkslateblue,"midnight blue,dark slate blue","dark orchid,dark slate blue",midnight blue,dark slate blue,dark orchid,dark slate blue
+Samford,#002649,#c4161d,NCAA,midnightblue,firebrick,"teal,dark cyan","crimson,deep pink",teal,dark cyan,crimson,deep pink
+The Citadel,#3975B7,#1F3A60,NCAA,steelblue,darkslategray,"steel blue,royal blue","steel blue,midnight blue",steel blue,royal blue,steel blue,midnight blue
+UNC Greensboro,#0f2044,#ffb71b,NCAA,midnightblue,orange,"midnight blue,royal blue","goldenrod,orange",midnight blue,royal blue,goldenrod,orange
+VMI,#A71F23,#ffd520,NCAA,firebrick,gold,"crimson,medium violet red","goldenrod,gold",crimson,medium violet red,goldenrod,gold
+Western Carolina,#592C88,#C1A875,NCAA,darkslateblue,darkkhaki,"dark orchid,dark slate blue","burly wood,tan",dark orchid,dark slate blue,burly wood,tan
+Wofford,#886E4C,#000000,NCAA,dimgray,black,"burly wood,tan","black,dim gray",burly wood,tan,black,dim gray
+Appalachian State,#222222,#FFCC00,NCAA,black,gold,"black,dim gray","gold,orange",black,dim gray,gold,orange
+Arkansas Little-Rock,#6E2639,#A7A9AC,NCAA,saddlebrown,darkgray,"pale violet red,hot pink","alice blue,light steel blue",pale violet red,hot pink,alice blue,light steel blue
+Arkansas State,#CC092F,#000000,NCAA,crimson,black,"crimson,deep pink","black,dim gray",crimson,deep pink,black,dim gray
+Coastal Carolina,#006F71,#A27752,NCAA,teal,peru,"teal,dark cyan","dark salmon,burly wood",teal,dark cyan,dark salmon,burly wood
+Georgia Southern,#011E41,#A3AAAE,NCAA,midnightblue,darkgray,"navy,dark blue","alice blue,light slate gray",navy,dark blue,alice blue,light slate gray
+Georgia State,#0039A6,#C60C30,NCAA,darkblue,crimson,"dark blue,navy","crimson,deep pink",dark blue,navy,crimson,deep pink
+Louisiana,#CE181E,#0A0203,NCAA,firebrick,black,"crimson,deep pink","crimson,medium violet red",crimson,deep pink,crimson,medium violet red
+Louisiana-Monroe,#800029,#BD955A,NCAA,maroon,peru,"crimson,medium violet red","sandy brown,burly wood",crimson,medium violet red,sandy brown,burly wood
+South Alabama,#00205B,#BF0D3E,NCAA,midnightblue,crimson,"navy,dark blue","crimson,deep pink",navy,dark blue,crimson,deep pink
+Texas Arlington,#0064B1,#F58025,NCAA,darkcyan,darkorange,"deep sky blue,dodger blue","chocolate,goldenrod",deep sky blue,dodger blue,chocolate,goldenrod
+Texas State,#501214,#8d734a,NCAA,maroon,sienna,"crimson,medium violet red","burly wood,dark khaki",crimson,medium violet red,burly wood,dark khaki
+BYU,#002255,#C5AF7D,NCAA,midnightblue,tan,"navy,dark blue","tan,burly wood",navy,dark blue,tan,burly wood
+Gonzaga,#041E42,#C8102E,NCAA,midnightblue,crimson,"navy,dark blue","crimson,deep pink",navy,dark blue,crimson,deep pink
+Loyola Marymount,#B62B3A,#00447C,NCAA,brown,midnightblue,"crimson,medium violet red","teal,dark cyan",crimson,medium violet red,teal,dark cyan
+Pacific,#E35205,#231F20,NCAA,orangered,black,"orange red,dark orange","lavender blush,pink",orange red,dark orange,lavender blush,pink
+Pepperdine,#00205C,#EE7624,NCAA,midnightblue,chocolate,"navy,dark blue","chocolate,goldenrod",navy,dark blue,chocolate,goldenrod
+Portland,#1E1656,#5E6A71,NCAA,midnightblue,dimgray,"midnight blue,dark slate blue","slate gray,light slate gray",midnight blue,dark slate blue,slate gray,light slate gray
+Saint Mary’s,#06315B,#D80024,NCAA,midnightblue,crimson,"teal,navy","crimson,deep pink",teal,navy,crimson,deep pink
+San Diego,#002868,#84BCE8,NCAA,midnightblue,skyblue,"navy,dark blue","light sky blue,sky blue",navy,dark blue,light sky blue,sky blue
+San Francisco,#00543C,#FDBB30,NCAA,darkslategray,goldenrod,"teal,dark cyan","goldenrod,chocolate",teal,dark cyan,goldenrod,chocolate
+Santa Clara,#862633,#862633,NCAA,brown,brown,"crimson,pale violet red","crimson,pale violet red",crimson,pale violet red,crimson,pale violet red
+Albany,#461660,#EEB211,NCAA,indigo,orange,"dark orchid,blue violet","goldenrod,orange",dark orchid,blue violet,goldenrod,orange
+Binghamton,#005A43,#B1B3B3,NCAA,darkslategray,darkgray,"teal,dark cyan","azure,light cyan",teal,dark cyan,azure,light cyan
+Hartford,#C02427,#000000,NCAA,firebrick,black,"crimson,deep pink","black,dim gray",crimson,deep pink,black,dim gray
+Maine,#003263,#B0D7FF,NCAA,midnightblue,lightblue,"teal,dark cyan","light steel blue,light blue",teal,dark cyan,light steel blue,light blue
+New Hampshire,#041E42,#BBBCBC,NCAA,midnightblue,silver,"navy,dark blue","azure,light cyan",navy,dark blue,azure,light cyan
+Stony Brook,#990000,#16243E,NCAA,darkred,midnightblue,"dark red,maroon","steel blue,midnight blue",dark red,maroon,steel blue,midnight blue
+Umass Lowell,#003DA5,#C8102E,NCAA,darkblue,crimson,"dark blue,navy","crimson,deep pink",dark blue,navy,crimson,deep pink
+UMBC,#B18906,#FFC20E,NCAA,darkgoldenrod,gold,"dark goldenrod,gold","gold,orange",dark goldenrod,gold,gold,orange
+Vermont,#154734,#FFC72C,NCAA,darkslategray,gold,"sea green,medium sea green","goldenrod,chocolate",sea green,medium sea green,goldenrod,chocolate
+Florida Gulf Coast,#002d72,#007749,NCAA,midnightblue,seagreen,"navy,dark blue","teal,dark cyan",navy,dark blue,teal,dark cyan
+Jacksonville,#004E44,#898A8D,NCAA,darkslategray,gray,"teal,dark cyan","lavender,ghost white",teal,dark cyan,lavender,ghost white
+Kennesaw State,#FDBB30,#0B1315,NCAA,goldenrod,black,"goldenrod,chocolate","dark slate gray,cadet blue",goldenrod,chocolate,dark slate gray,cadet blue
+Lipscomb University,#331E54,#F4AA00,NCAA,midnightblue,orange,"dark slate blue,midnight blue","orange,gold",dark slate blue,midnight blue,orange,gold
+North Alabama,#46166B,#DB9F11,NCAA,indigo,goldenrod,"dark orchid,blue violet","dark goldenrod,goldenrod",dark orchid,blue violet,dark goldenrod,goldenrod
+NJIT,#D22630,#071D49,NCAA,crimson,midnightblue,"crimson,deep pink","navy,dark blue",crimson,deep pink,navy,dark blue
+North Florida,#00246B,#D9D9D9,NCAA,midnightblue,gainsboro,"navy,dark blue","gainsboro,light gray",navy,dark blue,gainsboro,light gray
+South Carolina Upstate,#00703C,#000000,NCAA,forestgreen,black,"teal,dark cyan","black,dim gray",teal,dark cyan,black,dim gray
+Stetson,#00703C,#B58150,NCAA,forestgreen,peru,"teal,dark cyan","sandy brown,peru",teal,dark cyan,sandy brown,peru
+Butler,#13294B,#747678,NCAA,midnightblue,gray,"midnight blue,steel blue","slate gray,light slate gray",midnight blue,steel blue,slate gray,light slate gray
+Creighton,#005CA9,#00235D,NCAA,teal,midnightblue,"deep sky blue,dodger blue","navy,dark blue",deep sky blue,dodger blue,navy,dark blue
+DePaul,#005EB8,#E4002B,NCAA,darkcyan,crimson,"deep sky blue,dodger blue","crimson,deep pink",deep sky blue,dodger blue,crimson,deep pink
+Georgetown,#041e42,#8D817B,NCAA,midnightblue,gray,"navy,dark blue","linen,seashell",navy,dark blue,linen,seashell
+Marquette,#003366,#ffcc00,NCAA,midnightblue,gold,"navy,teal","gold,orange",navy,teal,gold,orange
+Providence,#000000,#8a8d8f,NCAA,black,lightslategray,"black,dim gray","alice blue,slate gray",black,dim gray,alice blue,slate gray
+Seton Hall,#004488,#A2AAAD,NCAA,midnightblue,darkgray,"deep sky blue,dark blue","alice blue,azure",deep sky blue,dark blue,alice blue,azure
+St. John’s,#BA0C2F,#041c2c,NCAA,firebrick,black,"crimson,deep pink","teal,dark cyan",crimson,deep pink,teal,dark cyan
+Villanova,#00205B,#13B5EA,NCAA,midnightblue,deepskyblue,"navy,dark blue","deep sky blue,dodger blue",navy,dark blue,deep sky blue,dodger blue
+Xavier,#0c2340,#9ea2a2,NCAA,midnightblue,darkgray,"midnight blue,steel blue","azure,light cyan",midnight blue,steel blue,azure,light cyan
+Cal Poly,#003831,#ffe395,NCAA,darkslategray,khaki,"teal,dark cyan","khaki,burly wood",teal,dark cyan,khaki,burly wood
+Cal State Fullerton,#00274C,#dc8218,NCAA,midnightblue,chocolate,"teal,dark cyan","chocolate,goldenrod",teal,dark cyan,chocolate,goldenrod
+CSUN,#CE1126,#d1cec6,NCAA,crimson,lightgray,"crimson,deep pink","floral white,old lace",crimson,deep pink,floral white,old lace
+Hawaii,#154734,#CCCCCC,NCAA,darkslategray,lightgray,"sea green,medium sea green","light gray,silver",sea green,medium sea green,light gray,silver
+Long Beach State,#000000,#FFC72A,NCAA,black,gold,"black,dim gray","goldenrod,dark goldenrod",black,dim gray,goldenrod,dark goldenrod
+UC Davis,#002855,#b3a369,NCAA,midnightblue,darkkhaki,"navy,dark blue","dark khaki,khaki",navy,dark blue,dark khaki,khaki
+UC Irvine,#0C2340,#ffc72c,NCAA,midnightblue,gold,"midnight blue,steel blue","goldenrod,chocolate",midnight blue,steel blue,goldenrod,chocolate
+UC Riverside,#2D6CC0,#f1ab00,NCAA,steelblue,orange,"royal blue,dodger blue","orange,gold",royal blue,dodger blue,orange,gold
+UC Santa Barbara,#003660,#FEBC11,NCAA,midnightblue,orange,"teal,dark cyan","orange,gold",teal,dark cyan,orange,gold
+Baylor,#1d3c34,#ffb81c,NCAA,darkslategray,orange,"dark slate gray,cadet blue","goldenrod,orange",dark slate gray,cadet blue,goldenrod,orange
+Iowa State,#c8102e,#f1be48,NCAA,crimson,sandybrown,"crimson,deep pink","peru,sandy brown",crimson,deep pink,peru,sandy brown
+Kansas,#0051ba,#e8000d,NCAA,teal,red,"dodger blue,deep sky blue","crimson,deep pink",dodger blue,deep sky blue,crimson,deep pink
+Kansas State,#512888,#a7a7a7,NCAA,darkslateblue,darkgray,"dark orchid,blue violet","dark gray,silver",dark orchid,blue violet,dark gray,silver
+Oklahoma,#841617,#fdf9d8,NCAA,maroon,cornsilk,"crimson,medium violet red","cornsilk,light goldenrod yellow",crimson,medium violet red,cornsilk,light goldenrod yellow
+Oklahoma State,#ff7300,#000000,NCAA,darkorange,black,"dark orange,orange red","black,dim gray",dark orange,orange red,black,dim gray
+Texas,#bf5700,#333f48,NCAA,chocolate,darkslategray,"dark orange,dark goldenrod","slate gray,light slate gray",dark orange,dark goldenrod,slate gray,light slate gray
+Texas Christian,#4d1979,#a3a9ac,NCAA,indigo,darkgray,"dark orchid,blue violet","alice blue,light slate gray",dark orchid,blue violet,alice blue,light slate gray
+Texas Tech,#cc0000,#000000,NCAA,red,black,"red,dark red","black,dim gray",red,dark red,black,dim gray
+West Virginia,#002855,#eaaa00,NCAA,midnightblue,orange,"navy,dark blue","orange,gold",navy,dark blue,orange,gold
+Cleveland State,#006747,#000000,NCAA,darkslategray,black,"teal,dark cyan","black,dim gray",teal,dark cyan,black,dim gray
+Detroit Mercy,#A6093D,#002d72,NCAA,brown,midnightblue,"crimson,medium violet red","navy,dark blue",crimson,medium violet red,navy,dark blue
+Green Bay,#006747,#9d2235,NCAA,darkslategray,brown,"teal,dark cyan","crimson,medium violet red",teal,dark cyan,crimson,medium violet red
+IUPUI,#9d2235,#dfd1a7,NCAA,brown,palegoldenrod,"crimson,medium violet red","wheat,moccasin",crimson,medium violet red,wheat,moccasin
+Milwaukee,#ffbd00,#000000,NCAA,orange,black,"orange,gold","black,dim gray",orange,gold,black,dim gray
+Northern Kentucky,#FFC72C,#000000,NCAA,gold,black,"goldenrod,chocolate","black,dim gray",goldenrod,chocolate,black,dim gray
+Oakland,#B59A57,#000000,NCAA,darkkhaki,black,"dark khaki,burly wood","black,dim gray",dark khaki,burly wood,black,dim gray
+UIC,#041E42,#AC1E2D,NCAA,midnightblue,firebrick,"navy,dark blue","crimson,medium violet red",navy,dark blue,crimson,medium violet red
+Wright State,#026937,#cea052,NCAA,forestgreen,peru,"teal,dark cyan","sandy brown,peru",teal,dark cyan,sandy brown,peru
+Youngstown State,#c8102e,#000000,NCAA,crimson,black,"crimson,deep pink","black,dim gray",crimson,deep pink,black,dim gray
+Canisius,#0c2340,#FFBA00,NCAA,midnightblue,orange,"midnight blue,steel blue","orange,gold",midnight blue,steel blue,orange,gold
+Fairfield,#C8102E,#A2AAAD,NCAA,crimson,darkgray,"crimson,deep pink","alice blue,azure",crimson,deep pink,alice blue,azure
+Iona,#6F2C3F,#F2A900,NCAA,saddlebrown,orange,"pale violet red,hot pink","orange,gold",pale violet red,hot pink,orange,gold
+Manhattan,#00703C,#00703C,NCAA,forestgreen,forestgreen,"teal,dark cyan","teal,dark cyan",teal,dark cyan,teal,dark cyan
+Marist,#C8102E,#B2B2B2,NCAA,crimson,darkgray,"crimson,deep pink","dark gray,silver",crimson,deep pink,dark gray,silver
+Monmouth,#041E42,#53565A,NCAA,midnightblue,dimgray,"navy,dark blue","slate gray,light slate gray",navy,dark blue,slate gray,light slate gray
+Niagara,#582C83,#582C83,NCAA,darkslateblue,darkslateblue,"dark orchid,dark slate blue","dark orchid,dark slate blue",dark orchid,dark slate blue,dark orchid,dark slate blue
+Rider,#981E32,#6C6F70,NCAA,brown,dimgray,"crimson,medium violet red","slate gray,light slate gray",crimson,medium violet red,slate gray,light slate gray
+St. Peter’s,#003C71,#0072CE,NCAA,midnightblue,dodgerblue,"teal,dark cyan","deep sky blue,dodger blue",teal,dark cyan,deep sky blue,dodger blue
+Siena,#006747,#FFC72C,NCAA,darkslategray,gold,"teal,dark cyan","goldenrod,chocolate",teal,dark cyan,goldenrod,chocolate
+Bradley,#A50000,#000000,NCAA,darkred,black,"dark red,maroon","black,dim gray",dark red,maroon,black,dim gray
+Drake,#004477,#000000,NCAA,midnightblue,black,"teal,dark cyan","black,dim gray",teal,dark cyan,black,dim gray
+Evansville,#52237F,#F36F21,NCAA,darkslateblue,chocolate,"dark orchid,blue violet","chocolate,orange red",dark orchid,blue violet,chocolate,orange red
+Illinois State,#CE1126,#F9DD16,NCAA,crimson,gold,"crimson,deep pink","gold,goldenrod",crimson,deep pink,gold,goldenrod
+Indiana State,#0142BC,#0142BC,NCAA,mediumblue,mediumblue,"medium blue,dodger blue","medium blue,dodger blue",medium blue,dodger blue,medium blue,dodger blue
+Loyola,#922247,#febd18,NCAA,brown,orange,"crimson,medium violet red","goldenrod,orange",crimson,medium violet red,goldenrod,orange
+Missouri State,#5E0009,#000000,NCAA,maroon,black,"crimson,medium violet red","black,dim gray",crimson,medium violet red,black,dim gray
+Northern Iowa,#4B116F,#FFCC00,NCAA,indigo,gold,"indigo,dark orchid","gold,orange",indigo,dark orchid,gold,orange
+Southern Illinois,#720000,#000000,NCAA,maroon,black,"maroon,dark red","black,dim gray",maroon,dark red,black,dim gray
+Valparaiso,#381E0E,#FFCC00,NCAA,black,gold,"sienna,saddle brown","gold,orange",sienna,saddle brown,gold,orange
+Arizona,#cc0033,#003366,NCAA,crimson,midnightblue,"crimson,deep pink","navy,teal",crimson,deep pink,navy,teal
+Arizona State,#8c1d40,#ffc627,NCAA,brown,gold,"crimson,medium violet red","goldenrod,dark goldenrod",crimson,medium violet red,goldenrod,dark goldenrod
+California,#003262,#fdb515,NCAA,midnightblue,orange,"teal,dark cyan","goldenrod,orange",teal,dark cyan,goldenrod,orange
+Colorado,#cfb87c,#000000,NCAA,tan,black,"burly wood,khaki","black,dim gray",burly wood,khaki,black,dim gray
+Oregon,#154733,#fee123,NCAA,darkslategray,gold,"sea green,medium sea green","goldenrod,gold",sea green,medium sea green,goldenrod,gold
+Oregon State,#dc4405,#000000,NCAA,orangered,black,"orange red,dark orange","black,dim gray",orange red,dark orange,black,dim gray
+Stanford,#8C1515,#4D4F53,NCAA,darkred,darkslategray,"fire brick,brown","slate gray,light slate gray",fire brick,brown,slate gray,light slate gray
+UCLA,#2d68c4,#f2a900,NCAA,royalblue,orange,"royal blue,dodger blue","orange,gold",royal blue,dodger blue,orange,gold
+USC,#9d2235,#ffc72c,NCAA,brown,gold,"crimson,medium violet red","goldenrod,chocolate",crimson,medium violet red,goldenrod,chocolate
+Utah,#cc0000,#808080,NCAA,red,gray,"red,dark red","gray,dim gray",red,dark red,gray,dim gray
+Washington,#4b2e83,#b7a57a,NCAA,darkslateblue,darkkhaki,"dark slate blue,slate blue","tan,burly wood",dark slate blue,slate blue,tan,burly wood
+Washington State,#981e32,#5e6a71,NCAA,brown,dimgray,"crimson,medium violet red","slate gray,light slate gray",crimson,medium violet red,slate gray,light slate gray
+Alabama,#9e1b32,#828A8f,NCAA,brown,lightslategray,"crimson,medium violet red","slate gray,light slate gray",crimson,medium violet red,slate gray,light slate gray
+Arkansas,#9D2235,#000000,NCAA,brown,black,"crimson,medium violet red","black,dim gray",crimson,medium violet red,black,dim gray
+Auburn,#0C2350,#e87722,NCAA,midnightblue,chocolate,"midnight blue,navy","chocolate,goldenrod",midnight blue,navy,chocolate,goldenrod
+Florida,#fa4616,#0021a5,NCAA,orangered,darkblue,"orange red,chocolate","dark blue,navy",orange red,chocolate,dark blue,navy
+Georgia,#ba0c2f,#000000,NCAA,firebrick,black,"crimson,deep pink","black,dim gray",crimson,deep pink,black,dim gray
+Kentucky,#0033a0,#000000,NCAA,darkblue,black,"dark blue,navy","black,dim gray",dark blue,navy,black,dim gray
+Louisiana State,#461d7c,#fdd023,NCAA,indigo,gold,"dark orchid,blue violet","goldenrod,dark goldenrod",dark orchid,blue violet,goldenrod,dark goldenrod
+Mississippi,#13294b,#c8102e,NCAA,midnightblue,crimson,"midnight blue,steel blue","crimson,deep pink",midnight blue,steel blue,crimson,deep pink
+Mississippi State,#660000,#ffffff,NCAA,maroon,white,"maroon,dark red","white,white smoke",maroon,dark red,white,white smoke
+Missouri,#f1b82d,#000000,NCAA,goldenrod,black,"goldenrod,chocolate","black,dim gray",goldenrod,chocolate,black,dim gray
+South Carolina,#73000a,#000000,NCAA,maroon,black,"crimson,medium violet red","black,dim gray",crimson,medium violet red,black,dim gray
+Tennessee,#FF8200,#58595b,NCAA,darkorange,dimgray,"dark orange,orange","slate gray,light slate gray",dark orange,orange,slate gray,light slate gray
+Texas A&M,#500000,#000000,NCAA,maroon,black,"maroon,dark red","black,dim gray",maroon,dark red,black,dim gray
+Vanderbilt,#866d4b,#000000,NCAA,dimgray,black,"burly wood,tan","black,dim gray",burly wood,tan,black,dim gray
+Denver,#8b2332,#8b6f4b,NCAA,brown,dimgray,"crimson,medium violet red","burly wood,tan",crimson,medium violet red,burly wood,tan
+Fort Wayne,#002F6C,#97999B,NCAA,midnightblue,darkgray,"navy,dark blue","alice blue,light slate gray",navy,dark blue,alice blue,light slate gray
+NDSU,#0A5640,#FFC72A,NCAA,darkslategray,gold,"teal,light sea green","goldenrod,dark goldenrod",teal,light sea green,goldenrod,dark goldenrod
+North Dakota,#009A44,#aaaead,NCAA,forestgreen,darkgray,"spring green,medium spring green","mint cream,azure",spring green,medium spring green,mint cream,azure
+Omaha,#000000,#D71920,NCAA,black,crimson,"black,dim gray","crimson,deep pink",black,dim gray,crimson,deep pink
+Oral Roberts,#002f60,#a28e2a,NCAA,midnightblue,darkgoldenrod,"navy,dark blue","goldenrod,peru",navy,dark blue,goldenrod,peru
+South Dakota,#AD0000,#000000,NCAA,darkred,black,"dark red,maroon","black,dim gray",dark red,maroon,black,dim gray
+South Dakota State,#0033A0,#FFD100,NCAA,darkblue,gold,"dark blue,navy","gold,orange",dark blue,navy,gold,orange
+Western Illinois,#663399,#ffcc00,NCAA,darkslateblue,gold,"dark orchid,medium orchid","gold,orange",dark orchid,medium orchid,gold,orange
+CSUB Bakersfield,#005DAA,#ffd200,NCAA,teal,gold,"deep sky blue,dodger blue","gold,orange",deep sky blue,dodger blue,gold,orange
+Chicago State,#006666,#000000,NCAA,teal,black,"teal,dark cyan","black,dim gray",teal,dark cyan,black,dim gray
+Grand Canyon,#522398,#000000,NCAA,darkslateblue,black,"blue violet,dark orchid","black,dim gray",blue violet,dark orchid,black,dim gray
+UMKC,#005293,#fecb00,NCAA,teal,gold,"deep sky blue,dark cyan","gold,orange",deep sky blue,dark cyan,gold,orange
+New Mexico State,#861F41,#000000,NCAA,brown,black,"crimson,medium violet red","black,dim gray",crimson,medium violet red,black,dim gray
+Seattle University,#aa0000,#333333,NCAA,darkred,darkslategray,"dark red,maroon","black,dim gray",dark red,maroon,black,dim gray
+UTRGV,#ffa300,#0c2340,NCAA,orange,midnightblue,"orange,dark orange","midnight blue,steel blue",orange,dark orange,midnight blue,steel blue
+Utah Valley,#275038,#000000,NCAA,darkslategray,black,"sea green,medium sea green","black,dim gray",sea green,medium sea green,black,dim gray
