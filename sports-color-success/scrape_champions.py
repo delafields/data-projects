@@ -33,7 +33,7 @@ for league in championship_urls:
                                              "Roma": "A.S. Roma"})
 
                 league = league.replace(" ", "")
-                champ_df.to_csv(f"data/{league}_Champions.csv", index = False)
+                champ_df.to_csv(f"data/champs/{league}_Champions.csv", index = False)
 
         elif league == "La Liga":
                 champ_df = get_champs_table(league = league)[["Club", "Winners", "League"]]
@@ -45,24 +45,23 @@ for league in championship_urls:
                                              "Deportivo La Coruña": "Deportivo"})
 
                 league = league.replace(" ", "")
-                champ_df.to_csv(f"data/{league}_Champions.csv", index = False)
+                champ_df.to_csv(f"data/champs/{league}_Champions.csv", index = False)
 
         elif league == "EPL":
                 champ_df = get_champs_table(league = league)[["Club", "Winners", "League"]]
                 champ_df = champ_df.rename(columns = {"Club": "Team", "Winners": "Wins"})
-                champ_df = champ_df.replace({"Everton FC": "Everton", 
-                                             "Newcastle United": "Newcastle United FC", 
+                champ_df = champ_df.replace({"Newcastle United": "Newcastle United FC", 
                                              "Wolverhampton Wanderers": "Wolverhampton", 
                                              "Watford": "Watford FC",
                                              "Southampton": "Southampton FC"})
 
-                champ_df.to_csv(f"data/{league}_Champions.csv", index = False)
+                champ_df.to_csv(f"data/champs/{league}_Champions.csv", index = False)
 
         elif league == "NHL":
                 champ_df = get_champs_table(league = league)[["Team", "Wins", "League"]]
                 champ_df["Team"] = champ_df["Team"].str.replace(r"\[.\]", "")
 
-                champ_df.to_csv(f"data/{league}_Champions.csv", index = False)
+                champ_df.to_csv(f"data/champs/{league}_Champions.csv", index = False)
 
         elif league == "MLB":
                 champ_df = get_champs_table(league = league)[["Team", "Wins", "League"]]
@@ -76,7 +75,7 @@ for league in championship_urls:
                                              "Montreal Expos/Washington Nationals MTL until 2004, WSH 2005-present": "Washington Nationals",
                                              "Seattle Pilots/Milwaukee Brewers SEA 1969, MIL 1970-present": "Milwaukee Brewers"})
 
-                champ_df.to_csv(f"data/{league}_Champions.csv", index = False)
+                champ_df.to_csv(f"data/champs/{league}_Champions.csv", index = False)
 
         elif league == "NBA":
                 champ_df = get_champs_table(league = league)[["Teams", "Win", "League"]]
@@ -84,7 +83,7 @@ for league in championship_urls:
                 champ_df["Team"] = champ_df["Team"].str.replace(r"\[.*\]", "")
                 champ_df["Wins"] = champ_df["Wins"].replace("—", 0)
 
-                champ_df.to_csv(f"data/{league}_Champions.csv", index = False)
+                champ_df.to_csv(f"data/champs/{league}_Champions.csv", index = False)
 
         elif league == "NFL":
                 champ_df = get_champs_table(league = league)[["Team", "Wins", "League"]]
@@ -99,4 +98,4 @@ for league in championship_urls:
                                              "Houston/Tennessee Oilers/Titans": "Tennessee Titans",
                                              "St. Louis/Phoenix/Arizona Cardinals": "Arizona Cardinals"})
 
-                champ_df.to_csv(f"data/{league}_Champions.csv", index = False)
+                champ_df.to_csv(f"data/champs/{league}_Champions.csv", index = False)

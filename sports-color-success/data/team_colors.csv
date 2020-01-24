@@ -137,7 +137,7 @@ Burnley,#80234C,#91D2F2,EPL,brown,skyblue,"medium violet red,hot pink","sky blue
 Cardiff City,#0070B5,#D11524,EPL,darkcyan,crimson,"deep sky blue,dark turquoise","crimson,deep pink",deep sky blue,dark turquoise,crimson,deep pink
 Chelsea,#034694,#ED1C24,EPL,teal,crimson,"dodger blue,dark blue","crimson,deep pink",dodger blue,dark blue,crimson,deep pink
 Crystal Palace FC,#1B458F,#C4122E,EPL,darkslateblue,firebrick,"midnight blue,royal blue","crimson,deep pink",midnight blue,royal blue,crimson,deep pink
-Everton FC,#063A99,#000000,EPL,midnightblue,black,"dark blue,navy","black,dim gray",dark blue,navy,black,dim gray
+Everton,#063A99,#000000,EPL,midnightblue,black,"dark blue,navy","black,dim gray",dark blue,navy,black,dim gray
 Fulham,#cc0000,#000000,EPL,red,black,"red,dark red","black,dim gray",red,dark red,black,dim gray
 Huddersfield Town,#0E63AD,#000000,EPL,darkcyan,black,"dodger blue,deep sky blue","black,dim gray",dodger blue,deep sky blue,black,dim gray
 Leicester City,#1358A1,#FAB92C,EPL,teal,goldenrod,"dodger blue,deep sky blue","goldenrod,chocolate",dodger blue,deep sky blue,goldenrod,chocolate
@@ -439,3 +439,16 @@ New Mexico State,#861F41,#000000,NCAA,brown,black,"crimson,medium violet red","b
 Seattle University,#aa0000,#333333,NCAA,darkred,darkslategray,"dark red,maroon","black,dim gray",dark red,maroon,black,dim gray
 UTRGV,#ffa300,#0c2340,NCAA,orange,midnightblue,"orange,dark orange","midnight blue,steel blue",orange,dark orange,midnight blue,steel blue
 Utah Valley,#275038,#000000,NCAA,darkslategray,black,"sea green,medium sea green","black,dim gray",sea green,medium sea green,black,dim gray
+Blackburn Rovers,#00002d,#78bcff,EPL,black,lightskyblue,"navy,dark blue","cornflower blue,light sky blue",cornflower blue,light sky blue,cornflower blue,light sky blue
+Sheffield United,#EE2737,#0D171A,EPL,crimson,black,"crimson,deep pink","dark slate gray,cadet blue",crimson,deep pink,dark slate gray,cadet blue
+Ipswich Town,#0e00f7,#FFFFFF,EPL,blue,white,"blue,medium blue","white,white smoke",blue,midnight blue,white,white smoke
+Nottingham Forest,#E53233,#FFFFFF,EPL,crimson,white,"crimson,deep pink","white,white smoke",crimson,deep pink,white,white smoke
+Sevilla,#cb282b,#a47433,La Liga,firebrick,sienna,"crimson,deep pink","peru,sienna",crimson,deep pink,peru,sienna
+Baltimore Bullets (original) (folded in 1954),#002B5C,#E31837,NBA,midnightblue,crimson,"navy,dark blue","crimson,deep pink",navy,dark blue,crimson,deep pink
+Genoa,#ED2D22,#202A4E,Serie A,crimson,midnightblue,"fire brick,tomato","dark slate blue,steel blue",fire brick,tomato,dark slate blue,steel blue
+Torino,#881f19,#FFFFFF,Serie A,brown,white,"fire brick,brown","white,white smoke",fire brick,brown,white,white smoke
+Pro Vercelli,#E31F2B,#FFFFFF,Serie A,crimson,white,"crimson,deep pink","white,white smoke",crimson,deep pink,white,white smoke
+Sampdoria,#2737a3,#000000,Serie A,darkslateblue,black,"midnight blue,royal blue","black,dim gray",midnight blue,royal blue,black,dim gray
+Hellas Verona,#172983,#FFED00,Serie A,midnightblue,yellow,"midnight blue,royal blue","yellow,gold",midnight blue,royal blue,yellow,gold
+Novese,#0099CC,#FFFFFF,Serie A,lightseagreen,white,"deep sky blue,dark turquoise","white,white smoke",deep sky blue,dark turquoise,white,white smoke
+Casale,#000000,#FFFFFF,Serie A,black,white,"black,dim gray","white,white smoke",black,dim gray,white,white smoke

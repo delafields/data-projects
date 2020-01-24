@@ -54,6 +54,23 @@ for league in color_urls:
 
     extract_colors(url, league_name)
 
+# Edge Cases
+# Manually add championship winning teams
+team_colors.loc[len(team_colors)] = ["Blackburn Rovers", "#00002d", "#78bcff", "EPL"]
+team_colors.loc[len(team_colors)] = ["Sheffield United", "#EE2737", "#0D171A", "EPL"]
+team_colors.loc[len(team_colors)] = ["Ipswich Town", "#0e00f7", "#FFFFFF", "EPL"]
+team_colors.loc[len(team_colors)] = ["Nottingham Forest", "#E53233", "#FFFFFF", "EPL"]
+team_colors.loc[len(team_colors)] = ["Sevilla", "#cb282b", "#a47433", "La Liga"]
+team_colors.loc[len(team_colors)] = ["Baltimore Bullets (original) (folded in 1954)", "#002B5C", "#E31837", "NBA"]
+team_colors.loc[len(team_colors)] = ["Genoa", "#ED2D22", "#202A4E", "Serie A"]
+team_colors.loc[len(team_colors)] = ["Torino", "#881f19", "#FFFFFF", "Serie A"]
+team_colors.loc[len(team_colors)] = ["Pro Vercelli", "#E31F2B", "#FFFFFF", "Serie A"]
+team_colors.loc[len(team_colors)] = ["Sampdoria", "#2737a3", "#000000", "Serie A"]
+team_colors.loc[len(team_colors)] = ["Hellas Verona", "#172983", "#FFED00", "Serie A"]
+team_colors.loc[len(team_colors)] = ["Novese", "#0099CC", "#FFFFFF", "Serie A"]
+team_colors.loc[len(team_colors)] = ["Casale", "#000000", "#FFFFFF", "Serie A"]
+  
+
 # https://stackoverflow.com/questions/9694165/convert-rgb-color-to-english-color-name-like-green-with-python
 def get_color_name(hex_code):
 
