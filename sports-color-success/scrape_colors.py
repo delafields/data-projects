@@ -81,7 +81,7 @@ team_colors.loc[len(team_colors)] = ["Lazio", "#7FD3F4", "#FFFFFF", "Serie A"]
   
 
 # https://stackoverflow.com/questions/9694165/convert-rgb-color-to-english-color-name-like-green-with-python
-def get_color_name(hex_code):
+def get_css3_color_name(hex_code):
 
     # convert hex to an rgb triplet
     hex_code = hex_code[1: ]
@@ -97,9 +97,27 @@ def get_color_name(hex_code):
         min_colors[(rd + gd + bd)] = name
     return min_colors[min(min_colors.keys())]
 
+def get_css2_color_name(hex_code):
+
+    # convert hex to an rgb triplet
+    hex_code = hex_code[1: ]
+    red, green, blue = bytes.fromhex(hex_code)
+    rgb_triplet = (red, green, blue)
+
+    min_colors = {}
+    for key, name in webcolors.css21_hex_to_names.items():
+        r_c, g_c, b_c = webcolors.hex_to_rgb(key)
+        rd = (r_c - rgb_triplet[0]) ** 2
+        gd = (g_c - rgb_triplet[1]) ** 2
+        bd = (b_c - rgb_triplet[2]) ** 2
+        min_colors[(rd + gd + bd)] = name
+    return min_colors[min(min_colors.keys())]
+
 # get the color name for each hex code from the `webcolors` package
-team_colors["wc_Primary_Name"] = team_colors["hex_Primary_Color"].apply(lambda c: get_color_name(c))
-team_colors["wc_Secondary_Name"] = team_colors["hex_Secondary_Color"].apply(lambda c: get_color_name(c))
+team_colors["wc_css2_Primary_Name"] = team_colors["hex_Primary_Color"].apply(lambda c: get_css2_color_name(c))
+team_colors["wc_css2_Secondary_Name"] = team_colors["hex_Secondary_Color"].apply(lambda c: get_css2_color_name(c))
+team_colors["wc_css3_Primary_Name"] = team_colors["hex_Primary_Color"].apply(lambda c: get_css3_color_name(c))
+team_colors["wc_css3_Secondary_Name"] = team_colors["hex_Secondary_Color"].apply(lambda c: get_css3_color_name(c))
 
 # finds the nth occurence of a character
 # https://stackoverflow.com/questions/1883980/find-the-nth-occurrence-of-substring-in-a-string
