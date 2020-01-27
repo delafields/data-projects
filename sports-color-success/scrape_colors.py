@@ -69,6 +69,15 @@ team_colors.loc[len(team_colors)] = ["Sampdoria", "#2737a3", "#000000", "Serie A
 team_colors.loc[len(team_colors)] = ["Hellas Verona", "#172983", "#FFED00", "Serie A"]
 team_colors.loc[len(team_colors)] = ["Novese", "#0099CC", "#FFFFFF", "Serie A"]
 team_colors.loc[len(team_colors)] = ["Casale", "#000000", "#FFFFFF", "Serie A"]
+team_colors.loc[len(team_colors)] = ["Sunderland", "#ff0000", "#FFFFFF", "EPL"]
+team_colors.loc[len(team_colors)] = ["Sheffield Wednesday", "#0e00f7", "#000015", "EPL"]
+team_colors.loc[len(team_colors)] = ["Preston North End", "#040040", "#FFDF00", "EPL"]
+team_colors.loc[len(team_colors)] = ["Derby County", "#000000", "#FFFFFF", "EPL"]
+team_colors.loc[len(team_colors)] = ["Portsmouth", "#001489", "#FFFFFF", "EPL"]
+team_colors.loc[len(team_colors)] = ["Athletic Bilbao", "#EE2523", "#FFFFFF", "La Liga"]
+team_colors.loc[len(team_colors)] = ["Real Sociedad", "#0062B8", "#FFFFFF", "La Liga"]
+team_colors.loc[len(team_colors)] = ["Lazio", "#7FD3F4", "#FFFFFF", "Serie A"]
+
   
 
 # https://stackoverflow.com/questions/9694165/convert-rgb-color-to-english-color-name-like-green-with-python
