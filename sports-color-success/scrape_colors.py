@@ -95,7 +95,7 @@ def get_css3_color_name(hex_code):
         gd = (g_c - rgb_triplet[1]) ** 2
         bd = (b_c - rgb_triplet[2]) ** 2
         min_colors[(rd + gd + bd)] = name
-    return min_colors[min(min_colors.keys())]
+    return min_colors[min(min_colors.keys())].capitalize()
 
 def get_css2_color_name(hex_code):
 
@@ -111,7 +111,7 @@ def get_css2_color_name(hex_code):
         gd = (g_c - rgb_triplet[1]) ** 2
         bd = (b_c - rgb_triplet[2]) ** 2
         min_colors[(rd + gd + bd)] = name
-    return min_colors[min(min_colors.keys())]
+    return min_colors[min(min_colors.keys())].capitalize()
 
 # get the color name for each hex code from the `webcolors` package
 team_colors["wc_css2_Primary_Name"] = team_colors["hex_Primary_Color"].apply(lambda c: get_css2_color_name(c))
@@ -143,12 +143,12 @@ def get_wolfram_colors(color):
             # get the first english color name provided
             start_color_one = find_nth(colors, '|', 6)
             end_color_one = find_nth(colors, '|', 7)
-            color_one = colors[start_color_one+1 : end_color_one].strip()
+            color_one = colors[start_color_one+1 : end_color_one].strip().capitalize()
 
             # get the second english color name provided
             start_color_two = find_nth(colors, '|', 11)
             end_color_two = find_nth(colors, '|', 12)
-            color_two = colors[start_color_two+1 : end_color_two].strip()
+            color_two = colors[start_color_two+1 : end_color_two].strip().capitalize()
 
             # join the two color names together - split later
             wa_colors = f"{color_one},{color_two}"
