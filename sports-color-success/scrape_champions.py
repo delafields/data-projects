@@ -99,3 +99,39 @@ for league in championship_urls:
                                              "St. Louis/Phoenix/Arizona Cardinals": "Arizona Cardinals"})
 
                 champ_df.to_csv(f"data/champs/{league}_Champions.csv", index = False)
+
+        elif league == "NCAAF":
+                champ_df = get_champs_table(league = league)[["Champion", "League"]]
+                champ_df = champ_df.rename(columns = {"Champion": "Team"})
+                # drop weird multi-champions
+                champ_df = champ_df[~champ_df["Team"].str.contains(",")]
+
+                champ_df = champ_df.replace({"LSU": "Louisiana",
+                                             "Southern California": "USC",
+                                             "Southern California*": "USC",
+                                             "Miami (Fla.)": "Miami",
+                                             "Florida St.": "Florida State",
+                                             "Penn St.": "Penn State",
+                                             "Brigham Young": "BYU",
+                                             "Ohio St.": "Ohio State",
+                                             "Michigan St.": "Michigan State",
+                                             "Georgia Tech.": "Georgia Tech",
+                                             "Pennsylvania": "Penn"})
+
+                # sum number of wins
+                champ_df["Wins"] = champ_df.groupby("Team")["Team"].transform("count")
+                champ_df = champ_df.drop_duplicates()
+
+                champ_df.to_csv(f"data/champs/{league}_Champions.csv", index = False)
+
+        elif league == "NCAAB":
+                champ_df = get_champs_table(league = league)[["Champion (Record)", "League"]]
+                champ_df = champ_df.rename(columns = {"Champion (Record)": "Team"})
+                # remove record from team name
+                champ_df["Team"] = champ_df["Team"].str.replace(r" \(.*", "")
+
+                # sum number of wins
+                champ_df["Wins"] = champ_df.groupby("Team")["Team"].transform("count")
+                champ_df = champ_df.drop_duplicates()
+
+                champ_df.to_csv(f"data/champs/{league}_Champions.csv", index = False)
